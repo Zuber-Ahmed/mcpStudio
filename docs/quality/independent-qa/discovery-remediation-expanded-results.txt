@@ -1,0 +1,18 @@
+=== RUN   TestQACommentCannotBecomeExecutableCandidate
+--- PASS: TestQACommentCannotBecomeExecutableCandidate (0.08s)
+=== RUN   TestQASrcAppRouteIdentity
+--- PASS: TestQASrcAppRouteIdentity (0.10s)
+=== RUN   TestQARouteGroupNotURLSegment
+--- PASS: TestQARouteGroupNotURLSegment (0.05s)
+=== RUN   TestQAIgnoredLocalCredentialFilesExcluded
+--- PASS: TestQAIgnoredLocalCredentialFilesExcluded (0.12s)
+=== RUN   TestQAGenerationRemainsLocked
+--- PASS: TestQAGenerationRemainsLocked (0.04s)
+=== RUN   TestQAReturnRegexLiteralCannotCreateRoute
+--- PASS: TestQAReturnRegexLiteralCannotCreateRoute (0.06s)
+=== RUN   TestQAUnsupportedIgnorePatternFailsClosed
+    extra_test.go:14: unsupported ignore rule silently discarded and secret file acquired: config/secrets.json
+--- FAIL: TestQAUnsupportedIgnorePatternFailsClosed (0.21s)
+FAIL
+FAIL	command-line-arguments	1.665s
+FAIL

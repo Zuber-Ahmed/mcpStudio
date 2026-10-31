@@ -1,0 +1,20 @@
+{
+  "validated_at": "2026-10-31T10:31:22.7159261Z",
+  "project_id": "f582eaa9-01cc-460f-962a-148ca2726e90",
+  "analysis_id": "5a0e1d14-5f01-41eb-bfb1-eb111cd475d4",
+  "candidate_counts": {
+    "allowed": 1,
+    "unknown": 1,
+    "blocked": 1,
+    "selected": 1
+  },
+  "plan_id": "f922a4d0-43b4-4f3a-9c39-5b5cce3416f9",
+  "plan_version": 1,
+  "plan_hash": "8886af3b1fc9d6d8b38bd9a2032e0f0cb832e130995b07f2ab39094e918a3483",
+  "canonicalization": "RFC8785+MCPStudio-sets-v1",
+  "policy_version": "local-safe-v1",
+  "mismatched_hash_rejected": true,
+  "approval_id": "027a43c9-c363-44d8-b562-4e1b431826cf",
+  "final_status": "approved",
+  "generation_endpoint_absent": true
+}

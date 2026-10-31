@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "prohibited commands absent",
+      "passed": true
+    },
+    {
+      "name": "pip and GUI modules explicitly absent",
+      "passed": true
+    },
+    {
+      "name": "non-root NSS identity resolves",
+      "passed": true
+    },
+    {
+      "name": "UTF-8 locale available",
+      "passed": true
+    },
+    {
+      "name": "timezone data available",
+      "passed": true
+    },
+    {
+      "name": "hosts resolution works",
+      "passed": true
+    },
+    {
+      "name": "system CA trust retained",
+      "passed": true
+    },
+    {
+      "name": "retained file hashes match manifest",
+      "passed": true
+    },
+    {
+      "name": "no retained set-ID files",
+      "passed": true
+    },
+    {
+      "name": "retained Python native libraries load",
+      "passed": true
+    },
+    {
+      "name": "TLS trusted local certificate succeeds",
+      "passed": true
+    },
+    {
+      "name": "TLS hostname mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "TLS untrusted issuer rejected",
+      "passed": true
+    },
+    {
+      "name": "TLS fixture terminates cleanly",
+      "passed": true
+    }
+  ],
+  "native_libraries_loaded": 82,
+  "retained_file_entries": 6740,
+  "scope": "Explicit minimal candidate support boundary, not all Python stdlib/plugin compatibility"
+}

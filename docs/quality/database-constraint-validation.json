@@ -1,0 +1,103 @@
+{
+  "scope": "Prototype constraints in disposable database; no application migration or API enforcement proof",
+  "image": "postgres:17.11",
+  "published_ports": false,
+  "project_data_mounted": false,
+  "passed": true,
+  "image_digest": [
+    "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f"
+  ],
+  "server_version": "17.11 (Debian 17.11-1.pgdg13+2)",
+  "sql_exit_code": 0,
+  "checks": [
+    {
+      "name": "changed artifact digest denied",
+      "passed": true
+    },
+    {
+      "name": "changed plan hash denied",
+      "passed": true
+    },
+    {
+      "name": "changed validation policy denied",
+      "passed": true
+    },
+    {
+      "name": "cross-analysis graph edge denied",
+      "passed": true
+    },
+    {
+      "name": "cross-plan approval denied",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant graph edge denied",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant project child denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate check record denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate dispatch identity denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate idempotency key denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate plan version denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate required checks denied",
+      "passed": true
+    },
+    {
+      "name": "empty required-check policy denied",
+      "passed": true
+    },
+    {
+      "name": "false passed exit denied",
+      "passed": true
+    },
+    {
+      "name": "foreign analysis recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "passed check without evidence denied",
+      "passed": true
+    },
+    {
+      "name": "referenced approval cannot cascade delete",
+      "passed": true
+    },
+    {
+      "name": "removed operator rights denied",
+      "passed": true
+    },
+    {
+      "name": "revoked approval denied",
+      "passed": true
+    },
+    {
+      "name": "same-tenant plan approval generation validation chain accepted",
+      "passed": true
+    },
+    {
+      "name": "skipped check with forged exit denied",
+      "passed": true
+    },
+    {
+      "name": "two current plans denied",
+      "passed": true
+    }
+  ],
+  "fixture_removed": true
+}

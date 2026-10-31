@@ -1,0 +1,24 @@
+{
+  "validated_at": "2026-10-31T16:00:00+05:30",
+  "scope": "Evidence-bound MCP candidate discovery and review",
+  "passed": true,
+  "checks": [
+    {"name": "go_tests", "passed": true, "detail": "Candidate rule tests verify allowed safe reads, unknown ordinary reads, blocked writes, snapshot-bound evidence and generation lock."},
+    {"name": "typescript_typecheck", "passed": true, "detail": "MCP Studio review UI typecheck passed."},
+    {"name": "next_production_build", "passed": true, "detail": "Next.js 16.4.3 compiled, typechecked and prerendered static routes."},
+    {"name": "database_fixture", "passed": true, "detail": "Migrations 001-012 applied in an isolated no-network PostgreSQL container; candidate and recommendation persistence passed with supported_generation false."},
+    {"name": "live_end_to_end", "passed": true, "detail": "Authenticated project registration, analysis, discovery and readback produced one allowed, one review-required and one blocked candidate."}
+  ],
+  "evidence": {
+    "project_id": "16ea15ab-ee0e-4adf-b5ff-467ba3ed8dc4",
+    "analysis_id": "9857454b-8f42-4ad7-8244-a4a9e7879799",
+    "candidate_count": 3,
+    "allowed": 1,
+    "needs_review": 1,
+    "blocked": 1,
+    "recommended_type": "server",
+    "supported_generation": false,
+    "snapshot_digest_evidence_matched": true
+  },
+  "next_gate": "Exact plan binding and explicit security approval before any generation."
+}

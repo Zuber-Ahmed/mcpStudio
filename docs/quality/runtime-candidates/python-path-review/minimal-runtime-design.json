@@ -1,0 +1,40 @@
+{
+  "status": "Proposed isolated candidate design; not adopted runtime policy",
+  "input_image_id": "sha256:ea6891d3e54f5d50597f2f27ede69385033f33afe20dcb5651e82675d4d6f762",
+  "preserve": [
+    "Python 3.14.10 and exact application distribution versions",
+    "application-agnostic core and local-first execution",
+    "OS/package provenance, licenses and complete retained-file hashes",
+    "CA trust, DNS/NSS, locale, timezone and user identity data as explicitly verified runtime requirements"
+  ],
+  "proposed_include": [
+    "Python interpreter, stdlib and pinned native/Python packages",
+    "recursive native dependency closure, including libuuid observed in fixture",
+    "explicitly inventoried runtime data and identity files",
+    "fixture modules for candidate validation only"
+  ],
+  "proposed_exclude": [
+    "shells and package managers",
+    "mount/umount/nsenter, login/set-ID and administrative utilities",
+    "Perl and ncurses CLI utilities",
+    "pip, ensurepip and wheel archives"
+  ],
+  "unresolved": [
+    "Tkinter native extension cannot resolve Tcl/Tk in existing slim image: explicitly exclude GUI support in the fixture candidate or supply reviewed dependencies; never silently claim all stdlib supported",
+    "ldd plus one execution snapshot does not cover dlopen, NSS, every import, subprocess or future plugin",
+    "service-client variant, TLS/CA/DNS/locale and actual workflow/S3 regression required",
+    "full provenance must survive image minimization; low scanner counts without coverage are not success"
+  ],
+  "acceptance": [
+    "exact input ID and per-retained-file hashes recorded",
+    "no missing dependencies for every supported retained native module",
+    "11 runtime/parser checks and 14 boundary/deadline checks",
+    "negative executable/package-installer/set-ID inventory",
+    "TLS trust and DNS/NSS/locale checks with controlled inputs",
+    "real Temporal/S3 client and restart/persistence regression before final adoption",
+    "raw scan plus retained-package provenance coverage comparison; no advisory suppression",
+    "document exclusions and remaining advisory applicability per exact image"
+  ],
+  "adopted": false,
+  "h04_complete": false
+}

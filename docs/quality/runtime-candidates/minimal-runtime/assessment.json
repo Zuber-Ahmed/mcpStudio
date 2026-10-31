@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "adopted": false,
+  "h04_complete": false,
+  "input_id": "sha256:bd320540b91dabf4f7fabe7bef85aefea4745d256895bbd6b2261c562db22049",
+  "recorded_at": "2026-10-30T14:58:40.823351+00:00",
+  "database_metadata": {
+    "Version": 2,
+    "NextUpdate": "2026-10-31T13:06:28.139592603Z",
+    "UpdatedAt": "2026-10-30T13:06:28.139593044Z",
+    "DownloadedAt": "2026-10-30T14:22:37.9639328Z"
+  },
+  "image_id": "sha256:dc612ae7bb151a095b3848d9cbf45c17311514267c39950d3121e223ff52f797",
+  "inventory": {
+    "distributions": {
+      "jmespath": "1.1.0",
+      "tree-sitter-typescript": "0.23.2",
+      "s3transfer": "0.19.3",
+      "python-dateutil": "2.9.0.post0",
+      "boto3": "1.43.121",
+      "tree-sitter": "0.26.0",
+      "urllib3": "2.8.0",
+      "six": "1.17.0",
+      "temporalio": "1.35.0",
+      "botocore": "1.43.121",
+      "nexus-rpc": "1.4.0",
+      "typing_extensions": "4.16.0",
+      "protobuf": "7.36.2",
+      "types-protobuf": "7.35.1.20260906"
+    },
+    "pip_present": false,
+    "ensurepip_present": false,
+    "wheel_dirs_present": false,
+    "uid": 65534
+  },
+  "worker-runtime-validation.json": 11,
+  "worker-boundary-validation.json": 14,
+  "local-service-validation.json": 9,
+  "scan": {
+    "counts": {
+      "LOW": 61,
+      "HIGH": 44,
+      "MEDIUM": 58,
+      "UNKNOWN": 1
+    },
+    "findings": 164,
+    "fixable": 0,
+    "library_findings": 0,
+    "os": {
+      "Family": "debian",
+      "Name": "13.7"
+    },
+    "sha256": "c6898aeb62470f6131020a4145c8adb84019aae1e214ef13a85222bb3f89c4ce"
+  },
+  "baseline_scan_counts": {
+    "LOW": 61,
+    "HIGH": 44,
+    "MEDIUM": 58,
+    "UNKNOWN": 1
+  },
+  "minimal_checks": 14,
+  "dns_checks": 2,
+  "scanner_package_coverage": {
+    "debian": 87,
+    "python-pkg": 14,
+    "cargo": 367
+  },
+  "validation_check_entries": 50,
+  "native_libraries_loaded": 82,
+  "scan_coverage_accepted": true
+}

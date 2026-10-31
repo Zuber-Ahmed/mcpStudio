@@ -1,0 +1,233 @@
+{
+  "scope": "Real PostgreSQL login-session privileges and scoped definer wrapper integration across migrations 001-003; no production principal provisioning or HTTP authentication",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "passed": true,
+  "published_ports": false,
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "001_admission_kernel.sql applies",
+      "passed": true
+    },
+    {
+      "name": "002_bound_validation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "003_runtime_roles.sql applies",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend raw read denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend raw write denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend audit insertion denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend audit truncation denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend DDL denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend internal function denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_backend owner role switch denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker raw read denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker raw write denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker audit insertion denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker audit truncation denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker DDL denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker internal function denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_worker owner role switch denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain raw read denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain raw write denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain audit insertion denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain audit truncation denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain DDL denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain internal function denied",
+      "passed": true
+    },
+    {
+      "name": "fixture_plain owner role switch denied",
+      "passed": true
+    },
+    {
+      "name": "unmapped backend cannot claim identity",
+      "passed": true
+    },
+    {
+      "name": "plain login cannot invoke public backend wrapper",
+      "passed": true
+    },
+    {
+      "name": "backend cannot execute worker publication",
+      "passed": true
+    },
+    {
+      "name": "worker cannot execute backend admission",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot set session authorization to owner",
+      "passed": true
+    },
+    {
+      "name": "custom tenant settings cannot spoof identity",
+      "passed": true
+    },
+    {
+      "name": "mapped backend admits its own run",
+      "passed": true
+    },
+    {
+      "name": "backend sees own run status",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant run status denied",
+      "passed": true
+    },
+    {
+      "name": "authorized replay returns same run",
+      "passed": true
+    },
+    {
+      "name": "unassigned worker cannot publish run",
+      "passed": true
+    },
+    {
+      "name": "worker cannot assign itself",
+      "passed": true
+    },
+    {
+      "name": "temporary shadow tables cannot redirect definer lookup",
+      "passed": true
+    },
+    {
+      "name": "assigned worker publishes through guarded function",
+      "passed": true
+    },
+    {
+      "name": "worker cannot republish terminal generation",
+      "passed": true
+    },
+    {
+      "name": "backend queues bound validation",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant cannot queue validation",
+      "passed": true
+    },
+    {
+      "name": "unassigned worker cannot record evidence",
+      "passed": true
+    },
+    {
+      "name": "assigned worker records mandatory execution evidence",
+      "passed": true
+    },
+    {
+      "name": "finalized evidence cannot be overwritten through wrapper",
+      "passed": true
+    },
+    {
+      "name": "authorized backend completes gated export",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant cannot export",
+      "passed": true
+    },
+    {
+      "name": "disabled principal loses wrapper access",
+      "passed": true
+    },
+    {
+      "name": "removed membership loses wrapper access",
+      "passed": true
+    },
+    {
+      "name": "revoked assignment loses worker access",
+      "passed": true
+    },
+    {
+      "name": "worker cannot enable its assignment",
+      "passed": true
+    },
+    {
+      "name": "runtime roles have no elevated flags",
+      "passed": true
+    },
+    {
+      "name": "definer functions owned by non-login kernel role",
+      "passed": true
+    },
+    {
+      "name": "all kernel functions have hardened search path",
+      "passed": true
+    },
+    {
+      "name": "future owner function is private by default",
+      "passed": true
+    },
+    {
+      "name": "successful export audit exists without runtime audit grants",
+      "passed": true
+    },
+    {
+      "name": "physical catalog includes runtime principal and assignment boundaries",
+      "passed": true
+    }
+  ]
+}

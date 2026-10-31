@@ -1,0 +1,80 @@
+{
+  "scope": "Selected RFC numeric/Unicode canonicalization vectors; no runtime plan approval proof",
+  "libraries": {
+    "python": "rfc8785 0.1.4",
+    "javascript": "canonicalize 2.1.0"
+  },
+  "source": "https://www.rfc-editor.org/rfc/rfc8785",
+  "passed": true,
+  "checks": [
+    {
+      "name": "object key sorting",
+      "passed": true,
+      "python": "{\"a\":1,\"b\":2}",
+      "javascript": "{\"a\":1,\"b\":2}",
+      "sha256": "43258cff783fe7036d8a43033f830adfc60ec037382473548ac742b888292777"
+    },
+    {
+      "name": "RFC numeric serialization",
+      "passed": true,
+      "python": "[333333333.3333333,1e+30,4.5,0.002,1e-27]",
+      "javascript": "[333333333.3333333,1e+30,4.5,0.002,1e-27]",
+      "sha256": "7c6bc86d861387d823ae596b79ca0b26567dddc22a77acb1f4e06d441f555adf"
+    },
+    {
+      "name": "negative zero",
+      "passed": true,
+      "python": "[0,0]",
+      "javascript": "[0,0]",
+      "sha256": "3d5812abc84c11768aa73a732c85d75dbed439188f5bb3239e9b762ea31d9862"
+    },
+    {
+      "name": "UTF16 key order",
+      "passed": true,
+      "python": "{\"\\r\":1,\"1\":2,\"\u0080\":3,\"\u00f6\":4,\"\u20ac\":5,\"\ud83d\ude00\":6,\"\ufb33\":7}",
+      "javascript": "{\"\\r\":1,\"1\":2,\"\u0080\":3,\"\u00f6\":4,\"\u20ac\":5,\"\ud83d\ude00\":6,\"\ufb33\":7}",
+      "sha256": "4bd52d82f332c2e5c7206abd57c74b45dd4f0fef63ab7af87b8bde4481e450e7"
+    },
+    {
+      "name": "control escapes",
+      "passed": true,
+      "python": "{\"s\":\"\\b\\t\\n\\f\\r\\\"\\\\\"}",
+      "javascript": "{\"s\":\"\\b\\t\\n\\f\\r\\\"\\\\\"}",
+      "sha256": "bfe21ab9f72ad8147a595795d6cbcbe11585e094a9954a9a70021336a8141ca3"
+    },
+    {
+      "name": "ordered arrays retained",
+      "passed": true,
+      "python": "{\"args\":[\"--stdio\",\"--safe\"]}",
+      "javascript": "{\"args\":[\"--stdio\",\"--safe\"]}",
+      "sha256": "dd2e5936fb5427e1b6021d97a71ea1c1d86dfc7f37f7a0b170a1aaa6ddf05cef"
+    },
+    {
+      "name": "no Unicode normalization",
+      "passed": true,
+      "python": "[\"\u00e9\",\"e\u0301\"]",
+      "javascript": "[\"\u00e9\",\"e\u0301\"]",
+      "sha256": "4f9aefe2a56dde33aa0522021cb5e8692f35b700043dbee664b3611e2b92f724"
+    },
+    {
+      "name": "NaN rejected",
+      "passed": true,
+      "scope": "both libraries"
+    },
+    {
+      "name": "Infinity rejected",
+      "passed": true,
+      "scope": "both libraries"
+    },
+    {
+      "name": "unsafe integer rejected",
+      "passed": true,
+      "scope": "Python library boundary"
+    },
+    {
+      "name": "unpaired surrogate rejected",
+      "passed": true,
+      "scope": "Python library boundary"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "entities": 23,
+  "mapped_fields_checked": 209,
+  "scope": "Field presence against independent catalog, not semantic completion",
+  "failures": []
+}

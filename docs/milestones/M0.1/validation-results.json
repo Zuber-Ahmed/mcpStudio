@@ -1,0 +1,430 @@
+{
+  "generatedUtc": "2026-10-28T17:27:11.0565859Z",
+  "scope": "M0.1 inventory integrity only",
+  "passed": true,
+  "checkCount": 72,
+  "failedCount": 0,
+  "checks": [
+    {
+      "name": "artifact:README.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:inventory.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:requirements-traceability.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:gaps-and-risks.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:decisions.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:status-tracker.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:validation.md",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "artifact:source-conversation.json",
+      "passed": true,
+      "detail": "Required review artifact"
+    },
+    {
+      "name": "source ZIP identity",
+      "passed": true,
+      "detail": "9F05120102A9017D118492E3ADCD02B5C4F4459858DCCBCCC787421B6E0B7319"
+    },
+    {
+      "name": "source file count",
+      "passed": true,
+      "detail": "Observed 11; expected 11"
+    },
+    {
+      "name": "HTML:dashboard",
+      "passed": true,
+      "detail": "Source screen HTML exists"
+    },
+    {
+      "name": "PNG:dashboard",
+      "passed": true,
+      "detail": "PNG signature checked; visual review recorded separately"
+    },
+    {
+      "name": "HTML:project_setup",
+      "passed": true,
+      "detail": "Source screen HTML exists"
+    },
+    {
+      "name": "PNG:project_setup",
+      "passed": true,
+      "detail": "PNG signature checked; visual review recorded separately"
+    },
+    {
+      "name": "HTML:architecture_explorer",
+      "passed": true,
+      "detail": "Source screen HTML exists"
+    },
+    {
+      "name": "PNG:architecture_explorer",
+      "passed": true,
+      "detail": "PNG signature checked; visual review recorded separately"
+    },
+    {
+      "name": "HTML:mcp_studio",
+      "passed": true,
+      "detail": "Source screen HTML exists"
+    },
+    {
+      "name": "PNG:mcp_studio",
+      "passed": true,
+      "detail": "PNG signature checked; visual review recorded separately"
+    },
+    {
+      "name": "HTML:results_validation",
+      "passed": true,
+      "detail": "Source screen HTML exists"
+    },
+    {
+      "name": "PNG:results_validation",
+      "passed": true,
+      "detail": "PNG signature checked; visual review recorded separately"
+    },
+    {
+      "name": "18 unique requirement rows",
+      "passed": true,
+      "detail": "Observed 18 rows"
+    },
+    {
+      "name": "trace:R01",
+      "passed": true,
+      "detail": "Eight columns with planned T01; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R02",
+      "passed": true,
+      "detail": "Eight columns with planned T02; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R03",
+      "passed": true,
+      "detail": "Eight columns with planned T03; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R04",
+      "passed": true,
+      "detail": "Eight columns with planned T04; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R05",
+      "passed": true,
+      "detail": "Eight columns with planned T05; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R06",
+      "passed": true,
+      "detail": "Eight columns with planned T06; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R07",
+      "passed": true,
+      "detail": "Eight columns with planned T07; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R08",
+      "passed": true,
+      "detail": "Eight columns with planned T08; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R09",
+      "passed": true,
+      "detail": "Eight columns with planned T09; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R10",
+      "passed": true,
+      "detail": "Eight columns with planned T10; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R11",
+      "passed": true,
+      "detail": "Eight columns with planned T11; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R12",
+      "passed": true,
+      "detail": "Eight columns with planned T12; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R13",
+      "passed": true,
+      "detail": "Eight columns with planned T13; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R14",
+      "passed": true,
+      "detail": "Eight columns with planned T14; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R15",
+      "passed": true,
+      "detail": "Eight columns with planned T15; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R16",
+      "passed": true,
+      "detail": "Eight columns with planned T16; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R17",
+      "passed": true,
+      "detail": "Eight columns with planned T17; does not validate runtime behavior"
+    },
+    {
+      "name": "trace:R18",
+      "passed": true,
+      "detail": "Eight columns with planned T18; does not validate runtime behavior"
+    },
+    {
+      "name": "gap:G01",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G02",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G03",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G04",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G05",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G06",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G07",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G08",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G09",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G10",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G11",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G12",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G13",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G14",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "gap:G15",
+      "passed": true,
+      "detail": "Gap defined and referenced by requirement"
+    },
+    {
+      "name": "decision:ADR-001",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-002",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-003",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-004",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-005",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-006",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-007",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-008",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "decision:ADR-009",
+      "passed": true,
+      "detail": "Decision inventory record exists"
+    },
+    {
+      "name": "screen:S1",
+      "passed": true,
+      "detail": "Screen included in traceability"
+    },
+    {
+      "name": "screen:S2",
+      "passed": true,
+      "detail": "Screen included in traceability"
+    },
+    {
+      "name": "screen:S3",
+      "passed": true,
+      "detail": "Screen included in traceability"
+    },
+    {
+      "name": "screen:S4",
+      "passed": true,
+      "detail": "Screen included in traceability"
+    },
+    {
+      "name": "screen:S5",
+      "passed": true,
+      "detail": "Screen included in traceability"
+    },
+    {
+      "name": "dashboard mismatch anchors",
+      "passed": true,
+      "detail": "Conflicting UI/script filter values present"
+    },
+    {
+      "name": "generation prototype anchor",
+      "passed": true,
+      "detail": "Timer prototype exists; not a generation test"
+    },
+    {
+      "name": "export distinction anchors",
+      "passed": true,
+      "detail": "Blocked/draft/skip source text present"
+    },
+    {
+      "name": "conversation provenance",
+      "passed": true,
+      "detail": "Five available turns; no older cursor"
+    }
+  ],
+  "sourceManifest": [
+    {
+      "path": "architecture_explorer\\code.html",
+      "bytes": 32248,
+      "sha256": "6814D56F14B83A51BDB4C57B0CBB52F4651739F6EAFD1EFAC3848E02A7E6FA78"
+    },
+    {
+      "path": "architecture_explorer\\screen.png",
+      "bytes": 228904,
+      "sha256": "2644BDE4AD47BB14C5B20B78F0199869B4152F4539B2E957CB2163ABED1F95C6"
+    },
+    {
+      "path": "dashboard\\code.html",
+      "bytes": 21476,
+      "sha256": "8F44F35FFDB6791ECCB23C216BE2E4ED1EF8DE5584E63160FF344AA4E1879DF2"
+    },
+    {
+      "path": "dashboard\\screen.png",
+      "bytes": 128426,
+      "sha256": "D614D189EC7AD1FF82CB9D92D50910AE34B007178E2FC9BA20A9BC3134195CBE"
+    },
+    {
+      "path": "mcp_studio_minimal\\DESIGN.md",
+      "bytes": 12038,
+      "sha256": "BC4263D7AD80E4722C7DC5E07A659791D2F11385DED098CFE62AADA34926FADA"
+    },
+    {
+      "path": "mcp_studio\\code.html",
+      "bytes": 39294,
+      "sha256": "52BD4631032D0E2AEE010E1ADE0B58E2ABBB64C210AF4B846D88A5881D08C9D5"
+    },
+    {
+      "path": "mcp_studio\\screen.png",
+      "bytes": 597912,
+      "sha256": "841C9D4CB422C86AF605EE3753CF15EE45D61AC61085214EC5E7AEA41379B686"
+    },
+    {
+      "path": "project_setup\\code.html",
+      "bytes": 22273,
+      "sha256": "B9AE13E48E1390751A0139D01B3AFC1B49F09EBF7B31751AF81617211721854F"
+    },
+    {
+      "path": "project_setup\\screen.png",
+      "bytes": 387028,
+      "sha256": "B971594743BCBBC3EC2028EB4744C3CB7EFBD6648C98487F752706E1C92BEF1C"
+    },
+    {
+      "path": "results_validation\\code.html",
+      "bytes": 48163,
+      "sha256": "606C5005CDAA608A50CA0CDE8F8529BDFE09E1F5C762CF9B87110D1DF7060109"
+    },
+    {
+      "path": "results_validation\\screen.png",
+      "bytes": 321742,
+      "sha256": "EF9DBE2F2B64E988E02811B5E57C9574A078183CB45C17F0B75A2A97F0C0F4B0"
+    }
+  ],
+  "runtimeTestsExecuted": 0,
+  "verifiedStudioEndpoints": 0,
+  "verifiedDatabaseEntities": 0,
+  "gate": "Blocked: missing authoritative inputs and unresolved conflicts"
+}

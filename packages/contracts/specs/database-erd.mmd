@@ -1,0 +1,289 @@
+%% M0.3 synchronized logical contract; no physical DDL enforced.
+erDiagram
+  TENANT ||--o{ MEMBERSHIP : has
+  USER ||--o{ MEMBERSHIP : has
+  TENANT ||--o{ PROJECT : owns
+  PROJECT ||--o{ ANALYSIS_RUN : analyzes
+  ANALYSIS_RUN ||--o{ GRAPH_NODE : contains
+  ANALYSIS_RUN ||--o{ GRAPH_EDGE : contains
+  GRAPH_NODE ||--o{ GRAPH_EDGE : source
+  GRAPH_NODE ||--o{ GRAPH_EDGE : target
+  ANALYSIS_RUN ||--o{ PLAN : informs
+  PLAN ||--o{ APPROVAL : receives
+  USER ||--o{ APPROVAL : records
+  PLAN ||--o{ GENERATION_RUN : generates
+  APPROVAL ||--o{ GENERATION_RUN : authorizes
+  GENERATION_RUN ||--o{ ARTIFACT : produces
+  GENERATION_RUN ||--o{ VALIDATION_RUN : validates
+  VALIDATION_RUN ||--o{ VALIDATION_CHECK : contains
+  TENANT ||--o{ AUDIT_EVENT : records
+  USER ||--o{ AUDIT_EVENT : acts
+  PROJECT ||--o{ SOURCE_SNAPSHOT : snapshots
+  SOURCE_SNAPSHOT ||--o{ ANALYSIS_RUN : analyzed_as
+  ANALYSIS_RUN ||--o{ CANDIDATE : discovers
+  GRAPH_NODE ||--o{ CANDIDATE : grounds
+  ANALYSIS_RUN ||--o{ RECOMMENDATION : recommends
+  RECOMMENDATION ||--o{ PLAN : informs
+  POLICY ||--o{ PLAN : pins
+  POLICY ||--o{ VALIDATION_RUN : governs
+  PROJECT ||--o{ INFERENCE_CONSENT : permits
+  GENERATION_RUN ||--o{ FINDING : reports
+  PLAN ||--o{ PLAN_REVOCATION : revoked_by
+  USER ||--o{ PLAN_REVOCATION : records
+  TENANT ||--o{ IDEMPOTENCY_RECORD : deduplicates
+  TENANT ||--o{ OUTBOX_EVENT : schedules
+  TENANT {
+    uuid id
+    string name
+  }
+  USER {
+    uuid id
+    string subject
+  }
+  MEMBERSHIP {
+    uuid tenant_id
+    uuid user_id
+    string role
+  }
+  PROJECT {
+    uuid id
+    uuid tenant_id
+    string name
+    json source
+    datetime created_at
+    datetime updated_at
+  }
+  ANALYSIS_RUN {
+    uuid id
+    uuid tenant_id
+    uuid project_id
+    string status
+    string source_digest
+    json diagnostics
+    datetime created_at
+    uuid snapshot_id
+    string resolved_revision
+    json analyzer_versions
+    json scope
+    string semantic_mode
+    uuid consent_id
+    uuid previous_run_id
+    datetime completed_at
+  }
+  GRAPH_NODE {
+    uuid id
+    uuid tenant_id
+    uuid analysis_run_id
+    string kind
+    json evidence
+    string label
+    string provenance
+    json confidence
+  }
+  GRAPH_EDGE {
+    uuid id
+    uuid tenant_id
+    uuid analysis_run_id
+    uuid from_node_id
+    uuid to_node_id
+    string kind
+    string provenance
+    json evidence
+  }
+  PLAN {
+    uuid id
+    uuid tenant_id
+    uuid analysis_run_id
+    int version
+    string status
+    string integration_type
+    string content_hash
+    json configuration
+    string policy_version
+    uuid snapshot_id
+    uuid recommendation_id
+    int recommendation_version
+    json candidate_ids
+    string rationale
+    json risks
+    json canonical_payload
+    string canonicalization
+    json generator
+    uuid policy_id
+    string override_reason
+    boolean is_current
+  }
+  APPROVAL {
+    uuid id
+    uuid tenant_id
+    uuid plan_id
+    uuid actor_id
+    string plan_hash
+    datetime approved_at
+    int plan_version
+    boolean security_confirmed
+    datetime revoked_at
+  }
+  GENERATION_RUN {
+    uuid id
+    uuid tenant_id
+    uuid plan_id
+    uuid approval_id
+    string status
+    datetime created_at
+    string plan_hash
+    json generator
+    string artifact_set_digest
+    uuid previous_run_id
+    datetime completed_at
+  }
+  ARTIFACT {
+    uuid id
+    uuid tenant_id
+    uuid generation_run_id
+    string path
+    string storage_key
+    string sha256
+    string media_type
+    int size_bytes
+  }
+  VALIDATION_RUN {
+    uuid id
+    uuid tenant_id
+    uuid generation_run_id
+    string status
+    string policy_version
+    datetime created_at
+    string artifact_set_digest
+    uuid policy_id
+    uuid previous_run_id
+    datetime completed_at
+  }
+  VALIDATION_CHECK {
+    uuid id
+    uuid tenant_id
+    uuid validation_run_id
+    string name
+    boolean mandatory
+    string status
+    int exit_code
+    string log_reference
+    string command
+    string tool_version
+    datetime started_at
+    datetime completed_at
+    string reason
+    json finding_ids
+  }
+  AUDIT_EVENT {
+    uuid id
+    uuid tenant_id
+    uuid actor_id
+    string action
+    string resource_id
+    datetime created_at
+  }
+  SOURCE_SNAPSHOT {
+    uuid id
+    uuid tenant_id
+    uuid project_id
+    string source_digest
+    string storage_key
+    string resolved_revision
+    datetime created_at
+  }
+  CANDIDATE {
+    uuid id
+    uuid tenant_id
+    uuid analysis_run_id
+    uuid graph_node_id
+    string finding_id
+    string operation_type
+    json side_effects
+    string sensitivity
+    json required_scopes
+    json input_schema
+    json output_schema
+    string eligibility
+    json reason_codes
+    json evidence
+    json detector
+    string provenance
+    json confidence
+  }
+  RECOMMENDATION {
+    uuid id
+    uuid tenant_id
+    uuid analysis_run_id
+    int version
+    string source_digest
+    string recommended_type
+    string rationale
+    json candidate_ids
+    json risks
+    json required_reviews
+    boolean supported_generation
+    string availability_reason
+  }
+  POLICY {
+    uuid id
+    uuid tenant_id
+    string policy_key
+    string version
+    json required_checks
+    string schema_version
+    string content_hash
+  }
+  INFERENCE_CONSENT {
+    uuid id
+    uuid tenant_id
+    uuid project_id
+    uuid actor_id
+    string source_digest
+    string provider_id
+    json payload_classes
+    string redaction_policy
+    string retention_disclosure
+    datetime expires_at
+    datetime revoked_at
+  }
+  IDEMPOTENCY_RECORD {
+    uuid id
+    uuid tenant_id
+    uuid actor_id
+    string operation_id
+    string key
+    string request_digest
+    uuid resource_id
+    string status
+    json response
+    datetime created_at
+  }
+  OUTBOX_EVENT {
+    uuid id
+    uuid tenant_id
+    uuid aggregate_id
+    string event_type
+    json payload
+    datetime created_at
+    datetime dispatched_at
+    int delivery_attempts
+  }
+  FINDING {
+    uuid id
+    uuid tenant_id
+    uuid generation_run_id
+    string stable_key
+    string severity
+    string code
+    string message
+    json evidence
+  }
+  PLAN_REVOCATION {
+    uuid id
+    uuid tenant_id
+    uuid plan_id
+    uuid actor_id
+    string reason
+    datetime revoked_at
+  }

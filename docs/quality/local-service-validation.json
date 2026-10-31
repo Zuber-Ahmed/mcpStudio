@@ -1,0 +1,58 @@
+{
+  "scope": "Local Temporal/PostgreSQL/SeaweedFS readiness with trusted fixture data only",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Temporal gRPC health",
+      "passed": true
+    },
+    {
+      "name": "dedicated local namespace available",
+      "passed": true
+    },
+    {
+      "name": "authenticated local S3 bucket access",
+      "passed": true
+    },
+    {
+      "name": "incorrect storage credentials denied",
+      "passed": true
+    },
+    {
+      "name": "Temporal workflow executes storage activity",
+      "passed": true
+    },
+    {
+      "name": "S3 upload download bytes match",
+      "passed": true
+    },
+    {
+      "name": "artifact digest and metadata match",
+      "passed": true
+    },
+    {
+      "name": "Temporal gRPC health",
+      "passed": true
+    },
+    {
+      "name": "completed workflow result survives service restart",
+      "passed": true
+    },
+    {
+      "name": "stored object survives storage restart",
+      "passed": true
+    },
+    {
+      "name": "unique fixture object cleanup",
+      "passed": true
+    }
+  ],
+  "fixture": {
+    "workflow_id": "m03-storage-0cd5180a122e47238431ad2e06c7e896",
+    "key": "readiness/0cd5180a122e47238431ad2e06c7e896.txt",
+    "sha256": "4f0d9f931fc69a0d89db6a12d7e5c5e0b5c32f637562ca407c7dc23b0e48ba45",
+    "namespace": "mcpstudio-local"
+  },
+  "restart_phase_complete": true,
+  "fixture_object_removed": true
+}

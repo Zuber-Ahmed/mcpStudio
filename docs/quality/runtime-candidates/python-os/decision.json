@@ -1,0 +1,21 @@
+{
+  "recorded_date": "2026-10-30",
+  "scope": "Candidate selection, not vulnerability applicability or acceptance",
+  "trixie": "Not selected for security remediation: only tzdata updated; 164 findings and 44 High remain.",
+  "bookworm": "Not adopted: 243 findings remain, including 59 High; scanner counts alone do not establish a safer supported runtime.",
+  "checks_passed": 50,
+  "h04_complete": false,
+  "m03_complete": false,
+  "approved_pins_changed": false,
+  "next": "Move to package/binary-specific applicability and minimal-runtime design for Python OS findings; separately remediate PostgreSQL/embedded Go/Alpine images. Do not repeat unchanged base refreshes as remediation.",
+  "source_notes": [
+    {
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-78408",
+      "note": "Debian lists bookworm/trixie util-linux vulnerable; sid/forky fixed. Trixie no-dsa minor issue. Runtime-specific applicability has not been decided."
+    },
+    {
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-54369",
+      "note": "Debian lists stable ACL packages vulnerable, fixes in sid/forky; notes ABI changes and deferred stable updates. No individual advisory waived."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "recorded_date": "2026-10-30",
+  "scope": "Corroborated pip and vendored metadata; package advisory presence, no code-path reachability claim",
+  "source": "https://api.osv.dev/v1/querybatch",
+  "query_succeeded": true,
+  "packages": [
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "msgpack",
+      "version": "1.1.2",
+      "advisory_ids": [
+        "GHSA-6v7p-g79w-8964",
+        "GHSA-j586-36cw-2gc2",
+        "PYSEC-2026-3625"
+      ]
+    },
+    {
+      "name": "setuptools",
+      "version": "70.3.0",
+      "advisory_ids": [
+        "GHSA-5rjg-fvgr-3xxf",
+        "GHSA-h35f-9h28-mq5c",
+        "GHSA-xmj3-9gf7-h52w",
+        "PYSEC-2025-49",
+        "PYSEC-2026-3447"
+      ]
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "advisory_ids": [
+        "GHSA-8988-9cw3-xx77",
+        "GHSA-gh4c-6fx4-qh6g",
+        "GHSA-vxq7-64xx-v4gw",
+        "PYSEC-2026-4175",
+        "PYSEC-2026-4176",
+        "PYSEC-2026-4177"
+      ]
+    }
+  ]
+}

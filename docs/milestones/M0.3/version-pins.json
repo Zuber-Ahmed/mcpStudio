@@ -1,0 +1,27 @@
+{
+  "recorded_date": "2026-10-28",
+  "status": "selected exact candidate pins; not installed or interoperability validated",
+  "runtime": {
+    "node": {"version": "26.13.0", "source": "https://nodejs.org/dist/index.json"},
+    "npm": {"version": "11.20.0", "source": "https://nodejs.org/dist/index.json"},
+    "go": {"version": "1.27.3", "source": "https://go.dev/dl/?mode=json"},
+    "python": {"version": "3.14.10", "source": "https://www.python.org/downloads/release/python-31410/"}
+  },
+  "packages": {
+    "next": {"version": "16.4.3", "source": "https://registry.npmjs.org/next/latest"},
+    "react": {"version": "19.3.1", "source": "https://registry.npmjs.org/react/latest"},
+    "typescript": {"version": "5.9.3", "source": "https://github.com/microsoft/TypeScript/releases/tag/v5.9.3", "reason": "Pin established JS compiler API generation for analyzer work; newer compiler migration is separate compatibility work."},
+    "@modelcontextprotocol/server": {"version": "2.4.0", "source": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.4.0/packages/server/package.json"},
+    "@modelcontextprotocol/client": {"version": "2.4.0", "source": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/v2.4.0/packages/client/package.json"},
+    "openapi-typescript": {"version": "7.13.0", "source": "https://github.com/openapi-ts/openapi-typescript/releases"}
+  },
+  "services": {
+    "postgresql": {"version": "17.11", "source": "https://www.postgresql.org/support/versioning/", "image_digest": null},
+    "temporal": {"version": "1.32.1", "source": "https://github.com/temporalio/temporal/releases/tag/v1.32.1", "image_digest": null},
+    "s3_compatible_store": {"implementation": "SeaweedFS", "version": "4.51", "source": "https://github.com/seaweedfs/seaweedfs/releases/tag/4.51", "image_digest": null, "status": "local S3 implementation candidate; configuration/interoperability not tested"},
+    "redis": {"status": "deferred per approved M0.2"}
+  },
+  "mcp": {"protocol_version": "2026-07-28", "transport": "stdio", "sdk_generation": "2", "test_client": "@modelcontextprotocol/client@2.4.0", "source": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio", "compatibility_test": "not run; fixture discovery/invocation remains required"},
+  "canonicalization": {"algorithm": "RFC8785+MCPStudio-sets-v1", "source": "https://www.rfc-editor.org/rfc/rfc8785", "implementation_dependency": null, "status": "algorithm pinned; implementation retrieval/full RFC vector verification blocked"},
+  "unresolved": ["Container image digests and supported OS/architecture manifests", "Go/Python workflow SDK and parser implementation package pins", "React DOM matching version and other frontend packages", "Immutable dependency lockfiles and audit", "Full OpenAPI validator/client generation execution", "Canonicalizer package and full Unicode/float vectors"]
+}

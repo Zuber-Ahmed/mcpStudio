@@ -1,0 +1,246 @@
+{
+  "scope": "Physical plan/policy binding, validation/export guard and append-only audit slice; trusted evidence fixtures, not object-byte verification or application API",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "passed": true,
+  "published_ports": false,
+  "fixture_run_id": "c5d924f0-6eea-4ca3-9a6e-4ff9f6f74c7c",
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "migration 001_admission_kernel.sql applies",
+      "passed": true
+    },
+    {
+      "name": "migration 002_bound_validation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "empty mandatory policy denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate mandatory check denied",
+      "passed": true
+    },
+    {
+      "name": "null mandatory check denied",
+      "passed": true
+    },
+    {
+      "name": "blank mandatory check denied",
+      "passed": true
+    },
+    {
+      "name": "foreign analysis denied",
+      "passed": true
+    },
+    {
+      "name": "changed source denied",
+      "passed": true
+    },
+    {
+      "name": "wrong policy denied",
+      "passed": true
+    },
+    {
+      "name": "wrong policy version denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate candidates denied",
+      "passed": true
+    },
+    {
+      "name": "foreign candidate denied",
+      "passed": true
+    },
+    {
+      "name": "ineligible candidate denied",
+      "passed": true
+    },
+    {
+      "name": "empty candidates denied",
+      "passed": true
+    },
+    {
+      "name": "unsupported mode denied",
+      "passed": true
+    },
+    {
+      "name": "unsupported transport denied",
+      "passed": true
+    },
+    {
+      "name": "changed bytes do not match plan digest",
+      "passed": true
+    },
+    {
+      "name": "canonical payload hash and binding accepted",
+      "passed": true
+    },
+    {
+      "name": "candidate links derive from exact bound payload",
+      "passed": true
+    },
+    {
+      "name": "unbound extra candidate link denied",
+      "passed": true
+    },
+    {
+      "name": "policy mutation denied",
+      "passed": true
+    },
+    {
+      "name": "plan hash mutation denied",
+      "passed": true
+    },
+    {
+      "name": "binding mutation denied",
+      "passed": true
+    },
+    {
+      "name": "candidate mutation denied",
+      "passed": true
+    },
+    {
+      "name": "analysis source mutation denied",
+      "passed": true
+    },
+    {
+      "name": "admission without bound plan denied",
+      "passed": true
+    },
+    {
+      "name": "run cannot change admitted identity",
+      "passed": true
+    },
+    {
+      "name": "validation requires succeeded generation",
+      "passed": true
+    },
+    {
+      "name": "terminal generation cannot be reopened",
+      "passed": true
+    },
+    {
+      "name": "artifact digest replacement denied",
+      "passed": true
+    },
+    {
+      "name": "changed artifact validation denied",
+      "passed": true
+    },
+    {
+      "name": "weaker policy validation denied",
+      "passed": true
+    },
+    {
+      "name": "all mandatory checks initialized not_run",
+      "passed": true
+    },
+    {
+      "name": "queued validation cannot export",
+      "passed": true
+    },
+    {
+      "name": "passed requires execution metadata",
+      "passed": true
+    },
+    {
+      "name": "nonzero exit cannot pass",
+      "passed": true
+    },
+    {
+      "name": "failed exit zero requires assertion reason",
+      "passed": true
+    },
+    {
+      "name": "skipped cannot carry execution evidence",
+      "passed": true
+    },
+    {
+      "name": "check identity cannot be moved",
+      "passed": true
+    },
+    {
+      "name": "mandatory check cannot be deleted",
+      "passed": true
+    },
+    {
+      "name": "skipped mandatory check blocks completed export",
+      "passed": true
+    },
+    {
+      "name": "failed assertion with exit zero blocks export",
+      "passed": true
+    },
+    {
+      "name": "failed validation cannot export despite passing checks",
+      "passed": true
+    },
+    {
+      "name": "completed validation with missing pass cannot export",
+      "passed": true
+    },
+    {
+      "name": "finalized check cannot be forged later",
+      "passed": true
+    },
+    {
+      "name": "export binds exact artifact digest",
+      "passed": true
+    },
+    {
+      "name": "foreign actor cannot export",
+      "passed": true
+    },
+    {
+      "name": "revoked approval denies export",
+      "passed": true
+    },
+    {
+      "name": "superseded plan denies export",
+      "passed": true
+    },
+    {
+      "name": "all required evidence permits approved record",
+      "passed": true
+    },
+    {
+      "name": "audit cannot update",
+      "passed": true
+    },
+    {
+      "name": "audit cannot delete",
+      "passed": true
+    },
+    {
+      "name": "audit cannot truncate",
+      "passed": true
+    },
+    {
+      "name": "export record cannot be relabeled",
+      "passed": true
+    },
+    {
+      "name": "successful export has atomic audit entry",
+      "passed": true
+    },
+    {
+      "name": "export rollback also removes audit event",
+      "passed": true
+    },
+    {
+      "name": "export revocation transaction lock observed",
+      "passed": true
+    },
+    {
+      "name": "export waits for revocation transaction",
+      "passed": true
+    },
+    {
+      "name": "committed concurrent revocation denies export",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "image_id": "sha256:ea6891d3e54f5d50597f2f27ede69385033f33afe20dcb5651e82675d4d6f762",
+  "review": [
+    {
+      "id": "CVE-2026-76642",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-76642",
+      "packages": [
+        "bsdutils",
+        "libblkid1",
+        "liblastlog2-2",
+        "libmount1",
+        "libsmartcols1",
+        "libuuid1",
+        "login",
+        "mount",
+        "util-linux"
+      ],
+      "affected_path_summary": "Privileged post-mount hooks after a failed helper",
+      "local_evidence": "mount is present, including set-ID mode. Fixture uses UID 65534, zero capability sets and no-new-privileges; no application mount workflow is implemented.",
+      "next_action": "Remove mount/helper tools from a minimal candidate; retain needed shared libraries. Privilege constraints are scoped controls, not a universal waiver.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-78408",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78408",
+      "packages": [
+        "bsdutils",
+        "libblkid1",
+        "liblastlog2-2",
+        "libmount1",
+        "libsmartcols1",
+        "libuuid1",
+        "login",
+        "mount",
+        "util-linux"
+      ],
+      "affected_path_summary": "Privileged nsenter cgroup joining and inherited descriptor",
+      "local_evidence": "nsenter is present; no privileged namespace join is performed by this fixture.",
+      "next_action": "Exclude nsenter; prohibit privilege elevation in candidate launch contract.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-78409",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78409",
+      "packages": [
+        "bsdutils",
+        "libblkid1",
+        "liblastlog2-2",
+        "libmount1",
+        "libsmartcols1",
+        "libuuid1",
+        "login",
+        "mount",
+        "util-linux"
+      ],
+      "affected_path_summary": "Privileged mount subdirectory resolution with intermediate symlinks",
+      "local_evidence": "mount present; /etc/fstab has no configured entries. Fixture controls deny privilege gain.",
+      "next_action": "Exclude mount tooling; future host path controls remain H03 and cannot be inferred from this test.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-78410",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78410",
+      "packages": [
+        "bsdutils",
+        "libblkid1",
+        "liblastlog2-2",
+        "libmount1",
+        "libsmartcols1",
+        "libuuid1",
+        "login",
+        "mount",
+        "util-linux"
+      ],
+      "affected_path_summary": "Restricted privileged bind mount with mutable source path",
+      "local_evidence": "mount present; no configured fstab entries in the image.",
+      "next_action": "Exclude mount tooling; no hostile path exploit or universal non-applicability claim.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-54369",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-54369",
+      "packages": [
+        "libacl1"
+      ],
+      "affected_path_summary": "Privileged caller of libacl pathname functions",
+      "local_evidence": "libacl is installed. It was not observed in the post-fixture process maps. This snapshot does not prove it cannot load later.",
+      "next_action": "Map all retained native dependencies and candidate subprocess contracts before excluding libacl or deciding applicability.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2025-69720",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2025-69720",
+      "packages": [
+        "libncursesw6",
+        "libtinfo6",
+        "ncurses-base",
+        "ncurses-bin"
+      ],
+      "affected_path_summary": "infocmp CLI analyze_string path",
+      "local_evidence": "infocmp exists. Source-level findings also appear on ncurses runtime/data packages.",
+      "next_action": "Exclude CLI; retain ncurses/tinfo when required by Python native extensions. Do not delete shared libraries solely because a CLI advisory shares the source package.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-16742",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-16742",
+      "packages": [
+        "libsystemd0",
+        "libudev1"
+      ],
+      "affected_path_summary": "systemd-homed managed-user operation",
+      "local_evidence": "systemd-homed/homectl are absent from checked standard paths and PATH; installed systemd-source packages are libsystemd0/libudev1.",
+      "next_action": "Component-absence evidence supports further scoped applicability review; preserve raw source-package findings and validate final filesystem before disposition.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    },
+    {
+      "id": "CVE-2026-9538",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-9538",
+      "packages": [
+        "perl-base"
+      ],
+      "affected_path_summary": "Perl Archive::Tar parsing untrusted archive entries",
+      "local_evidence": "perl-base installed, but a trusted Perl import probe cannot locate Archive::Tar in its configured include paths.",
+      "next_action": "Exclude Perl tooling from candidate. Import failure is scoped to this image/include path, not an assertion about future modules or every image.",
+      "disposition": "OPEN; no suppression or risk acceptance"
+    }
+  ]
+}

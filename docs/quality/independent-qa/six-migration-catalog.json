@@ -1,0 +1,1399 @@
+{
+  "scope": "Actual PostgreSQL catalog after migrations 001-006 in metadata-chain fixture",
+  "columns": [
+    {
+      "table": "actor",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "project_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "source_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "next_version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "snapshot_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "resolved_revision",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "status",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "completed_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "analysis",
+      "column": "diagnostics",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "analyzer_versions",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "scope",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "semantic_mode",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "analysis",
+      "column": "consent_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "analysis",
+      "column": "previous_run_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "approval",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "plan_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "plan_hash",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "revoked_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "approval",
+      "column": "approved_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "plan_version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "approval",
+      "column": "security_confirmed",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "generation_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "path",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "storage_key",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "sha256",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "media_type",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "size_bytes",
+      "type": "bigint",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact",
+      "column": "path_folded",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "artifact_set",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact_set",
+      "column": "run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact_set",
+      "column": "artifact_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "artifact_set",
+      "column": "canonical_manifest",
+      "type": "bytea",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "sequence_no",
+      "type": "bigint",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "entity",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "entity_key",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "event_type",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "recorded_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "audit_event",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "audit_event",
+      "column": "resource_id",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "analysis_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "eligible",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "source_reference",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "candidate",
+      "column": "graph_node_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "project_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "source_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "provider_id",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "payload_classes",
+      "type": "ARRAY",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "redaction_policy",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "retention_disclosure",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "expires_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "consent",
+      "column": "revoked_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "export_record",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "validation_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "artifact_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "classification",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "export_record",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "generation_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "stable_key",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "severity",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "code",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "message",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "finding",
+      "column": "evidence",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "analysis_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "from_node_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "to_node_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "kind",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "provenance",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_edge",
+      "column": "evidence",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "analysis_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "kind",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "label",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "evidence",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "provenance",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "graph_node",
+      "column": "confidence",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "operation",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "key",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "request_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "request_body",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "status",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "response",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "idempotency",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "membership",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "membership",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "membership",
+      "column": "active",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "event_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "event_type",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "payload",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "outbox",
+      "column": "dispatched_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "outbox",
+      "column": "delivery_attempts",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "analysis_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "plan_hash",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "current",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "snapshot_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "recommendation_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan",
+      "column": "recommendation_version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "plan_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "policy_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "policy_version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "canonical_payload",
+      "type": "bytea",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_binding",
+      "column": "source_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_candidate",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_candidate",
+      "column": "plan_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_candidate",
+      "column": "analysis_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_candidate",
+      "column": "candidate_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "plan_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "reason",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "plan_revocation",
+      "column": "revoked_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "project",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "project",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "analysis_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "source_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "recommended_type",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "rationale",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "candidate_ids",
+      "type": "ARRAY",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "risks",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "required_reviews",
+      "type": "jsonb",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "supported_generation",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "recommendation",
+      "column": "availability_reason",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "plan_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "approval_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "consent_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "run",
+      "column": "request_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "status",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "completed_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "run",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "plan_hash",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "run",
+      "column": "previous_run_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "runtime_principal",
+      "column": "login_name",
+      "type": "name",
+      "nullable": "NO"
+    },
+    {
+      "table": "runtime_principal",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "runtime_principal",
+      "column": "actor_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "runtime_principal",
+      "column": "capability",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "runtime_principal",
+      "column": "enabled",
+      "type": "boolean",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "project_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "source_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "storage_key",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "resolved_revision",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "source_snapshot",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "tenant",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "artifact_digest",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "policy_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "policy_version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "status",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "completed_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation",
+      "column": "previous_run_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check",
+      "column": "validation_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check",
+      "column": "name",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check",
+      "column": "status",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check",
+      "column": "command",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "tool_version",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "exit_code",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "started_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "completed_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "log_reference",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "reason",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "validation_run_id",
+      "type": "uuid",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "name",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "mandatory",
+      "type": "boolean",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "status",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "command",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "tool_version",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "exit_code",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "started_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "completed_at",
+      "type": "timestamp with time zone",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "log_reference",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "reason",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_contract",
+      "column": "finding_ids",
+      "type": "jsonb",
+      "nullable": "YES"
+    },
+    {
+      "table": "validation_check_finding",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check_finding",
+      "column": "validation_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check_finding",
+      "column": "name",
+      "type": "text",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check_finding",
+      "column": "generation_run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_check_finding",
+      "column": "finding_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_policy",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_policy",
+      "column": "id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_policy",
+      "column": "version",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "table": "validation_policy",
+      "column": "required_checks",
+      "type": "ARRAY",
+      "nullable": "NO"
+    },
+    {
+      "table": "worker_assignment",
+      "column": "login_name",
+      "type": "name",
+      "nullable": "NO"
+    },
+    {
+      "table": "worker_assignment",
+      "column": "tenant_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "worker_assignment",
+      "column": "run_id",
+      "type": "uuid",
+      "nullable": "NO"
+    },
+    {
+      "table": "worker_assignment",
+      "column": "enabled",
+      "type": "boolean",
+      "nullable": "NO"
+    }
+  ],
+  "migration_files": [
+    "001_admission_kernel.sql",
+    "002_bound_validation.sql",
+    "003_runtime_roles.sql",
+    "004_source_graph_recommendation.sql",
+    "005_artifacts_findings_revocations.sql",
+    "006_identity_approval_metadata.sql"
+  ]
+}

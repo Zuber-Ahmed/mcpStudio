@@ -1,0 +1,96 @@
+{
+  "recorded_date": "2026-10-29",
+  "scope": "Physical field coverage and database foundation acceptance review, not milestone approval",
+  "logical_entities": 23,
+  "unmapped_fields": 0,
+  "field_coverage_complete": true,
+  "current_fixture_checks": 118,
+  "current_fixture_passed": true,
+  "physical_semantics_complete": false,
+  "m03_complete": false,
+  "review_status": "HOLD: field coverage and policy identity reconciled; integrated runtime/security requirements remain",
+  "requirements": [
+    {
+      "id": "DB01",
+      "requirement": "Tenant-scoped identities",
+      "foundation_evidence": "Tenant-scoped policy-version UUID uniqueness and separate lineage key now enforced alongside candidate/entity identities. Duplicate row UUID, lineage label and internal ordinal rejected; cross-tenant scope and fail-closed legacy preflight tested.",
+      "remaining": "No policy identity exception remains. Complete migration/provisioning and integrated application authorization are still required before production use.",
+      "acceptance": "PASS_FOUNDATION_IDENTITY; production integration pending"
+    },
+    {
+      "id": "DB02",
+      "requirement": "Same-analysis graph/candidate ownership",
+      "foundation_evidence": "Composite graph endpoint and candidate-node FKs; earlier negative fixtures and current linked pipeline.",
+      "remaining": "Actual analyzer/evidence content and immutable analysis-output sealing remain integration work.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB03",
+      "requirement": "Monotonic plan versions",
+      "foundation_evidence": "Analysis locks, uniqueness/current-plan index and sequential publication; earlier concurrency fixture.",
+      "remaining": "Complete current-schema crash/retry/recovery publication coverage remains required.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB04",
+      "requirement": "Approval and current rights",
+      "foundation_evidence": "Exact plan/hash/version/security confirmation, active operator, explicit revocation; current real-role concurrent admission/export race passed.",
+      "remaining": "HTTP identity/session and all-operation idempotency/security lifecycle remain unimplemented.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB05",
+      "requirement": "Pinned source/recommendation/candidate/configuration",
+      "foundation_evidence": "Full canonical payload/source/recommendation and selected security metadata bound and schema validated.",
+      "remaining": "Installed plugin/configuration-specific schema and real source/detector/generator truth need application integration.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB06",
+      "requirement": "Validation artifact and policy binding",
+      "foundation_evidence": "Exact stored manifest/digest and immutable exact policy-label reference; scoped positive pipeline.",
+      "remaining": "Actual object bytes, worker command/evidence integrity and publication recovery are not proven by fixture records.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB07",
+      "requirement": "Mandatory checks and evidence rules",
+      "foundation_evidence": "Nonempty/unique required checks, real metadata shape, frozen finalized records; scoped Check documents validate.",
+      "remaining": "Actual policy execution, optional-check semantics and secret-safe logs/findings require integrated tests.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB08",
+      "requirement": "Idempotency and durable dispatch",
+      "foundation_evidence": "Current concurrent requests return one run/outbox identity; original admission outcome/payload immutable.",
+      "remaining": "Generation-only implementation; dispatcher leases/recovery/effect deduplication and every other POST remain open.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB09",
+      "requirement": "Retention, safe paths and secret boundaries",
+      "foundation_evidence": "Retained immutable rows, UUID audit, terminal times, portable relative paths and no raw runtime grants.",
+      "remaining": "OS credential references/secret redaction, administrator attribution policy, real root/symlink checks and cleanup still required.",
+      "acceptance": "PARTIAL"
+    },
+    {
+      "id": "DB10",
+      "requirement": "Scoped consent",
+      "foundation_evidence": "Earlier admission consent/expiry/revocation fixture; initial backend wrapper enables no inference.",
+      "remaining": "No real inference provider/egress path or consent-enabled scan exists; execution-time provider/payload consent proof remains open.",
+      "acceptance": "PARTIAL"
+    }
+  ],
+  "resolved_design_issues": [
+    {
+      "id": "SCHEMA-D01",
+      "status": "CLOSED",
+      "issue": "Policy stable-lineage id/internal revision representation versus DB01 tenant-unique entity identity",
+      "disposition": "Review and implement a normalized policy-version resource identity or explicitly approved rule reconciliation; do not infer acceptance from zero missing fields.",
+      "resolution": "Migration 009 gives every immutable policy version tenant-unique UUID identity; policy_key groups lineage, exact version labels/internal ordinals are unique per lineage. No baseline exception or canonical-byte rewrite.",
+      "evidence": "docs/quality/policy-identity-validation.json"
+    }
+  ],
+  "open_design_issue": null,
+  "current_fixture_evidence": "docs/quality/policy-identity-validation.json"
+}

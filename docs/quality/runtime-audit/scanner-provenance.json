@@ -1,0 +1,18 @@
+{
+  "recorded_date": "2026-10-30",
+  "version": "0.76.1",
+  "source": "https://github.com/aquasecurity/trivy/releases/download/v0.76.1/trivy_0.76.1_windows-64bit.zip",
+  "official_checksum_source": "https://github.com/aquasecurity/trivy/releases/download/v0.76.1/trivy_0.76.1_checksums.txt",
+  "archive_sha256": "1051f49cb22d5284f43425f72aad9cda63ca12ceb92e7caa06903490c82dc9bf",
+  "binary_sha256": "94618922c9eb324d7099bf217b01504bfc1f87a0d46d6008cb24ec89b1d1a4bb",
+  "checksum_verified": true,
+  "signature_verified": false,
+  "installed_path": "work/runtime-audit/trivy.exe",
+  "global_installation": false,
+  "version_output": "Version: 0.76.1",
+  "scout_probe": {
+    "version": "1.27.0",
+    "scan_complete": false,
+    "reason": "Docker Hub authentication required; local-first account-free scanner selected"
+  }
+}

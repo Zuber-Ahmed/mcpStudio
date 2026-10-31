@@ -1,0 +1,165 @@
+{
+  "recorded_at": "2026-10-30T14:21:15.122542+00:00",
+  "source": "https://api.osv.dev/v1/querybatch",
+  "scope": "Exact Python worker/service/contract-tool package versions; excludes OS/container layers, JavaScript and uninstalled frontend packages",
+  "packages": [
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "boto3",
+      "version": "1.43.121",
+      "advisory_ids": []
+    },
+    {
+      "name": "botocore",
+      "version": "1.43.121",
+      "advisory_ids": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "advisory_ids": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "advisory_ids": []
+    },
+    {
+      "name": "jmespath",
+      "version": "1.1.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "jsonschema-path",
+      "version": "0.3.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "lazy-object-proxy",
+      "version": "1.13.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "nexus-rpc",
+      "version": "1.4.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "openapi-schema-validator",
+      "version": "0.6.3",
+      "advisory_ids": []
+    },
+    {
+      "name": "openapi-spec-validator",
+      "version": "0.7.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "pathable",
+      "version": "0.4.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "advisory_ids": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "advisory_ids": []
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "rfc3339-validator",
+      "version": "0.1.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "rfc8785",
+      "version": "0.1.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "s3transfer",
+      "version": "0.19.3",
+      "advisory_ids": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "temporalio",
+      "version": "1.35.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "version": "0.23.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "types-protobuf",
+      "version": "7.35.1.20260906",
+      "advisory_ids": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "advisory_ids": []
+    }
+  ],
+  "query_succeeded": true,
+  "advisory_count": 0,
+  "no_known_advisories_returned": true
+}

@@ -1,0 +1,127 @@
+%% NEW DRAFT - not recovered or approved; composite tenant constraints are in docs/03-Database-ERD.md
+erDiagram
+  TENANT ||--o{ MEMBERSHIP : has
+  USER ||--o{ MEMBERSHIP : has
+  TENANT ||--o{ PROJECT : owns
+  PROJECT ||--o{ ANALYSIS_RUN : analyzes
+  ANALYSIS_RUN ||--o{ GRAPH_NODE : contains
+  ANALYSIS_RUN ||--o{ GRAPH_EDGE : contains
+  GRAPH_NODE ||--o{ GRAPH_EDGE : source
+  GRAPH_NODE ||--o{ GRAPH_EDGE : target
+  ANALYSIS_RUN ||--o{ PLAN : informs
+  PLAN ||--o{ APPROVAL : receives
+  USER ||--o{ APPROVAL : records
+  PLAN ||--o{ GENERATION_RUN : generates
+  APPROVAL ||--o{ GENERATION_RUN : authorizes
+  GENERATION_RUN ||--o{ ARTIFACT : produces
+  GENERATION_RUN ||--o{ VALIDATION_RUN : validates
+  VALIDATION_RUN ||--o{ VALIDATION_CHECK : contains
+  TENANT ||--o{ AUDIT_EVENT : records
+  USER ||--o{ AUDIT_EVENT : acts
+  TENANT {
+    uuid id PK
+    string name
+  }
+  USER {
+    uuid id PK
+    string subject UK
+  }
+  MEMBERSHIP {
+    uuid tenant_id PK,FK
+    uuid user_id PK,FK
+    string role
+  }
+  PROJECT {
+    uuid id PK
+    uuid tenant_id FK
+    string name
+    json source
+    datetime created_at
+  }
+  ANALYSIS_RUN {
+    uuid id PK
+    uuid tenant_id FK
+    uuid project_id FK
+    string status
+    string source_digest
+    json diagnostics
+    datetime created_at
+  }
+  GRAPH_NODE {
+    uuid id PK
+    uuid tenant_id FK
+    uuid analysis_run_id FK
+    string kind
+    json evidence
+  }
+  GRAPH_EDGE {
+    uuid id PK
+    uuid tenant_id FK
+    uuid analysis_run_id FK
+    uuid from_node_id FK
+    uuid to_node_id FK
+    string kind
+  }
+  PLAN {
+    uuid id PK
+    uuid tenant_id FK
+    uuid analysis_run_id FK
+    int version
+    string status
+    string integration_type
+    string content_hash
+    json configuration
+    string policy_version
+  }
+  APPROVAL {
+    uuid id PK
+    uuid tenant_id FK
+    uuid plan_id FK
+    uuid actor_id FK
+    string plan_hash
+    datetime approved_at
+  }
+  GENERATION_RUN {
+    uuid id PK
+    uuid tenant_id FK
+    uuid plan_id FK
+    uuid approval_id FK
+    string status
+    datetime created_at
+  }
+  ARTIFACT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid generation_run_id FK
+    string path
+    string storage_key
+    string sha256
+    string media_type
+    int size_bytes
+  }
+  VALIDATION_RUN {
+    uuid id PK
+    uuid tenant_id FK
+    uuid generation_run_id FK
+    string status
+    string policy_version
+    datetime created_at
+  }
+  VALIDATION_CHECK {
+    uuid id PK
+    uuid tenant_id FK
+    uuid validation_run_id FK
+    string name
+    boolean mandatory
+    string status
+    int exit_code
+    string log_reference
+  }
+  AUDIT_EVENT {
+    uuid id PK
+    uuid tenant_id FK
+    uuid actor_id FK
+    string action
+    string resource_id
+    datetime created_at
+  }

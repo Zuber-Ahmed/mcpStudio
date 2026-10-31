@@ -1,0 +1,170 @@
+{
+  "scope": "OpenAPI meta-schema and selected request/record fixtures, not API runtime",
+  "validator": "openapi-spec-validator 0.7.2 / openapi-schema-validator 0.6.3",
+  "passed": true,
+  "checks": [
+    {
+      "check": "full OpenAPI 3.0 schema:openapi.yaml",
+      "passed": true
+    },
+    {
+      "check": "full OpenAPI 3.0 schema:bootstrap.openapi.yaml",
+      "passed": true
+    },
+    {
+      "check": "OAS instance:local revision optional",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:git revision required",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:git revision accepted",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:raw token rejected",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:offline analysis",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:consent missing",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:explicit consent reference",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:disabled mode rejects consent baggage",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:untrusted command rejected",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:executed evidence accepted",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:passed without exit evidence denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:skip reason required",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:truthful skip accepted",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:skip cannot forge execution",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:security confirmation false denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:empty required-check policy denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:duplicate required checks denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:graph cannot silently truncate",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:bootstrap exact nonce/code shape",
+      "passed": true,
+      "valid": true,
+      "expected": true,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:bootstrap short secret denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:bootstrap nonce required",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    },
+    {
+      "check": "OAS instance:bootstrap arbitrary tenant denied",
+      "passed": true,
+      "valid": false,
+      "expected": false,
+      "errors": []
+    }
+  ],
+  "runtime_tests": 0
+}

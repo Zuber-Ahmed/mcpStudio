@@ -1,0 +1,18 @@
+{
+  "yaml_parse": "pass",
+  "local_schema_refs": 150,
+  "unresolved_refs": 0,
+  "unique_operation_ids": "pass",
+  "path_parameter_coverage": "pass",
+  "operations": 15,
+  "schemas": 23,
+  "erd_entities": 14,
+  "erd_relationships": 18,
+  "erd_relationship_targets": "pass",
+  "original_prd_sha256": "952f22e67b7ee6bd7bd92483f3a85f297f0010c8dac3c909f2de82b94ff6dad7",
+  "runtime_tests": "not run - no implementation",
+  "full_openapi_validator": "not run",
+  "mermaid_renderer": "not run",
+  "pdf_pages": 21,
+  "pdf_text_extraction": "pass"
+}

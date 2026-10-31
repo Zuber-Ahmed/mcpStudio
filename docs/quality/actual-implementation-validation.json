@@ -1,0 +1,27 @@
+{
+  "recorded_date": "2026-10-30",
+  "slice": "local session plus PostgreSQL project registry and Dashboard/Project Setup",
+  "passed": true,
+  "application_url": "http://127.0.0.1:8080",
+  "checks": [
+    {"name": "Go API unit tests", "passed": true},
+    {"name": "Next.js TypeScript check", "passed": true},
+    {"name": "Next.js production static build", "passed": true},
+    {"name": "UI served from loopback API", "passed": true, "status": 200},
+    {"name": "one-time bootstrap exchange", "passed": true},
+    {"name": "CSRF-protected project creation", "passed": true},
+    {"name": "PostgreSQL list and search returns created project", "passed": true},
+    {"name": "project detail identity matches", "passed": true},
+    {"name": "logout", "passed": true, "status": 204},
+    {"name": "bootstrap replay denied", "passed": true, "status": 401},
+    {"name": "fresh bootstrap prepared for operator", "passed": true}
+  ],
+  "created_project": {
+    "id": "329e5116-8b06-45ec-a44b-8904c334a998",
+    "name": "MCP Integration Studio",
+    "workflow_status": "created"
+  },
+  "implemented": ["local session", "project create/list/search/detail", "Dashboard", "Project Setup"],
+  "not_implemented": ["source acquisition", "analysis", "recommendation", "approval", "generation", "validation", "artifact download"],
+  "release_holds_remain": true
+}

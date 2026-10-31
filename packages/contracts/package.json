@@ -1,0 +1,7 @@
+{
+  "name": "@mcpstudio/contracts",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Synchronized resource/session HTTP contracts and logical persistence model",
+  "files": ["specs", "operation-inventory.json", "semantic-rules.md"]
+}

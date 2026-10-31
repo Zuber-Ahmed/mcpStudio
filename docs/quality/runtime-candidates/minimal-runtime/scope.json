@@ -1,0 +1,10 @@
+{
+  "dpkg_inventory": "Original input inventory retained conservatively; not a description of fully installed package payloads",
+  "excluded_support": [
+    "GUI/Tkinter/IDLE",
+    "shell commands",
+    "package installation",
+    "administrative utilities"
+  ],
+  "adopted": false
+}

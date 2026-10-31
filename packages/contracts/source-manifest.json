@@ -1,0 +1,26 @@
+[
+  {
+    "path": "specs/openapi.yaml",
+    "sha256": "3c8c38f49f3f429629e2be7e1f243030a33d1684a78d3f5e7e0800a931de284c"
+  },
+  {
+    "path": "specs/bootstrap.openapi.yaml",
+    "sha256": "5659e3d0502c7c92c56b656023a98b8cc4d964680d9f2169b89316484aff1cb9"
+  },
+  {
+    "path": "specs/database-erd.mmd",
+    "sha256": "b980c577b23641be00082ecf59261dd1f0a2b9c4936447b1a1734f768c0ae1a7"
+  },
+  {
+    "path": "specs/data-dictionary.json",
+    "sha256": "e2f355ff4e9e429f69a6c19f23fd7ccbd0c6a775129c15d660962636be838cf4"
+  },
+  {
+    "path": "operation-inventory.json",
+    "sha256": "99b5c27d285f681dcd0589971489c0b2fa3922586bd7952dd26f545637975a6c"
+  },
+  {
+    "path": "semantic-rules.md",
+    "sha256": "83ab48cce2899ae5856a7b9f9824ffc4fcdf17de0df7213a003d566739f68734"
+  }
+]

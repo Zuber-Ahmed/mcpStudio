@@ -1,0 +1,747 @@
+[
+  {
+    "name": "local revision optional",
+    "schema": "Source",
+    "value": {
+      "kind": "local",
+      "location": "fixture"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "git revision required",
+    "schema": "Source",
+    "value": {
+      "kind": "git",
+      "location": "https://example.test/repo"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "git revision accepted",
+    "schema": "Source",
+    "value": {
+      "kind": "git",
+      "location": "https://example.test/repo",
+      "revision": "abc123"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "raw token rejected",
+    "schema": "Source",
+    "value": {
+      "kind": "local",
+      "location": "fixture",
+      "token": "fixture-secret"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "offline analysis",
+    "schema": "AnalysisInput",
+    "value": {
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "scope": {
+        "version": "1",
+        "endpoints": true,
+        "protocol_schemas": true,
+        "prompts_resources": false,
+        "dependency_graph": true
+      },
+      "semantic_mode": "disabled"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "consent missing",
+    "schema": "AnalysisInput",
+    "value": {
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "scope": {
+        "version": "1",
+        "endpoints": true,
+        "protocol_schemas": true,
+        "prompts_resources": false,
+        "dependency_graph": true
+      },
+      "semantic_mode": "consented"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "explicit consent reference",
+    "schema": "AnalysisInput",
+    "value": {
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "scope": {
+        "version": "1",
+        "endpoints": true,
+        "protocol_schemas": true,
+        "prompts_resources": false,
+        "dependency_graph": true
+      },
+      "semantic_mode": "consented",
+      "consent_reference": "00000000-0000-4000-8000-000000000001"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "disabled mode rejects consent baggage",
+    "schema": "AnalysisInput",
+    "value": {
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "scope": {
+        "version": "1",
+        "endpoints": true,
+        "protocol_schemas": true,
+        "prompts_resources": false,
+        "dependency_graph": true
+      },
+      "semantic_mode": "disabled",
+      "consent_reference": "00000000-0000-4000-8000-000000000001"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "untrusted command rejected",
+    "schema": "AnalysisInput",
+    "value": {
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "scope": {
+        "version": "1",
+        "endpoints": true,
+        "protocol_schemas": true,
+        "prompts_resources": false,
+        "dependency_graph": true
+      },
+      "semantic_mode": "disabled",
+      "command": "execute-source"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "executed evidence accepted",
+    "schema": "Check",
+    "value": {
+      "name": "compile",
+      "mandatory": true,
+      "status": "passed",
+      "finding_ids": [],
+      "command": "tsc --noEmit",
+      "tool_version": "pinned-fixture",
+      "exit_code": 0,
+      "started_at": "2026-10-28T10:00:00Z",
+      "completed_at": "2026-10-28T10:00:01Z",
+      "log_reference": "redacted-log-1"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "passed without exit evidence denied",
+    "schema": "Check",
+    "value": {
+      "name": "compile",
+      "mandatory": true,
+      "status": "passed",
+      "finding_ids": [],
+      "command": "tsc --noEmit",
+      "tool_version": "pinned-fixture",
+      "started_at": "2026-10-28T10:00:00Z",
+      "completed_at": "2026-10-28T10:00:01Z",
+      "log_reference": "redacted-log-1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "skip reason required",
+    "schema": "Check",
+    "value": {
+      "name": "compile",
+      "mandatory": true,
+      "status": "skipped",
+      "finding_ids": []
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "truthful skip accepted",
+    "schema": "Check",
+    "value": {
+      "name": "compile",
+      "mandatory": true,
+      "status": "skipped",
+      "finding_ids": [],
+      "reason": "tool unavailable"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "skip cannot forge execution",
+    "schema": "Check",
+    "value": {
+      "name": "compile",
+      "mandatory": true,
+      "status": "skipped",
+      "finding_ids": [],
+      "reason": "tool unavailable",
+      "exit_code": 0
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "security confirmation false denied",
+    "schema": "ApprovalInput",
+    "value": {
+      "plan_version": 1,
+      "plan_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "security_confirmed": false
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "empty required-check policy denied",
+    "schema": "PolicyReference",
+    "value": {
+      "id": "mvp",
+      "version": "1",
+      "required_checks": []
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "duplicate required checks denied",
+    "schema": "PolicyReference",
+    "value": {
+      "id": "mvp",
+      "version": "1",
+      "required_checks": [
+        "compile",
+        "compile"
+      ]
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "graph cannot silently truncate",
+    "schema": "Graph",
+    "value": {
+      "analysis_id": "00000000-0000-4000-8000-000000000001",
+      "nodes": [],
+      "edges": [],
+      "truncated": true
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "bootstrap exact nonce/code shape",
+    "schema": "BootstrapExchange",
+    "value": {
+      "one_time_code": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "browser_nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "bootstrap short secret denied",
+    "schema": "BootstrapExchange",
+    "value": {
+      "one_time_code": "short",
+      "browser_nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "bootstrap nonce required",
+    "schema": "BootstrapExchange",
+    "value": {
+      "one_time_code": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "bootstrap arbitrary tenant denied",
+    "schema": "BootstrapExchange",
+    "value": {
+      "one_time_code": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "browser_nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "tenant_id": "00000000-0000-4000-8000-000000000001"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "matching complete evidence",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": true,
+    "actual": true
+  },
+  {
+    "name": "empty mandatory list",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "mandatory skipped",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "skipped",
+          "finding_ids": [],
+          "reason": "tool unavailable"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "mandatory absent",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "missing actor rights",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": false,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "revoked approval",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": true,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "unfinished runner",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": false,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "changed artifact bytes",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "changed policy",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:2"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "generation failed",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "failed",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "missing evidence",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "forged passed exit",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 1,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "reverse execution time",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T09:00:00Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  },
+  {
+    "name": "duplicate check records",
+    "semantic_rule": "SEM-EXPORT",
+    "value": {
+      "authorized": true,
+      "revoked": false,
+      "generation_status": "succeeded",
+      "runner_finished": true,
+      "required_checks": [
+        "compile"
+      ],
+      "checks": [
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        },
+        {
+          "name": "compile",
+          "mandatory": true,
+          "status": "passed",
+          "finding_ids": [],
+          "command": "tsc --noEmit",
+          "tool_version": "pinned-fixture",
+          "exit_code": 0,
+          "started_at": "2026-10-28T10:00:00Z",
+          "completed_at": "2026-10-28T10:00:01Z",
+          "log_reference": "redacted-log-1"
+        }
+      ],
+      "generation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "validation_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "plan_policy": "mvp:1",
+      "validation_policy": "mvp:1"
+    },
+    "expected": false,
+    "actual": false
+  }
+]

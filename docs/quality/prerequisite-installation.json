@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-29T16:50:28.669406+00:00",
+  "scope": "project-local prerequisites and trusted container smoke fixture",
+  "node": {
+    "exit_code": 0,
+    "stdout": "v26.13.0",
+    "stderr": ""
+  },
+  "npm": {
+    "exit_code": 0,
+    "stdout": "11.20.0",
+    "stderr": ""
+  },
+  "go": {
+    "exit_code": 0,
+    "stdout": "go version go1.27.3 windows/amd64",
+    "stderr": ""
+  },
+  "docker": {
+    "exit_code": 0,
+    "stdout": "{\"Client\":{\"Version\":\"29.9.2\",\"ApiVersion\":\"1.56\",\"DefaultAPIVersion\":\"1.56\",\"GitCommit\":\"a82e528\",\"GoVersion\":\"go1.26.10\",\"Os\":\"windows\",\"Arch\":\"amd64\",\"BuildTime\":\"Tue Oct 20 19:44:07 2026\",\"Context\":\"desktop-linux\"},\"Server\":{\"Platform\":{\"Name\":\"Docker Desktop 4.97.0 (244584)\"},\"Version\":\"29.9.2\",\"ApiVersion\":\"1.56\",\"MinAPIVersion\":\"1.40\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"Components\":[{\"Name\":\"Engine\",\"Version\":\"29.9.2\",\"Details\":{\"ApiVersion\":\"1.56\",\"Arch\":\"amd64\",\"BuildTime\":\"Tue Oct 20 18:45:02 2026\",\"Experimental\":\"false\",\"GitCommit\":\"0367cbe\",\"GoVersion\":\"go1.26.10\",\"KernelVersion\":\"6.18.54.1-microsoft-standard-WSL2\",\"MinAPIVersion\":\"1.40\",\"Module\":\"github.com/moby/moby/v2\",\"ModuleVersion\":\"v2.0.0+unknown\",\"Os\":\"linux\"}},{\"Name\":\"containerd\",\"Version\":\"v2.4.2\",\"Details\":{\"GitCommit\":\"b7a25261e029d68978bbf290df0a62fc819b3c51\"}},{\"Name\":\"runc\",\"Version\":\"1.5.2\",\"Details\":{\"GitCommit\":\"v1.5.2-0-g29dd3dc2\"}},{\"Name\":\"docker-init\",\"Version\":\"0.19.0\",\"Details\":{\"GitCommit\":\"de40ad0\"}}],\"GitCommit\":\"0367cbe\",\"GoVersion\":\"go1.26.10\",\"KernelVersion\":\"6.18.54.1-microsoft-standard-WSL2\",\"BuildTime\":\"2026-10-20T18:45:02.000000000+00:00\"}}",
+    "stderr": ""
+  },
+  "compose": {
+    "exit_code": 0,
+    "stdout": "Docker Compose version v5.6.1",
+    "stderr": ""
+  },
+  "image_pull": {
+    "exit_code": 0,
+    "stdout": "3.22.2: Pulling from library/alpine\n2d35ebdb57d9: Pulling fs layer\n40ad67084d10: Download complete\n2d35ebdb57d9: Download complete\nebbebd44c17f: Download complete\n2d35ebdb57d9: Pull complete\nDigest: sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412\nStatus: Downloaded newer image for alpine:3.22.2\ndocker.io/library/alpine:3.22.2",
+    "stderr": ""
+  },
+  "image_identity": {
+    "exit_code": 0,
+    "stdout": "[\"alpine@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412\"]",
+    "stderr": ""
+  },
+  "container_smoke": {
+    "exit_code": 0,
+    "stdout": "read-only-input-and-root-no-route-temp-write-passed",
+    "stderr": ""
+  },
+  "fixture_unchanged": true,
+  "prerequisites_verified": true,
+  "sandbox_smoke_passed": true,
+  "remaining": "Smoke fixture is not full worker adversarial/security testing, database proof or MCP integration. No system Node replacement or project feature implementation."
+}

@@ -1,0 +1,47 @@
+{
+  "recorded_date": "2026-10-30",
+  "scope": "Installed isolated contract/MCP fixture npm dependency locks; no fix/install or uninitialized app dependency claim",
+  "audits": [
+    {
+      "label": "contract-tools",
+      "exit_code": 0,
+      "query_succeeded": true,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "lock_sha256": "615d7d507067c514673164481c2b7a00db337bc9b7e9f2568c13d94e9e2213fc",
+      "package_lock": "work/node-tools/package-lock.json",
+      "dependencies": {
+        "canonicalize": "2.1.0",
+        "openapi-fetch": "0.17.0",
+        "openapi-typescript": "7.13.0",
+        "typescript": "5.9.3"
+      }
+    },
+    {
+      "label": "mcp-fixture",
+      "exit_code": 0,
+      "query_succeeded": true,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "lock_sha256": "7c43f6042779d278cd553f4236fece7c0763438a2605d8ff494a664087609aca",
+      "package_lock": "work/mcp-fixture/package-lock.json",
+      "dependencies": {
+        "@modelcontextprotocol/client": "2.4.0",
+        "@modelcontextprotocol/server": "2.4.0",
+        "zod": "4.6.7"
+      }
+    }
+  ]
+}

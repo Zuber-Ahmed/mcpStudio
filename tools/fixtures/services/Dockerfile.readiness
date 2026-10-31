@@ -1,0 +1,8 @@
+FROM mcpstudio-worker-readiness:0.1.0
+USER root
+COPY wheels /service-wheels
+COPY requirements.lock /tmp/service-requirements.lock
+RUN python -m pip install --no-index --find-links=/service-wheels --require-hashes -r /tmp/service-requirements.lock && python -m pip check
+COPY service_workflow.py service_validation.py /fixture/
+USER 65534:65534
+CMD ["python", "/fixture/service_validation.py"]

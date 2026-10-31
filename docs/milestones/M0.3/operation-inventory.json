@@ -1,0 +1,210 @@
+[
+  {
+    "operationId": "listProjects",
+    "method": "GET",
+    "path": "/projects",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "createProject",
+    "method": "POST",
+    "path": "/projects",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY"
+    ]
+  },
+  {
+    "operationId": "getProject",
+    "method": "GET",
+    "path": "/projects/{project_id}",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "startAnalysis",
+    "method": "POST",
+    "path": "/analyses",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY",
+      "SEM-CONSENT"
+    ]
+  },
+  {
+    "operationId": "getAnalysis",
+    "method": "GET",
+    "path": "/analyses/{analysis_id}",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getGraph",
+    "method": "GET",
+    "path": "/analyses/{analysis_id}/graph",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "createPlan",
+    "method": "POST",
+    "path": "/plans",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY",
+      "SEM-PLAN",
+      "SEM-CANDIDATE"
+    ]
+  },
+  {
+    "operationId": "getPlan",
+    "method": "GET",
+    "path": "/plans/{plan_id}",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "approvePlan",
+    "method": "POST",
+    "path": "/plans/{plan_id}/approvals",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY",
+      "SEM-APPROVAL"
+    ]
+  },
+  {
+    "operationId": "startGeneration",
+    "method": "POST",
+    "path": "/generations",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY",
+      "SEM-APPROVAL",
+      "SEM-GENERATION"
+    ]
+  },
+  {
+    "operationId": "getGeneration",
+    "method": "GET",
+    "path": "/generations/{generation_id}",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "startValidation",
+    "method": "POST",
+    "path": "/validations",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY",
+      "SEM-VALIDATION"
+    ]
+  },
+  {
+    "operationId": "getValidation",
+    "method": "GET",
+    "path": "/validations/{validation_id}",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "listArtifacts",
+    "method": "GET",
+    "path": "/artifacts",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "downloadBundle",
+    "method": "GET",
+    "path": "/generations/{generation_id}/bundle",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-EXPORT"
+    ]
+  },
+  {
+    "operationId": "listProjectRuns",
+    "method": "GET",
+    "path": "/projects/{project_id}/runs",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getSupportedCapabilities",
+    "method": "GET",
+    "path": "/capabilities",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "listCandidates",
+    "method": "GET",
+    "path": "/analyses/{analysis_id}/candidates",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getRecommendation",
+    "method": "GET",
+    "path": "/analyses/{analysis_id}/recommendation",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getArtifactContent",
+    "method": "GET",
+    "path": "/artifacts/{artifact_id}/content",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getValidationLogs",
+    "method": "GET",
+    "path": "/validations/{validation_id}/logs",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "getGenerationReport",
+    "method": "GET",
+    "path": "/generations/{generation_id}/report",
+    "semantic_rules": [
+      "SEM-AUTH"
+    ]
+  },
+  {
+    "operationId": "downloadDraftBundle",
+    "method": "GET",
+    "path": "/generations/{generation_id}/draft-bundle",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-DRAFT"
+    ]
+  },
+  {
+    "operationId": "revokePlanApproval",
+    "method": "POST",
+    "path": "/plans/{plan_id}/revocations",
+    "semantic_rules": [
+      "SEM-AUTH",
+      "SEM-IDEMPOTENCY"
+    ]
+  }
+]

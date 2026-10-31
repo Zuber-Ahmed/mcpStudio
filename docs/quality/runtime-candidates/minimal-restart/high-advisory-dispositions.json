@@ -1,0 +1,130 @@
+{
+  "image_id": "sha256:dc612ae7bb151a095b3848d9cbf45c17311514267c39950d3121e223ff52f797",
+  "raw_scan_sha256": "c6898aeb62470f6131020a4145c8adb84019aae1e214ef13a85222bb3f89c4ce",
+  "review_complete_for_high_advisories": true,
+  "review": [
+    {
+      "id": "CVE-2026-76642",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-76642",
+      "affected_component": "Privileged mount helper/post-hook path",
+      "scanner_occurrences": 9,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "mount": [],
+          "libmount1": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-78408",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78408",
+      "affected_component": "nsenter privileged cgroup-join path",
+      "scanner_occurrences": 9,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "util-linux": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-78409",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78409",
+      "affected_component": "mount subdirectory path using libmount",
+      "scanner_occurrences": 9,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "mount": [],
+          "libmount1": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-78410",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-78410",
+      "affected_component": "Restricted bind mount path using libmount",
+      "scanner_occurrences": 9,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "mount": [],
+          "libmount1": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-54369",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-54369",
+      "affected_component": "libacl pathname functions",
+      "scanner_occurrences": 1,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "libacl1": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2025-69720",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2025-69720",
+      "affected_component": "infocmp analyze_string command path",
+      "scanner_occurrences": 4,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "ncurses-bin": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-16742",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-16742",
+      "affected_component": "systemd-homed managed-user path",
+      "scanner_occurrences": 2,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "libsystemd0": [],
+          "libudev1": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    },
+    {
+      "id": "CVE-2026-9538",
+      "source": "https://security-tracker.debian.org/tracker/CVE-2026-9538",
+      "affected_component": "Perl Archive::Tar parser",
+      "scanner_occurrences": 1,
+      "disposition": "Affected component excluded from this exact fixture candidate",
+      "evidence": {
+        "excluded_component_package_elf": {
+          "perl-base": []
+        },
+        "runtime_probe": "component-exclusion-checks.json"
+      },
+      "limits": "Does not apply to baseline/server images, future payloads, additional mounts, plugins or replacement libraries. No raw scan suppression or risk acceptance."
+    }
+  ],
+  "original_raw_findings": 164,
+  "other_severity_rows_still_need_semantic_review": 120,
+  "risk_acceptance": false,
+  "suppression_file_created": false,
+  "adopted": false,
+  "h04_complete": false,
+  "interpretation": "Scoped affected-component exclusion evidence; conservative original source-package records still produce 44 High entries. Not a globally clean image or an application-wide reachability proof."
+}

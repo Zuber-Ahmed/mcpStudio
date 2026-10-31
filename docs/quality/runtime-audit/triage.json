@@ -1,0 +1,138 @@
+{
+  "recorded_date": "2026-10-30",
+  "scan_complete": true,
+  "h04_complete": false,
+  "risk_acceptance_granted": false,
+  "critical_package_advisory_occurrences": 5,
+  "unique_critical_advisory_ids": [
+    "CVE-2025-68121",
+    "CVE-2026-118264",
+    "CVE-2026-31789",
+    "CVE-2026-6653"
+  ],
+  "critical_entries": [
+    {
+      "id": "CVE-2026-6653",
+      "package": "libxml2",
+      "installed": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+      "fixed": "",
+      "severity": "CRITICAL",
+      "status": "affected",
+      "type": "debian",
+      "target": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f (debian 13.7)",
+      "title": "libxml2: mingw-libxml2: libxml2: Denial of Service via crafted XML input due to use-after-free",
+      "primary_url": "https://avd.aquasec.com/nvd/cve-2026-6653",
+      "image": "postgres"
+    },
+    {
+      "id": "CVE-2025-68121",
+      "package": "stdlib",
+      "installed": "v1.24.6",
+      "fixed": "1.24.13, 1.25.7, 1.26.0-rc.3",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "type": "gobinary",
+      "target": "usr/local/bin/gosu",
+      "title": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption",
+      "primary_url": "https://avd.aquasec.com/nvd/cve-2025-68121",
+      "image": "postgres"
+    },
+    {
+      "id": "CVE-2026-118264",
+      "package": "github.com/labstack/echo/v4",
+      "installed": "v4.15.4",
+      "fixed": "4.16.1",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "type": "gobinary",
+      "target": "usr/local/bin/temporal",
+      "title": "Echo is a Go web framework. From 4.0.0 until 4.16.1 and 5.4.1, Echo's  ...",
+      "primary_url": "https://avd.aquasec.com/nvd/cve-2026-118264",
+      "image": "schema"
+    },
+    {
+      "id": "CVE-2026-31789",
+      "package": "libcrypto3",
+      "installed": "3.5.4-r0",
+      "fixed": "3.5.6-r0",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "type": "alpine",
+      "target": "sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412 (alpine 3.22.2)",
+      "title": "openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+      "primary_url": "https://avd.aquasec.com/nvd/cve-2026-31789",
+      "image": "sandbox_smoke"
+    },
+    {
+      "id": "CVE-2026-31789",
+      "package": "libssl3",
+      "installed": "3.5.4-r0",
+      "fixed": "3.5.6-r0",
+      "severity": "CRITICAL",
+      "status": "fixed",
+      "type": "alpine",
+      "target": "sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412 (alpine 3.22.2)",
+      "title": "openssl: OpenSSL: Heap buffer overflow on 32-bit systems from large X.509 certificate processing",
+      "primary_url": "https://avd.aquasec.com/nvd/cve-2026-31789",
+      "image": "sandbox_smoke"
+    }
+  ],
+  "remediation_tasks": [
+    {
+      "id": "H04-R01",
+      "target": "Pinned PostgreSQL/Python OS layers",
+      "status": "OPEN",
+      "action": "Select maintained rebuilt base digests/OS package fixes; retain selected runtime versions where possible. Rescan and rerun affected runtime/schema/service fixtures before adopting candidates."
+    },
+    {
+      "id": "H04-R02",
+      "target": "Temporal server/admin-tools, SeaweedFS and gosu embedded Go dependencies",
+      "status": "OPEN",
+      "action": "Obtain upstream rebuilt binaries or reviewed builds with patched Go/modules. Installed host Go does not patch binaries embedded in images. Verify actual compiled versions and rescan; do not hot-edit running services."
+    },
+    {
+      "id": "H04-R03",
+      "target": "pip-vendored msgpack/urllib3/pkg_resources metadata in Python base/worker images",
+      "status": "OPEN; applicability needs per-advisory review",
+      "action": "Upgrade the complete pip bundle or remove build/package-manager tooling in a verified final runtime stage. A top-level urllib3 upgrade alone does not replace pip._vendor. Retest parser/workflow/storage integration and preserve unsuppressed baseline reports."
+    },
+    {
+      "id": "H04-R04",
+      "target": "Alpine sandbox-smoke image",
+      "status": "OPEN",
+      "action": "Refresh supported patch digest and rescan. Separately document CVE-2026-31789 architecture/vendor severity applicability; do not equate raw critical package counts to confirmed critical exploits."
+    },
+    {
+      "id": "H04-R05",
+      "target": "Final application dependencies and coverage",
+      "status": "OPEN",
+      "action": "Review actual frontend/API/worker dependency locks and exact adopted images before product execution. Reserved/uninstalled frontend candidates are not audited application installations; no exploit reachability or full host/Docker/WSL security certification was performed."
+    }
+  ],
+  "applicability_notes": [
+    {
+      "id": "CVE-2026-31789",
+      "images": [
+        "sandbox_smoke"
+      ],
+      "scanner_severity": "CRITICAL",
+      "vendor_severity": "Low",
+      "observed_architecture": "amd64",
+      "vendor_scope": "32-bit platforms",
+      "disposition": "Architecture-related non-applicability candidate; not suppressed or automatically accepted",
+      "source": "https://www.openssl-library.org/news/vulnerabilities-3.5/index.html"
+    },
+    {
+      "component": "pip vendored Python packages",
+      "disposition": "Versions and actual vendor module paths corroborated. Top-level distribution absence is not proof of absence or non-reachability. Package advisories and reachability require distinct review.",
+      "source": "https://github.com/aquasecurity/trivy/discussions/11031"
+    }
+  ],
+  "coverage_limits": [
+    "OS/library vulnerability scan only; no license, secret or misconfiguration pass",
+    "Package/advisory duplicates across images/layers/binaries are not distinct exploit counts",
+    "Known advisory matching is not code reachability/exploitability proof",
+    "Checksum verified scanner download; Sigstore signature verification not performed",
+    "No dependencies, adopted digests or running services were changed"
+  ]
+}

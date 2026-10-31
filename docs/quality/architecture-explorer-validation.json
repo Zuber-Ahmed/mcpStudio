@@ -1,0 +1,25 @@
+{
+  "validated_at": "2026-10-31T15:41:00+05:30",
+  "scope": "Architecture Explorer local TypeScript/Next.js slice",
+  "passed": true,
+  "checks": [
+    {"name": "go_unit_tests", "passed": true, "detail": "Snapshot digest stability, route/import graph detection, symlink rejection and existing API security tests passed."},
+    {"name": "typescript_typecheck", "passed": true, "detail": "Next.js UI TypeScript validation passed."},
+    {"name": "next_production_build", "passed": true, "detail": "Next.js 16.4.3 compiled, typechecked and prerendered all static routes."},
+    {"name": "database_migration_fixture", "passed": true, "detail": "Migrations 001-011 applied in an isolated no-network PostgreSQL container; tenant-scoped analysis insert and graph read passed; fixture removed."},
+    {"name": "live_end_to_end", "passed": true, "detail": "Authenticated local analysis succeeded with immutable digest readback, 233 files, 233 nodes, 1 edge, source evidence and non-truncated graph."},
+    {"name": "execution_boundary", "passed": true, "detail": "Analyzer reads bounded supported files only and does not invoke repository commands, dependency installers or package scripts."}
+  ],
+  "evidence": {
+    "project_id": "0a542555-1958-4b56-b6fe-9a59fcb8d3c0",
+    "analysis_id": "292a3929-b8b7-4060-9d87-64f9e570b2c4",
+    "status": "succeeded",
+    "digest_readback_matched": true,
+    "graph_truncated": false
+  },
+  "boundaries": [
+    "Local folders only; Git acquisition remains unavailable.",
+    "TypeScript, JavaScript and JSON scope only.",
+    "MCP candidate recommendation, approval, generation and validation remain unimplemented."
+  ]
+}

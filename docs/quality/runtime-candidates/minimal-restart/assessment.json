@@ -1,0 +1,188 @@
+{
+  "complete": true,
+  "passed": true,
+  "project": "mcpstudio-restart-0f55348e6b36",
+  "candidate_image": "sha256:dc612ae7bb151a095b3848d9cbf45c17311514267c39950d3121e223ff52f797",
+  "scope": "Graceful PostgreSQL/Temporal/S3 restart with completed fixture data; not crash recovery or in-flight replay",
+  "original_stack_before": {
+    "storage": {
+      "id": "ac3485c79cc3e38e6a095dddbe72851ae0470ee5ae4338432ee66f36a70aa31c",
+      "image": "sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8",
+      "started_at": "2026-10-29T17:19:17.728316035Z",
+      "running": true,
+      "ports": {
+        "8333/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8333"
+          }
+        ]
+      }
+    },
+    "temporal": {
+      "id": "62598cd54236a45ac9269f0a80772d27edd8d8f05b6fe49a39f2bc98287d2f7c",
+      "image": "sha256:acecbab5b0b8ae9cf4012b508866ca97feda3709577bf157b537239f40029049",
+      "started_at": "2026-10-29T17:19:15.807928284Z",
+      "running": true,
+      "ports": {
+        "7233/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "7233"
+          }
+        ]
+      }
+    },
+    "schema": {
+      "id": "96249102718db39589cc13870458dd588bd2d83ea39b53abcf3070ee43727794",
+      "image": "sha256:9ef0dc5b063bf4ffd5c1512de72e0e73e225bd2c7006a18ce69bd592a8862a83",
+      "started_at": "2026-10-29T17:18:51.698372444Z",
+      "running": false,
+      "ports": {}
+    },
+    "postgres": {
+      "id": "9035701cc5b0914ac564348599518fe93be08570bfec3d0510538703acc0a9a6",
+      "image": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+      "started_at": "2026-10-29T17:14:18.064062058Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "checks": [
+    {
+      "name": "isolated services publish no host ports",
+      "passed": true
+    },
+    {
+      "name": "isolated network is internal",
+      "passed": true
+    },
+    {
+      "name": "all three isolated data services actually restarted",
+      "passed": true
+    },
+    {
+      "name": "fixture workflow and object persist across isolated service restarts",
+      "passed": true
+    },
+    {
+      "name": "unique fixture object removed",
+      "passed": true
+    },
+    {
+      "name": "isolated containers volumes and network removed",
+      "passed": true
+    },
+    {
+      "name": "original stack IDs and startup times unchanged",
+      "passed": true
+    }
+  ],
+  "cleanup_complete": true,
+  "isolated_before_restart": {
+    "temporal": {
+      "id": "45d37db7d883f5303fecedaba7f8d8236c424861c4af322ac2c96944bff56a88",
+      "image": "sha256:acecbab5b0b8ae9cf4012b508866ca97feda3709577bf157b537239f40029049",
+      "started_at": "2026-10-30T15:04:07.366506739Z",
+      "running": true,
+      "ports": {}
+    },
+    "schema": {
+      "id": "92896f79e9014fa95e88f4cb8d834db0152b370d8cf96d926b68f151cf3053c2",
+      "image": "sha256:9ef0dc5b063bf4ffd5c1512de72e0e73e225bd2c7006a18ce69bd592a8862a83",
+      "started_at": "2026-10-30T15:04:05.606290055Z",
+      "running": false,
+      "ports": {}
+    },
+    "postgres": {
+      "id": "ecc37b110ff05596bc8b6bee0bf5b40db50f7f8102d3fd210383be58cde1159e",
+      "image": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+      "started_at": "2026-10-30T15:04:01.751115095Z",
+      "running": true,
+      "ports": {}
+    },
+    "storage": {
+      "id": "0549a9817535d69220eea06eb977449687bc4ac6e0a6f6d747335ad62201cdaf",
+      "image": "sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8",
+      "started_at": "2026-10-30T15:04:02.100296516Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "isolated_after_restart": {
+    "temporal": {
+      "id": "45d37db7d883f5303fecedaba7f8d8236c424861c4af322ac2c96944bff56a88",
+      "image": "sha256:acecbab5b0b8ae9cf4012b508866ca97feda3709577bf157b537239f40029049",
+      "started_at": "2026-10-30T15:04:27.928224184Z",
+      "running": true,
+      "ports": {}
+    },
+    "schema": {
+      "id": "92896f79e9014fa95e88f4cb8d834db0152b370d8cf96d926b68f151cf3053c2",
+      "image": "sha256:9ef0dc5b063bf4ffd5c1512de72e0e73e225bd2c7006a18ce69bd592a8862a83",
+      "started_at": "2026-10-30T15:04:27.174488806Z",
+      "running": false,
+      "ports": {}
+    },
+    "postgres": {
+      "id": "ecc37b110ff05596bc8b6bee0bf5b40db50f7f8102d3fd210383be58cde1159e",
+      "image": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+      "started_at": "2026-10-30T15:04:22.869406067Z",
+      "running": true,
+      "ports": {}
+    },
+    "storage": {
+      "id": "0549a9817535d69220eea06eb977449687bc4ac6e0a6f6d747335ad62201cdaf",
+      "image": "sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8",
+      "started_at": "2026-10-30T15:04:26.66707431Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "service_checks": 11,
+  "original_stack_after": {
+    "storage": {
+      "id": "ac3485c79cc3e38e6a095dddbe72851ae0470ee5ae4338432ee66f36a70aa31c",
+      "image": "sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8",
+      "started_at": "2026-10-29T17:19:17.728316035Z",
+      "running": true,
+      "ports": {
+        "8333/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8333"
+          }
+        ]
+      }
+    },
+    "temporal": {
+      "id": "62598cd54236a45ac9269f0a80772d27edd8d8f05b6fe49a39f2bc98287d2f7c",
+      "image": "sha256:acecbab5b0b8ae9cf4012b508866ca97feda3709577bf157b537239f40029049",
+      "started_at": "2026-10-29T17:19:15.807928284Z",
+      "running": true,
+      "ports": {
+        "7233/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "7233"
+          }
+        ]
+      }
+    },
+    "schema": {
+      "id": "96249102718db39589cc13870458dd588bd2d83ea39b53abcf3070ee43727794",
+      "image": "sha256:9ef0dc5b063bf4ffd5c1512de72e0e73e225bd2c7006a18ce69bd592a8862a83",
+      "started_at": "2026-10-29T17:18:51.698372444Z",
+      "running": false,
+      "ports": {}
+    },
+    "postgres": {
+      "id": "9035701cc5b0914ac564348599518fe93be08570bfec3d0510538703acc0a9a6",
+      "image": "sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+      "started_at": "2026-10-29T17:14:18.064062058Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "ephemeral_credentials_removed": true
+}

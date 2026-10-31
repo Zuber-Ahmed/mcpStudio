@@ -1,0 +1,67 @@
+[
+  {
+    "name": "object key sorting",
+    "value": {
+      "b": 2,
+      "a": 1
+    },
+    "expected": "{\"a\":1,\"b\":2}"
+  },
+  {
+    "name": "RFC numeric serialization",
+    "value": [
+      333333333.3333333,
+      1e+30,
+      4.5,
+      0.002,
+      1e-27
+    ],
+    "expected": "[333333333.3333333,1e+30,4.5,0.002,1e-27]"
+  },
+  {
+    "name": "negative zero",
+    "value": [
+      -0.0,
+      0.0
+    ],
+    "expected": "[0,0]"
+  },
+  {
+    "name": "UTF16 key order",
+    "value": {
+      "\ufb33": 7,
+      "\ud83d\ude00": 6,
+      "\u20ac": 5,
+      "\u00f6": 4,
+      "\u0080": 3,
+      "1": 2,
+      "\r": 1
+    },
+    "expected": "{\"\\r\":1,\"1\":2,\"\u0080\":3,\"\u00f6\":4,\"\u20ac\":5,\"\ud83d\ude00\":6,\"\ufb33\":7}"
+  },
+  {
+    "name": "control escapes",
+    "value": {
+      "s": "\b\t\n\f\r\"\\"
+    },
+    "expected": "{\"s\":\"\\b\\t\\n\\f\\r\\\"\\\\\"}"
+  },
+  {
+    "name": "ordered arrays retained",
+    "value": {
+      "args": [
+        "--stdio",
+        "--safe"
+      ]
+    },
+    "expected": "{\"args\":[\"--stdio\",\"--safe\"]}"
+  },
+  {
+    "name": "no Unicode normalization",
+    "value": [
+      "\u00e9",
+      "e\u0301"
+    ],
+    "expected": "[\"\u00e9\",\"e\u0301\"]"
+  }
+]

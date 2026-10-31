@@ -1,0 +1,1486 @@
+{
+  "scope": "All logical entity fields accounted for against actual column catalog; no schema completeness claim",
+  "catalog_sha256": "c0c50490f7f4a6147bec17265a726ca22ba00b6b5343d6710760ee1da6fa811f",
+  "logical_dictionary_sha256": "e2f355ff4e9e429f69a6c19f23fd7ccbd0c6a775129c15d660962636be838cf4",
+  "logical_entity_count": 23,
+  "absent_entities": [],
+  "entities": [
+    {
+      "logical_entity": "TENANT",
+      "physical_table": "tenant",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "tenant",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "name": {
+          "table": "tenant",
+          "column": "name",
+          "physical_type": "text",
+          "logical_type": "string"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Workspace display name is required; local workspace only, no tenant-management product surface."
+    },
+    {
+      "logical_entity": "USER",
+      "physical_table": "actor",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "actor",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "subject": {
+          "table": "actor",
+          "column": "subject",
+          "physical_type": "text",
+          "logical_type": "string"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Unique immutable local subject exists; real bootstrap/session credential provisioning remains unimplemented."
+    },
+    {
+      "logical_entity": "MEMBERSHIP",
+      "physical_table": "membership",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "tenant_id": {
+          "table": "membership",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "user_id": {
+          "table": "membership",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "role": {
+          "table": "membership",
+          "column": "role",
+          "physical_type": "text",
+          "logical_type": "string"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Explicit operator role plus active state enforces the approved initial single-operator capability; no enterprise role-management UI or broader permission model is added."
+    },
+    {
+      "logical_entity": "PROJECT",
+      "physical_table": "project",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "project",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "project",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "name": {
+          "table": "project",
+          "column": "name",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "source": {
+          "table": "project",
+          "column": "source",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "created_at": {
+          "table": "project",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "updated_at": {
+          "table": "project",
+          "column": "updated_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Source/name/timestamps exist and Source/ProjectInput fixture documents validate. Source identity is immutable; actual local/Git acquisition, credential resolution and full workflow/latest-run API projections remain pending."
+    },
+    {
+      "logical_entity": "ANALYSIS_RUN",
+      "physical_table": "analysis",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "analysis",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "analysis",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "project_id": {
+          "table": "analysis",
+          "column": "project_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "status": {
+          "table": "analysis",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "source_digest": {
+          "table": "analysis",
+          "column": "source_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "diagnostics": {
+          "table": "analysis",
+          "column": "diagnostics",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "created_at": {
+          "table": "analysis",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "snapshot_id": {
+          "table": "analysis",
+          "column": "snapshot_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "resolved_revision": {
+          "table": "analysis",
+          "column": "resolved_revision",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "analyzer_versions": {
+          "table": "analysis",
+          "column": "analyzer_versions",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "scope": {
+          "table": "analysis",
+          "column": "scope",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "semantic_mode": {
+          "table": "analysis",
+          "column": "semantic_mode",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "consent_id": {
+          "table": "analysis",
+          "column": "consent_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "previous_run_id": {
+          "table": "analysis",
+          "column": "previous_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "completed_at": {
+          "table": "analysis",
+          "column": "completed_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Analyzer version references are a pinned nonempty array; actual source/analyzer lifecycle and snapshot output sealing remain integration work."
+    },
+    {
+      "logical_entity": "GRAPH_NODE",
+      "physical_table": "graph_node",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "graph_node",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "graph_node",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "analysis_run_id": {
+          "table": "graph_node",
+          "column": "analysis_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "kind": {
+          "table": "graph_node",
+          "column": "kind",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "evidence": {
+          "table": "graph_node",
+          "column": "evidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "label": {
+          "table": "graph_node",
+          "column": "label",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "provenance": {
+          "table": "graph_node",
+          "column": "provenance",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "confidence": {
+          "table": "graph_node",
+          "column": "confidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Scope and nonempty JSON evidence are enforced; analyzer/evidence-content validation and snapshot output sealing remain incomplete."
+    },
+    {
+      "logical_entity": "GRAPH_EDGE",
+      "physical_table": "graph_edge",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "graph_edge",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "graph_edge",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "analysis_run_id": {
+          "table": "graph_edge",
+          "column": "analysis_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "from_node_id": {
+          "table": "graph_edge",
+          "column": "from_node_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "to_node_id": {
+          "table": "graph_edge",
+          "column": "to_node_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "kind": {
+          "table": "graph_edge",
+          "column": "kind",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "provenance": {
+          "table": "graph_edge",
+          "column": "provenance",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "evidence": {
+          "table": "graph_edge",
+          "column": "evidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Same-analysis/tenant endpoints are enforced; analyzer lifecycle output sealing remains incomplete."
+    },
+    {
+      "logical_entity": "PLAN",
+      "physical_table": "plan",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "plan",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "plan",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "analysis_run_id": {
+          "table": "plan",
+          "column": "analysis_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "version": {
+          "table": "plan",
+          "column": "version",
+          "physical_type": "integer",
+          "logical_type": "int"
+        },
+        "status": {
+          "table": "plan_contract",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "integration_type": {
+          "table": "plan_contract",
+          "column": "integration_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "content_hash": {
+          "table": "plan",
+          "column": "plan_hash",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "configuration": {
+          "table": "plan_contract",
+          "column": "configuration",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "policy_version": {
+          "table": "plan_contract",
+          "column": "policy_version",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "snapshot_id": {
+          "table": "plan",
+          "column": "snapshot_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "recommendation_id": {
+          "table": "plan",
+          "column": "recommendation_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "recommendation_version": {
+          "table": "plan",
+          "column": "recommendation_version",
+          "physical_type": "integer",
+          "logical_type": "int"
+        },
+        "candidate_ids": {
+          "table": "plan_contract",
+          "column": "candidate_ids",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "rationale": {
+          "table": "plan_contract",
+          "column": "rationale",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "risks": {
+          "table": "plan_contract",
+          "column": "risks",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "canonical_payload": {
+          "table": "plan_contract",
+          "column": "canonical_payload",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "canonicalization": {
+          "table": "plan_contract",
+          "column": "canonicalization",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "generator": {
+          "table": "plan_contract",
+          "column": "generator",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "policy_id": {
+          "table": "plan_contract",
+          "column": "policy_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "override_reason": {
+          "table": "plan_contract",
+          "column": "override_reason",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "is_current": {
+          "table": "plan",
+          "column": "current",
+          "physical_type": "boolean",
+          "logical_type": "boolean"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Full canonical payload and read-only projection validate against original CanonicalPlan/Plan schemas; trusted publisher must enforce JCS/installed plugin schema and secret-reference policy before product exposure."
+    },
+    {
+      "logical_entity": "APPROVAL",
+      "physical_table": "approval",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "approval",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "approval",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "plan_id": {
+          "table": "approval",
+          "column": "plan_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "actor_id": {
+          "table": "approval",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "plan_hash": {
+          "table": "approval",
+          "column": "plan_hash",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "approved_at": {
+          "table": "approval",
+          "column": "approved_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "plan_version": {
+          "table": "approval",
+          "column": "plan_version",
+          "physical_type": "integer",
+          "logical_type": "int"
+        },
+        "security_confirmed": {
+          "table": "approval",
+          "column": "security_confirmed",
+          "physical_type": "boolean",
+          "logical_type": "boolean"
+        },
+        "revoked_at": {
+          "table": "approval",
+          "column": "revoked_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Exact current plan hash/version and affirmative security confirmation are required; scoped stored Approval validates against OpenAPI. Browser/session and POST idempotency integration remain open."
+    },
+    {
+      "logical_entity": "GENERATION_RUN",
+      "physical_table": "run",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "run",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "run",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "plan_id": {
+          "table": "run",
+          "column": "plan_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "approval_id": {
+          "table": "run",
+          "column": "approval_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "status": {
+          "table": "run",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "created_at": {
+          "table": "run",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "plan_hash": {
+          "table": "run",
+          "column": "plan_hash",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "generator": {
+          "table": "run",
+          "column": "generator",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "artifact_set_digest": {
+          "table": "artifact_set",
+          "column": "artifact_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "previous_run_id": {
+          "table": "run",
+          "column": "previous_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "completed_at": {
+          "table": "run",
+          "column": "completed_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Generator and plan hash derive from immutable canonical binding; actual generation, verified object publication and recovery still require application integration."
+    },
+    {
+      "logical_entity": "ARTIFACT",
+      "physical_table": "artifact",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "artifact",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "artifact",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "generation_run_id": {
+          "table": "artifact",
+          "column": "generation_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "path": {
+          "table": "artifact",
+          "column": "path",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "storage_key": {
+          "table": "artifact",
+          "column": "storage_key",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "sha256": {
+          "table": "artifact",
+          "column": "sha256",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "media_type": {
+          "table": "artifact",
+          "column": "media_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "size_bytes": {
+          "table": "artifact",
+          "column": "size_bytes",
+          "physical_type": "bigint",
+          "logical_type": "int"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Immutable relative portable-path metadata and exact manifest binding exist; actual object bytes, host path resolution/symlink protection and secret-safe publication remain integration work."
+    },
+    {
+      "logical_entity": "VALIDATION_RUN",
+      "physical_table": "validation",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "validation",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "validation",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "generation_run_id": {
+          "table": "validation",
+          "column": "run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "status": {
+          "table": "validation",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "policy_version": {
+          "table": "validation_policy_reference",
+          "column": "policy_version",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "created_at": {
+          "table": "validation",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "artifact_set_digest": {
+          "table": "validation",
+          "column": "artifact_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "policy_id": {
+          "table": "validation",
+          "column": "policy_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "previous_run_id": {
+          "table": "validation",
+          "column": "previous_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "completed_at": {
+          "table": "validation",
+          "column": "completed_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Existence/name alignment does not establish complete behavior, tenant authorization or API compatibility."
+    },
+    {
+      "logical_entity": "VALIDATION_CHECK",
+      "physical_table": "validation_check",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "validation_check",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "validation_check",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "validation_run_id": {
+          "table": "validation_check",
+          "column": "validation_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "name": {
+          "table": "validation_check",
+          "column": "name",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "mandatory": {
+          "table": "validation_check_contract",
+          "column": "mandatory",
+          "physical_type": "boolean",
+          "logical_type": "boolean"
+        },
+        "status": {
+          "table": "validation_check",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "exit_code": {
+          "table": "validation_check",
+          "column": "exit_code",
+          "physical_type": "integer",
+          "logical_type": "int"
+        },
+        "log_reference": {
+          "table": "validation_check",
+          "column": "log_reference",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "command": {
+          "table": "validation_check",
+          "column": "command",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "tool_version": {
+          "table": "validation_check",
+          "column": "tool_version",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "started_at": {
+          "table": "validation_check",
+          "column": "started_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "completed_at": {
+          "table": "validation_check",
+          "column": "completed_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "reason": {
+          "table": "validation_check",
+          "column": "reason",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "finding_ids": {
+          "table": "validation_check_contract",
+          "column": "finding_ids",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Stable UUID plus private contract projection derives mandatory/finding IDs; actual worker evidence ingestion and complete policy execution still require integration."
+    },
+    {
+      "logical_entity": "AUDIT_EVENT",
+      "physical_table": "audit_event",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "audit_event",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "audit_event",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "actor_id": {
+          "table": "audit_event",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "action": {
+          "table": "audit_event",
+          "column": "event_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "resource_id": {
+          "table": "audit_event",
+          "column": "resource_id",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "created_at": {
+          "table": "audit_event",
+          "column": "recorded_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "UUID external identity and generated resource ID exist; runtime actor comes from authenticated principal. Administrative/bootstrap actor remains explicitly nullable; complete audit lifecycle/redaction still pending."
+    },
+    {
+      "logical_entity": "SOURCE_SNAPSHOT",
+      "physical_table": "source_snapshot",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "source_snapshot",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "source_snapshot",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "project_id": {
+          "table": "source_snapshot",
+          "column": "project_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "source_digest": {
+          "table": "source_snapshot",
+          "column": "source_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "storage_key": {
+          "table": "source_snapshot",
+          "column": "storage_key",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "resolved_revision": {
+          "table": "source_snapshot",
+          "column": "resolved_revision",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "created_at": {
+          "table": "source_snapshot",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Immutable database identity and scope exist; actual source acquisition/storage byte verification and retention controls remain unimplemented."
+    },
+    {
+      "logical_entity": "CANDIDATE",
+      "physical_table": "candidate",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "candidate",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "candidate",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "analysis_run_id": {
+          "table": "candidate",
+          "column": "analysis_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "graph_node_id": {
+          "table": "candidate",
+          "column": "graph_node_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "finding_id": {
+          "table": "candidate",
+          "column": "finding_id",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "operation_type": {
+          "table": "candidate",
+          "column": "operation_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "side_effects": {
+          "table": "candidate",
+          "column": "side_effects",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "sensitivity": {
+          "table": "candidate",
+          "column": "sensitivity",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "required_scopes": {
+          "table": "candidate",
+          "column": "required_scopes",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "input_schema": {
+          "table": "candidate",
+          "column": "input_schema",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "output_schema": {
+          "table": "candidate",
+          "column": "output_schema",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "eligibility": {
+          "table": "candidate",
+          "column": "eligibility",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "reason_codes": {
+          "table": "candidate",
+          "column": "reason_codes",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "evidence": {
+          "table": "candidate",
+          "column": "evidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "detector": {
+          "table": "candidate",
+          "column": "detector",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "provenance": {
+          "table": "candidate",
+          "column": "provenance",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "confidence": {
+          "table": "candidate",
+          "column": "confidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        }
+      },
+      "missing_fields": [],
+      "notes": "All declared security/evidence metadata exists and selected executable fields bind exactly; schema-valid fixture and basic admission prerequisites are tested, not source truth or installed plugin compatibility."
+    },
+    {
+      "logical_entity": "RECOMMENDATION",
+      "physical_table": "recommendation",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "recommendation",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "recommendation",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "analysis_run_id": {
+          "table": "recommendation",
+          "column": "analysis_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "version": {
+          "table": "recommendation",
+          "column": "version",
+          "physical_type": "integer",
+          "logical_type": "int"
+        },
+        "source_digest": {
+          "table": "recommendation",
+          "column": "source_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "recommended_type": {
+          "table": "recommendation",
+          "column": "recommended_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "rationale": {
+          "table": "recommendation",
+          "column": "rationale",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "candidate_ids": {
+          "table": "recommendation",
+          "column": "candidate_ids",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "risks": {
+          "table": "recommendation",
+          "column": "risks",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "required_reviews": {
+          "table": "recommendation",
+          "column": "required_reviews",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "supported_generation": {
+          "table": "recommendation",
+          "column": "supported_generation",
+          "physical_type": "boolean",
+          "logical_type": "boolean"
+        },
+        "availability_reason": {
+          "table": "recommendation",
+          "column": "availability_reason",
+          "physical_type": "text",
+          "logical_type": "string"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Immutable scope/version/candidate ownership exists; actual deterministic recommendation computation and full content schema validation remain incomplete."
+    },
+    {
+      "logical_entity": "POLICY",
+      "physical_table": "validation_policy",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "validation_policy",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "validation_policy",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "policy_key": {
+          "table": "validation_policy",
+          "column": "policy_key",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "version": {
+          "table": "validation_policy",
+          "column": "version_label",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "required_checks": {
+          "table": "validation_policy",
+          "column": "required_checks",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "schema_version": {
+          "table": "validation_policy",
+          "column": "schema_version",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "content_hash": {
+          "table": "validation_policy",
+          "column": "content_hash",
+          "physical_type": "text",
+          "logical_type": "string"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Each immutable version resource now has a tenant-unique UUID; policy_key groups lineage and exact labels/revisions are unique within it. Canonical references retain the version-row UUID and opaque label. Legacy identity conflicts block migration; actual policy execution remains integration work."
+    },
+    {
+      "logical_entity": "INFERENCE_CONSENT",
+      "physical_table": "consent",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "consent",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "consent",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "project_id": {
+          "table": "consent",
+          "column": "project_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "actor_id": {
+          "table": "consent",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "source_digest": {
+          "table": "consent",
+          "column": "source_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "provider_id": {
+          "table": "consent",
+          "column": "provider_id",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "payload_classes": {
+          "table": "consent",
+          "column": "payload_classes",
+          "physical_type": "ARRAY",
+          "logical_type": "json"
+        },
+        "redaction_policy": {
+          "table": "consent",
+          "column": "redaction_policy",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "retention_disclosure": {
+          "table": "consent",
+          "column": "retention_disclosure",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "expires_at": {
+          "table": "consent",
+          "column": "expires_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "revoked_at": {
+          "table": "consent",
+          "column": "revoked_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Payload classes are text[], not JSON; transaction admission scope exists, actual egress recheck not integrated."
+    },
+    {
+      "logical_entity": "IDEMPOTENCY_RECORD",
+      "physical_table": "idempotency",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "idempotency",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "idempotency",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "actor_id": {
+          "table": "idempotency",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "operation_id": {
+          "table": "idempotency",
+          "column": "operation",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "key": {
+          "table": "idempotency",
+          "column": "key",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "request_digest": {
+          "table": "idempotency",
+          "column": "request_digest",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "resource_id": {
+          "table": "idempotency",
+          "column": "run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "status": {
+          "table": "idempotency",
+          "column": "status",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "response": {
+          "table": "idempotency",
+          "column": "response",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "created_at": {
+          "table": "idempotency",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "UUID/timestamp and immutable original admission response are persisted for generate; other POST operations and HTTP response/status mapping remain integration work."
+    },
+    {
+      "logical_entity": "OUTBOX_EVENT",
+      "physical_table": "outbox",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "outbox",
+          "column": "event_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "outbox",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "aggregate_id": {
+          "table": "outbox",
+          "column": "run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "event_type": {
+          "table": "outbox",
+          "column": "event_type",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "payload": {
+          "table": "outbox",
+          "column": "payload",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        },
+        "created_at": {
+          "table": "outbox",
+          "column": "created_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "dispatched_at": {
+          "table": "outbox",
+          "column": "dispatched_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        },
+        "delivery_attempts": {
+          "table": "outbox",
+          "column": "delivery_attempts",
+          "physical_type": "integer",
+          "logical_type": "int"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Durable immutable payload/timestamps and monotonic attempt metadata exist; dispatcher leases, crash recovery and deduplicated external effects remain unimplemented."
+    },
+    {
+      "logical_entity": "FINDING",
+      "physical_table": "finding",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "finding",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "finding",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "generation_run_id": {
+          "table": "finding",
+          "column": "generation_run_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "stable_key": {
+          "table": "finding",
+          "column": "stable_key",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "severity": {
+          "table": "finding",
+          "column": "severity",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "code": {
+          "table": "finding",
+          "column": "code",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "message": {
+          "table": "finding",
+          "column": "message",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "evidence": {
+          "table": "finding",
+          "column": "evidence",
+          "physical_type": "jsonb",
+          "logical_type": "json"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Immutable same-generation stable identities and validation-check links exist; worker evidence ingestion/redaction and complete report integration remain incomplete."
+    },
+    {
+      "logical_entity": "PLAN_REVOCATION",
+      "physical_table": "plan_revocation",
+      "status": "PARTIAL; name mapping only",
+      "mapped_fields": {
+        "id": {
+          "table": "plan_revocation",
+          "column": "id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "tenant_id": {
+          "table": "plan_revocation",
+          "column": "tenant_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "plan_id": {
+          "table": "plan_revocation",
+          "column": "plan_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "actor_id": {
+          "table": "plan_revocation",
+          "column": "actor_id",
+          "physical_type": "uuid",
+          "logical_type": "uuid"
+        },
+        "reason": {
+          "table": "plan_revocation",
+          "column": "reason",
+          "physical_type": "text",
+          "logical_type": "string"
+        },
+        "revoked_at": {
+          "table": "plan_revocation",
+          "column": "revoked_at",
+          "physical_type": "timestamp with time zone",
+          "logical_type": "datetime"
+        }
+      },
+      "missing_fields": [],
+      "notes": "Immutable actor/reason record blocks supported admission/replay/publication/export; HTTP idempotency, cancellation and full lifecycle integration remain incomplete."
+    }
+  ],
+  "supporting_tables": [
+    "artifact_set",
+    "export_record",
+    "plan_binding",
+    "plan_candidate",
+    "plan_contract",
+    "runtime_principal",
+    "validation_check_contract",
+    "validation_check_finding",
+    "validation_policy_reference",
+    "worker_assignment"
+  ],
+  "mapping_consistency_passed": true,
+  "unmapped_field_count": 0,
+  "field_coverage_complete": true,
+  "full_schema_complete": false
+}

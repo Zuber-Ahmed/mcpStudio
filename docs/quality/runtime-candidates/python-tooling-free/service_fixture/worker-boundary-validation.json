@@ -1,0 +1,71 @@
+{
+  "recorded_date": "2026-10-30",
+  "image": "sha256:bd320540b91dabf4f7fabe7bef85aefea4745d256895bbd6b2261c562db22049",
+  "scope": "Trusted Docker isolation/resource/forced deadline fixture, not application path validator or hostile-code sandbox certification",
+  "passed": true,
+  "checks": [
+    {
+      "name": "bounded container fixture exits successfully",
+      "passed": true
+    },
+    {
+      "name": "source_read_only",
+      "passed": true
+    },
+    {
+      "name": "root_read_only",
+      "passed": true
+    },
+    {
+      "name": "egress_denied",
+      "passed": true
+    },
+    {
+      "name": "non_root",
+      "passed": true
+    },
+    {
+      "name": "output_writable",
+      "passed": true
+    },
+    {
+      "name": "symlink_target_read_only",
+      "passed": true
+    },
+    {
+      "name": "host source digest unchanged",
+      "passed": true
+    },
+    {
+      "name": "timeout fixture starts",
+      "passed": true
+    },
+    {
+      "name": "memory CPU process limits applied",
+      "passed": true
+    },
+    {
+      "name": "forced deadline occurs",
+      "passed": true
+    },
+    {
+      "name": "timed out container forcibly removed",
+      "passed": true
+    },
+    {
+      "name": "no retained container or ephemeral tmp filesystem",
+      "passed": true
+    },
+    {
+      "name": "unique host fixture directory removed",
+      "passed": true
+    }
+  ],
+  "limits": {
+    "memory_bytes": 134217728,
+    "cpu": 0.5,
+    "pids": 32,
+    "deadline_seconds": 3
+  },
+  "cleanup_complete": true
+}

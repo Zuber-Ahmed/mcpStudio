@@ -1,0 +1,50 @@
+{
+  "base_image": "python@sha256:3cabfd7d7aaf394e6040e79fa1eec6ca1c52b74ed9188650472695d9a9326999",
+  "wheels": [
+    {
+      "name": "nexus-rpc",
+      "version": "1.4.0",
+      "filename": "nexus_rpc-1.4.0-py3-none-any.whl",
+      "sha256": "14c953d3519113f8ccec533a9efdb6b10c28afef75d11cdd6d422640c40b3a49"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "filename": "protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl",
+      "sha256": "89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2"
+    },
+    {
+      "name": "temporalio",
+      "version": "1.35.0",
+      "filename": "temporalio-1.35.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "45b5438f41ab154eda4eea40069df2fa8779cb8f5c27f266b917a700bfba8bb8"
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.0",
+      "filename": "tree_sitter-0.26.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "f665510f0fcf4636fb9696f1f7853bed7a3bd764b7bb0cb8494e619c14ed5a0c"
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "version": "0.23.2",
+      "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "e96d36b85bcacdeb8ff5c2618d75593ef12ebaf1b4eace3477e2bdb2abb1752c"
+    },
+    {
+      "name": "types-protobuf",
+      "version": "7.35.1.20260906",
+      "filename": "types_protobuf-7.35.1.20260906-py3-none-any.whl",
+      "sha256": "5155e48569e0dabff303fdf578db96cd31ea9a4a63b18018a4ceac6b0ae17462"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    }
+  ],
+  "all_hashes_verified_against_pypi": true,
+  "offline_image_build": true,
+  "fixture_image_id": "sha256:5cd2e089643a7c47f7c0fe4feaf81b0191834d51e9b9190a128a87a796846af4"
+}

@@ -1,0 +1,105 @@
+{
+  "scope": "Recorded scan counts and baseline report hashes; not a fresh vulnerability scan or reachability analysis",
+  "passed": true,
+  "reports": [
+    {
+      "image": "postgres",
+      "entries": 374,
+      "counts": {
+        "LOW": 141,
+        "HIGH": 86,
+        "MEDIUM": 140,
+        "UNKNOWN": 5,
+        "CRITICAL": 2
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "temporal",
+      "entries": 30,
+      "counts": {
+        "UNKNOWN": 5,
+        "HIGH": 6,
+        "MEDIUM": 15,
+        "LOW": 4
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "schema",
+      "entries": 145,
+      "counts": {
+        "UNKNOWN": 16,
+        "HIGH": 32,
+        "MEDIUM": 76,
+        "LOW": 20,
+        "CRITICAL": 1
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "storage",
+      "entries": 4,
+      "counts": {
+        "HIGH": 1,
+        "UNKNOWN": 3
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "python_base",
+      "entries": 172,
+      "counts": {
+        "LOW": 62,
+        "HIGH": 49,
+        "MEDIUM": 60,
+        "UNKNOWN": 1
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "worker_fixture",
+      "entries": 172,
+      "counts": {
+        "LOW": 62,
+        "HIGH": 49,
+        "MEDIUM": 60,
+        "UNKNOWN": 1
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "service_fixture",
+      "entries": 172,
+      "counts": {
+        "LOW": 62,
+        "HIGH": 49,
+        "MEDIUM": 60,
+        "UNKNOWN": 1
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "sandbox_smoke",
+      "entries": 103,
+      "counts": {
+        "MEDIUM": 29,
+        "LOW": 51,
+        "CRITICAL": 2,
+        "HIGH": 19,
+        "UNKNOWN": 2
+      },
+      "hash_matches": true
+    },
+    {
+      "image": "worker_fixture_tooling_free",
+      "entries": 164,
+      "library_findings": 0
+    },
+    {
+      "image": "service_fixture_tooling_free",
+      "entries": 164,
+      "library_findings": 0
+    }
+  ]
+}

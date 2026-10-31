@@ -1,0 +1,165 @@
+{
+  "scope": "Implemented partial foundation admission kernel, migration and independent-session transaction tests; no API, inference execution or full 23-entity schema",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "published_ports": false,
+  "passed": true,
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "migration applies atomically on empty PostgreSQL",
+      "passed": true
+    },
+    {
+      "name": "current scoped approval admits local run",
+      "passed": true
+    },
+    {
+      "name": "same key and same body returns original run",
+      "passed": true
+    },
+    {
+      "name": "changed digest conflicts with existing key",
+      "passed": true
+    },
+    {
+      "name": "same digest but changed body conflicts",
+      "passed": true
+    },
+    {
+      "name": "foreign actor denied",
+      "passed": true
+    },
+    {
+      "name": "inference without consent denied",
+      "passed": true
+    },
+    {
+      "name": "matching explicit consent accepted",
+      "passed": true
+    },
+    {
+      "name": "wrong provider denied",
+      "passed": true
+    },
+    {
+      "name": "extra payload class denied",
+      "passed": true
+    },
+    {
+      "name": "null payload class denied",
+      "passed": true
+    },
+    {
+      "name": "empty payload class denied",
+      "passed": true
+    },
+    {
+      "name": "changed redaction denied",
+      "passed": true
+    },
+    {
+      "name": "changed retention denied",
+      "passed": true
+    },
+    {
+      "name": "expired consent denied",
+      "passed": true
+    },
+    {
+      "name": "revoked consent denied",
+      "passed": true
+    },
+    {
+      "name": "changed source consent denied",
+      "passed": true
+    },
+    {
+      "name": "foreign project consent denied",
+      "passed": true
+    },
+    {
+      "name": "foreign actor consent denied",
+      "passed": true
+    },
+    {
+      "name": "cross tenant analysis parent denied",
+      "passed": true
+    },
+    {
+      "name": "terminal run without completion time denied",
+      "passed": true
+    },
+    {
+      "name": "referenced approval deletion restricted",
+      "passed": true
+    },
+    {
+      "name": "concurrent identical requests return one resource",
+      "passed": true
+    },
+    {
+      "name": "concurrent admission creates one outbox identity",
+      "passed": true
+    },
+    {
+      "name": "failed admission rolls back run and outbox",
+      "passed": true
+    },
+    {
+      "name": "rejected admission has no persisted run",
+      "passed": true
+    },
+    {
+      "name": "approval revocation lock observed in independent session",
+      "passed": true
+    },
+    {
+      "name": "approval admission waits for revocation transaction",
+      "passed": true
+    },
+    {
+      "name": "approval concurrent committed revocation denies admission",
+      "passed": true
+    },
+    {
+      "name": "membership revocation lock observed in independent session",
+      "passed": true
+    },
+    {
+      "name": "membership admission waits for revocation transaction",
+      "passed": true
+    },
+    {
+      "name": "membership concurrent committed revocation denies admission",
+      "passed": true
+    },
+    {
+      "name": "consent revocation lock observed in independent session",
+      "passed": true
+    },
+    {
+      "name": "consent admission waits for revocation transaction",
+      "passed": true
+    },
+    {
+      "name": "consent concurrent committed revocation denies admission",
+      "passed": true
+    },
+    {
+      "name": "concurrent plan versions are monotonic and unique",
+      "passed": true
+    },
+    {
+      "name": "one current plan after concurrent publication",
+      "passed": true
+    },
+    {
+      "name": "superseded plan cannot replay prior admission",
+      "passed": true
+    },
+    {
+      "name": "transaction rollback removes idempotency and outbox effects",
+      "passed": true
+    }
+  ]
+}

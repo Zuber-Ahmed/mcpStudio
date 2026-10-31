@@ -1,0 +1,118 @@
+{
+  "name": "mcpstudio-local",
+  "services": {
+    "postgres": {
+      "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+      "environment": {
+        "POSTGRES_USER": "mcpstudio_local",
+        "POSTGRES_DB": "postgres",
+        "POSTGRES_PASSWORD": "${MCPSTUDIO_DB_PASSWORD:?local credentials required}"
+      },
+      "volumes": [
+        "postgres-data:/var/lib/postgresql/data",
+        "./temporal-databases.sql:/docker-entrypoint-initdb.d/01-temporal.sql:ro"
+      ],
+      "networks": [
+        "default",
+        "local-edge"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -U mcpstudio_local -d postgres"
+        ],
+        "interval": "3s",
+        "timeout": "3s",
+        "retries": 30
+      },
+      "ports": [
+        "127.0.0.1:5432:5432"
+      ],
+      "mem_limit": "512m"
+    },
+    "schema": {
+      "image": "temporalio/admin-tools@sha256:9ef0dc5b063bf4ffd5c1512de72e0e73e225bd2c7006a18ce69bd592a8862a83",
+      "entrypoint": [
+        "/bin/sh",
+        "/bootstrap.sh"
+      ],
+      "environment": {
+        "POSTGRES_PWD": "${MCPSTUDIO_DB_PASSWORD:?local credentials required}"
+      },
+      "volumes": [
+        "./setup-temporal-schema.sh:/bootstrap.sh:ro"
+      ],
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy"
+        }
+      }
+    },
+    "temporal": {
+      "image": "temporalio/server@sha256:acecbab5b0b8ae9cf4012b508866ca97feda3709577bf157b537239f40029049",
+      "entrypoint": [
+        "/bin/sh",
+        "/run/start-temporal.sh"
+      ],
+      "volumes": [
+        "../.local/services/temporal.yaml:/run/temporal-template.yaml:ro",
+        "./run-temporal.sh:/run/start-temporal.sh:ro"
+      ],
+      "networks": [
+        "default",
+        "local-edge"
+      ],
+      "ports": [
+        "127.0.0.1:7233:7233"
+      ],
+      "depends_on": {
+        "schema": {
+          "condition": "service_completed_successfully"
+        }
+      },
+      "mem_limit": "1g"
+    },
+    "storage": {
+      "image": "chrislusf/seaweedfs@sha256:f7a49e3f3972ebed5be2ed4befa4a0c68eb7bdddba6e692d42729ceb545134b8",
+      "command": [
+        "mini",
+        "-dir=/data",
+        "-ip=storage",
+        "-ip.bind=0.0.0.0",
+        "-s3.config=/run/s3.json",
+        "-bucket=mcpstudio-fixtures",
+        "-master.telemetry=false",
+        "-admin.ui=false",
+        "-webdav=false",
+        "-s3.port.iceberg=0",
+        "-s3.port.lance=0",
+        "-volume.max=4",
+        "-master.volumeSizeLimitMB=64"
+      ],
+      "volumes": [
+        "storage-data:/data",
+        "../.local/services/s3.json:/run/s3.json:ro"
+      ],
+      "ports": [
+        "127.0.0.1:8333:8333"
+      ],
+      "networks": [
+        "default",
+        "local-edge"
+      ],
+      "mem_limit": "512m"
+    }
+  },
+  "volumes": {
+    "postgres-data": {},
+    "storage-data": {}
+  },
+  "networks": {
+    "default": {
+      "internal": true
+    },
+    "local-edge": {
+      "driver": "bridge"
+    }
+  }
+}

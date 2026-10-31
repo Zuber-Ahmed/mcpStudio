@@ -1,0 +1,10 @@
+{
+  "scope": "Generated resource/bootstrap declarations and typed client factories; no API runtime",
+  "compiler": "TypeScript 5.9.3",
+  "generator": "openapi-typescript 7.13.0",
+  "transport": "openapi-fetch 0.17.0",
+  "passed": true,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

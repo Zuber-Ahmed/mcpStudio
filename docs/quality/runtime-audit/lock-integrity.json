@@ -1,0 +1,73 @@
+{
+  "recorded_date": "2026-10-30",
+  "scope": "Previously source-verified installed fixture locks and downloaded binary wheels; no authenticity beyond recorded source checks",
+  "checks": [
+    {
+      "name": "contract-tools installed lock matches preserved lock",
+      "passed": true,
+      "sha256": "615d7d507067c514673164481c2b7a00db337bc9b7e9f2568c13d94e9e2213fc"
+    },
+    {
+      "name": "mcp-fixture installed lock matches preserved lock",
+      "passed": true,
+      "sha256": "7c43f6042779d278cd553f4236fece7c0763438a2605d8ff494a664087609aca"
+    },
+    {
+      "name": "nexus-rpc 1.4.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "protobuf 7.36.2 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "temporalio 1.35.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "tree-sitter 0.26.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "tree-sitter-typescript 0.23.2 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "types-protobuf 7.35.1.20260906 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "typing-extensions 4.16.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "boto3 1.43.121 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "botocore 1.43.121 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "jmespath 1.1.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "python-dateutil 2.9.0.post0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "s3transfer 0.19.3 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "six 1.17.0 wheel retains pinned digest",
+      "passed": true
+    },
+    {
+      "name": "urllib3 2.8.0 wheel retains pinned digest",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

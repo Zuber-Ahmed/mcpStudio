@@ -1,0 +1,606 @@
+{
+  "recorded_date": "2026-10-29",
+  "review_complete": true,
+  "foundation_checks_passed": true,
+  "m03_complete": false,
+  "gate_status": "HOLD: required checks remain; no milestone transition authorized by this report",
+  "evidence": [
+    {
+      "path": "docs/quality/openapi-validation.json",
+      "sha256": "86b6cf0927a2f9935ae224c74426d14c377d120582b9d2f2038ff1f19ee6d860",
+      "passed": true,
+      "check_entries": 24
+    },
+    {
+      "path": "docs/quality/client-validation.json",
+      "sha256": "be382d13018b967a1a28bc3b308c5b35fa37525a1ab8dd79f9d5e8bef89b8de4",
+      "passed": true
+    },
+    {
+      "path": "docs/quality/jcs-validation.json",
+      "sha256": "d257a811042fb6f1064a340625b09c46bc0c8eecb88000e8cb519e5f4ab59c43",
+      "passed": true,
+      "check_entries": 11
+    },
+    {
+      "path": "docs/quality/database-constraint-validation.json",
+      "sha256": "013cd9c50bf521f116036cda0b2d5050fc3b8b5cf49a5812276405f8feb74418",
+      "passed": true,
+      "check_entries": 22
+    },
+    {
+      "path": "docs/quality/mcp-stdio-validation.json",
+      "sha256": "84ee4b2274d43623fcd5dce245e251644270895bf2fd8d62f02e61f5a745e77a",
+      "passed": true,
+      "check_entries": 8
+    },
+    {
+      "path": "docs/quality/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e",
+      "passed": true,
+      "check_entries": 11
+    },
+    {
+      "path": "docs/quality/local-service-validation.json",
+      "sha256": "f06472b9a464f6099de02e61a4a65e77780e0100f9aa0118597021210fc5a742",
+      "passed": true,
+      "check_entries": 11
+    },
+    {
+      "path": "docs/quality/worker-boundary-validation.json",
+      "sha256": "4028ae09c4cc172978771ca1b4c8de8ef8be58bd469833f1ccd9bd89f2d8fca5",
+      "passed": true,
+      "check_entries": 14
+    },
+    {
+      "path": "docs/quality/mcp-fixture-audit.json",
+      "sha256": "39913900e9015932fb79e6b4d8f8c8b6cba4b52666925812d55967858da9f2c0"
+    },
+    {
+      "path": "docs/quality/admission-transaction-validation.json",
+      "sha256": "9a8034d0bfc70cd9a78277a221c4428858ee443a5745a5b48f058259c8a0b0ea",
+      "passed": true,
+      "check_entries": 39
+    },
+    {
+      "path": "docs/quality/bound-validation-results.json",
+      "sha256": "dd67a350893f4524bed193c9167fd84de6750e481a52556a47f2269edae10f5e",
+      "passed": true,
+      "check_entries": 59
+    },
+    {
+      "path": "infra/database/migrations/001_admission_kernel.sql",
+      "sha256": "423a3274313a24290bc0cebfec09a6ce840de5a7485fc834f27d52f386b4dd49"
+    },
+    {
+      "path": "infra/database/migrations/002_bound_validation.sql",
+      "sha256": "531983169ec3e4aca380156101cbdbb79e743adcf378aecbb31569180243701d"
+    },
+    {
+      "path": "tools/fixtures/m03/bound-validation-runner.py",
+      "sha256": "0c571f4e60970c2c425b5b9c3e928f52f618b3d14407339e51dc51c499ba8368"
+    },
+    {
+      "path": "docs/quality/runtime-role-validation.json",
+      "sha256": "6d3e3cbb77a313dbf152adafd5914f911f3cf07bed3f6be6b752d4918cbc0023",
+      "passed": true,
+      "check_entries": 56
+    },
+    {
+      "path": "infra/database/migrations/003_runtime_roles.sql",
+      "sha256": "b5dd2f3810e005e603a4b7afe41989bf2616845e89ce8f14527c8ec651015196"
+    },
+    {
+      "path": "tools/fixtures/m03/runtime-role-runner.py",
+      "sha256": "8a314b5e95a242f5125affa5b29991e08822de41e1e58d89ea5bd6653c4c7e95"
+    },
+    {
+      "path": "docs/quality/source-chain-validation.json",
+      "sha256": "d71b18536219fe37182cdf4ec54211fcd2942c4a3292e65cfabb89d32872f15a",
+      "passed": true,
+      "check_entries": 48
+    },
+    {
+      "path": "infra/database/migrations/004_source_graph_recommendation.sql",
+      "sha256": "a1cc5640cbdb65c8771f341126795af3602764954619d5aae98de789300fb665"
+    },
+    {
+      "path": "tools/fixtures/m03/source-chain-runner.py",
+      "sha256": "c01379c819167cc402f43c3525776ee6ceb22901de3ff2afb8a8946c334e0be8"
+    },
+    {
+      "path": "docs/quality/artifact-chain-validation.json",
+      "sha256": "564d24c2711e57f3eb6a3f8de214466e198c1851d187b2d31c44bcee09da75cd",
+      "passed": true,
+      "check_entries": 101
+    },
+    {
+      "path": "infra/database/migrations/005_artifacts_findings_revocations.sql",
+      "sha256": "49273747c226960f25c8787be14b7ea55eea9ed3f45a8a6f0400eeb31713f179"
+    },
+    {
+      "path": "tools/fixtures/m03/artifact-chain-runner.py",
+      "sha256": "5adb327f32334db531bb5be9dd30181a5d41cfe9ad00f751586f88245939ff92"
+    },
+    {
+      "path": "docs/quality/metadata-chain-validation.json",
+      "sha256": "d38b966d3f72d74cabaeabfc26cac78d38baab990477cc915ff9807f6a3e7e5f",
+      "passed": true,
+      "check_entries": 138
+    },
+    {
+      "path": "infra/database/migrations/006_identity_approval_metadata.sql",
+      "sha256": "5dbdbb27ac550d617398e5579c07b9e8df0c9a330ca7515dea177dde14c3b362"
+    },
+    {
+      "path": "tools/fixtures/m03/metadata-chain-runner.py",
+      "sha256": "7a9ec73eb1bc640673f02e8756bf87852835ec69b78cae6f0f96f90f7a101ccb"
+    },
+    {
+      "path": "docs/quality/payload-chain-validation.json",
+      "sha256": "768e276840c36172ae6e9601b13ee8ed539ffc6d3468bb5442f90e239f444ad8",
+      "passed": true,
+      "check_entries": 59
+    },
+    {
+      "path": "infra/database/migrations/007_executable_payloads.sql",
+      "sha256": "21557b2fba2ce1dcea5903d8f4dbb52252fd5d5974cc7107c38f8b233daa9e32"
+    },
+    {
+      "path": "tools/fixtures/m03/payload-chain-runner.py",
+      "sha256": "6642752dffd6034524af2cdc0ef58a5bf38f318d457ee5ffc6377805d077ff15"
+    },
+    {
+      "path": "tools/plan_payload.py",
+      "sha256": "473f478386b3bb60b2687113d83264635f8a2ae8e5d0a382ae37ac46bccd73ac"
+    },
+    {
+      "path": "docs/quality/schema-acceptance-validation.json",
+      "sha256": "99b762d37aeb7f189cbd9c5ccb42f65ffc3b178df414a2852fe1145b8ab1ba2b",
+      "passed": true,
+      "check_entries": 104
+    },
+    {
+      "path": "infra/database/migrations/008_principal_project_metadata.sql",
+      "sha256": "416c52212dc984c4cecdf026c0beb076a42c7d5594af3d4300fc078c57edbf56"
+    },
+    {
+      "path": "tools/fixtures/m03/schema-acceptance-runner.py",
+      "sha256": "0e25a2ada3d98151eeb3accbe123d7c59af7e3ab404602c31c4a86453a16034f"
+    },
+    {
+      "path": "docs/quality/policy-identity-validation.json",
+      "sha256": "bb3ab66e3558bd923d7467ea7bead22b1a0551f6f591f1be3beb283b4dbdf625",
+      "passed": true,
+      "check_entries": 118
+    },
+    {
+      "path": "docs/quality/schema-acceptance-review.json",
+      "sha256": "e02cebc185e94c79a6ed0949c27c5d0cecd94a2b7e222f8475f1a55fac8543f6"
+    },
+    {
+      "path": "docs/quality/physical-schema-catalog.json",
+      "sha256": "c0c50490f7f4a6147bec17265a726ca22ba00b6b5343d6710760ee1da6fa811f"
+    },
+    {
+      "path": "docs/quality/physical-model-mapping.json",
+      "sha256": "92d1251d2715d8ec436bb08d49463c302a0a20282d61df99b769c668734fceab"
+    },
+    {
+      "path": "infra/database/migrations/009_policy_version_identity.sql",
+      "sha256": "e313fb147338b4bf08c40d454004c90e9ee6710ff333ccffc7ab50dbf4906d24"
+    },
+    {
+      "path": "tools/fixtures/m03/policy-identity-runner.py",
+      "sha256": "e493bcf27e4ffcdc744538c91bcf378f7f6dfd11a43752f76fa6a6cf624b5a57"
+    },
+    {
+      "path": "tools/map-physical-schema.py",
+      "sha256": "5f5947b6840eb3580f9b1aec35acdf60f2243bfcf880f38b6ec8d45cb96a87b8"
+    },
+    {
+      "path": "docs/quality/python-dependency-review.json",
+      "sha256": "b60c8c47dbe57d7dbf21d2fa60159dce424f299c2b59ed9efed727462fb9719c"
+    },
+    {
+      "path": "docs/quality/runtime-audit/assessment.json",
+      "sha256": "7d66d2e0e13e48e3eede0135b1727073539f3cc92b74565b20438297fc54d438"
+    },
+    {
+      "path": "docs/quality/runtime-audit/contract-tools-audit.json",
+      "sha256": "0179643853ea515e865e541b2120e247ba5c5fbffd1f698241ce75c1dc84e9e8"
+    },
+    {
+      "path": "docs/quality/runtime-audit/core-runtime-review.json",
+      "sha256": "7ddfd6ef8237f4c2e048ee9af73410e5a5639f11385fb03be0a846924a4c0573"
+    },
+    {
+      "path": "docs/quality/runtime-audit/image-review.json",
+      "sha256": "258b4d915e4baba49a7c2f43aced73b9259282e6ae149e4fe7c9d6b8fbb5a7b7"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/postgres.json",
+      "sha256": "d19235999775a904bd70098c0e3600e1785798df52759bc3d650e041a85a821c"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/python_base.json",
+      "sha256": "d45fdecc40e6b12bb65d072bedc13fabb39a33c3c662c9963860baba9dc58722"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/sandbox_smoke.json",
+      "sha256": "c6145e470c84a498eaeb3f16e76c9943f25923b9f0ab43fbb7a99dd4858f0237"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/schema.json",
+      "sha256": "03a07db5b40f5179f9cf0c306a2f789a136398e72bcc211796f54caead424bc5"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/service_fixture.json",
+      "sha256": "4ff5708f756408f74327aebbcb7a850c7f2d48741190afed54feb5169df837ea"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/storage.json",
+      "sha256": "cc81739fef2f91558ea85b78e8f0f9918175978fffdf138f25945e12e284f334"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/temporal.json",
+      "sha256": "c539f47e5a6747933ceb222adb11197d62f695fee9632e74afae682cad1a33b8"
+    },
+    {
+      "path": "docs/quality/runtime-audit/images/worker_fixture.json",
+      "sha256": "e0ebb57b16e479fdc407334338b6e5920815c7a71668a30e18cccab96904c8d9"
+    },
+    {
+      "path": "docs/quality/runtime-audit/inventory-corroboration.json",
+      "sha256": "9ca19168e281db3dd75cfab639dd72efe9be6291a427d65492cfaad6a0c0532f"
+    },
+    {
+      "path": "docs/quality/runtime-audit/lock-integrity.json",
+      "sha256": "cafcd09909af7033071fb98e6f1fc766e44776bb29e3e646448ab1b9058c4555"
+    },
+    {
+      "path": "docs/quality/runtime-audit/mcp-fixture-audit.json",
+      "sha256": "39913900e9015932fb79e6b4d8f8c8b6cba4b52666925812d55967858da9f2c0"
+    },
+    {
+      "path": "docs/quality/runtime-audit/npm-review.json",
+      "sha256": "8395b2d655a4aaa25ef720b34687af650ffae3ebb6175e940846cefcb0559b7f"
+    },
+    {
+      "path": "docs/quality/runtime-audit/scanner-provenance.json",
+      "sha256": "d29211398d841666911e98ed899ba5f37da9430cfa8380e8ff4924cc40418a18"
+    },
+    {
+      "path": "docs/quality/runtime-audit/triage.json",
+      "sha256": "15da652dadd5aa727002179071d1119d5968963058dee4559777da16a4d017e8"
+    },
+    {
+      "path": "docs/quality/runtime-audit/vendored-python-review.json",
+      "sha256": "aec379fe57068ae68f8670d093d4f15f8ba226d08391f8f8aaddba8ea87fb8fd"
+    },
+    {
+      "path": "tools/readiness/prepare-runtime-audit.py",
+      "sha256": "3e1f579a05b8c763c20d0c29f8f7b473650e074079b21410fcbfc0bed55ad595"
+    },
+    {
+      "path": "tools/readiness/audit-npm-runtime.py",
+      "sha256": "469e9ea29eb06041c2cc6ef78a019043827687faa93276043fd98f6e915aded6"
+    },
+    {
+      "path": "tools/readiness/audit-core-and-integrity.py",
+      "sha256": "26f488f271f2aba2a5bb69f150cc4d7892160280846065df226f2c10453f142d"
+    },
+    {
+      "path": "tools/readiness/scan-runtime-images.py",
+      "sha256": "34035a31b6e28fe43ab69447729bf5b5907a971d5da7c6cdce4c11f98f21df30"
+    },
+    {
+      "path": "tools/readiness/corroborate-image-inventory.py",
+      "sha256": "7e7734c2746a4774820edcc8bf98878b4ee315ef022cc9ee164f758cba297ba9"
+    },
+    {
+      "path": "tools/readiness/evaluate-python-runtime-candidates.py",
+      "sha256": "5e2ebe897fa1bf84acd2d9418fd9735bece374bcbddea8d84370c1850319c4a4"
+    },
+    {
+      "path": "tools/fixtures/m03/worker-boundary-runner.py",
+      "sha256": "d06a642282d49c057b69a5d56ea0d0f81c0baeed10efefe606cc3c660e117968"
+    },
+    {
+      "path": "docs/foundation/PYTHON-RUNTIME-CANDIDATES.md",
+      "sha256": "85a9130da80747a7a90e331d6436834ef894343969a2494a1826788b69f80da0"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/assessment.json",
+      "sha256": "8d98aadcc128cabc2e8ad074b036ec1dab67a504fcea0523d568393b3b5278e7"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/service_fixture-scan.json",
+      "sha256": "9f9dbb2cfbf4b944161595e66199d5b80e7c9eea92b6d6d39e44e50fe5ffee3b"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/worker_fixture-scan.json",
+      "sha256": "8fa711bd22dbf08072d7e315eae8accc6eb7779f07996010f7bafe63435b9628"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/service_fixture/local-service-validation.json",
+      "sha256": "c137af2f63f5a80b57702d6674a38515861c2486f45483eab71a6844fc1af142"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/service_fixture/worker-boundary-validation.json",
+      "sha256": "2bd533d5412689437d375a384d35c426250112df821157859d41b21434e22f52"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/service_fixture/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/worker_fixture/worker-boundary-validation.json",
+      "sha256": "2e9c09ec202c3c26269c974eed5f2ea013f8ee0e4d0932f8ff4417abd2020921"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/worker_fixture/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/service_fixture.Dockerfile",
+      "sha256": "25447c1b6126590be27e6c801cef4fd8183085d247d936c7a6e45a7cd2eefd5d"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-tooling-free/worker_fixture.Dockerfile",
+      "sha256": "f799a2a5616bd869276da5bc47eed821c507f048e9ecf729044689df1d149e94"
+    },
+    {
+      "path": "tools/readiness/evaluate-python-os-candidates.py",
+      "sha256": "7f9a1071734e19edfcdc850630fd0a9f9e6968d6e6e180c054912e70361308ca"
+    },
+    {
+      "path": "docs/foundation/PYTHON-OS-CANDIDATES.md",
+      "sha256": "85128c37f266f899762bd43d145134c5e8e44765027386fb4ed3f48d4d8d4ac6"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/assessment.json",
+      "sha256": "fe2df80ecca7b5a2ff4741683ef1b6120480c38ef7673eadf02953384778a788"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/bookworm-build.log",
+      "sha256": "a12d570bc63d50e0dd1289ce1bde1da0da78ed6ed21c32ec9bd619bde0ced3c0"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/bookworm-scan.json",
+      "sha256": "5c1ae380554ba047576fa4874087c6dfb03afc23ad6b24c9cbcab11f1daa7e77"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/bookworm.Dockerfile",
+      "sha256": "299b78b513baea16da808230caebc82f7065536bac285ee0b2eefdb70469d74e"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/decision.json",
+      "sha256": "5b5aa7de2ef352eb8faec1cbd103fe0534b61effb36aee029a2a459387e63e18"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/packages-after.tsv",
+      "sha256": "fd82c8acdd4ad37ea91f7ca9fba74a0ac62a202542e1baabd05483be60d71245"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/packages-before.tsv",
+      "sha256": "2ea0add88637b36701955acdc58b5828da1b0b30bda91660d5a91c61393ffff6"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/trixie_apt_upgrade-build.log",
+      "sha256": "586227fec9fd8935efb2d00faacab446d01798df7ac754a3951a9c4080cf0503"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/trixie_apt_upgrade-scan.json",
+      "sha256": "27421f9cb8ef13d4a6dd83eecd6f9966e78f1117efb87836b7201f6f7aeaa8cb"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/trixie_apt_upgrade.Dockerfile",
+      "sha256": "883914907f2ab1027ed56598ca6f45ccdb54b6fe9bb7852cc08238401c714c85"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/bookworm/worker-boundary-validation.json",
+      "sha256": "d5131cbfcf9ddc29180310e3923184308c97b8f1e441f4a30222ccb3eccdd903"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/bookworm/worker-runtime-validation.json",
+      "sha256": "faa38ecf6c7c2b50b7c4e1f736e125245f92d60b552d1f1d7f8f4cc35283ac62"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/trixie_apt_upgrade/worker-boundary-validation.json",
+      "sha256": "feb55a735b03650ebedf97a2737ab016cd6b431b5a90bd3474d811cfe41e1b07"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-os/trixie_apt_upgrade/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e"
+    },
+    {
+      "path": "tools/readiness/map-worker-os-findings.py",
+      "sha256": "74b6a563cd5e52d34216537a7bccc5e74354c2c43c6e19f559aa351d81fd31dc"
+    },
+    {
+      "path": "docs/foundation/WORKER-MINIMAL-RUNTIME-DESIGN.md",
+      "sha256": "a57b489485fa694fb463569724be95dfa9596e526769cd0752936686e33a9f13"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/assessment.json",
+      "sha256": "aff4da722d386c60bfaaf391f68fd2ae08433fd6b7328efaa6dd2398345c035c"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/finding-path-matrix.json",
+      "sha256": "b189f3c129b00492c78364ec191a17f2e6932e7a90f22b82c195276c1401f4e8"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/high-advisory-review.json",
+      "sha256": "e4696dc909cb4419b98ac9c1dcc3839bc5f64e7b2830feb4d04680816d10c10b"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/minimal-runtime-design.json",
+      "sha256": "6d4a5cc73919319734c08c09cdc643f212bd6886bb13f6e9619f27d8aeee669b"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/runtime-path-evidence.json",
+      "sha256": "1f9b26b0d4fcb7d26c122f5f700ab0c0b16c8a9cdac5488abf166b8c92725fab"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/python-path-review/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e"
+    },
+    {
+      "path": "docs/foundation/MINIMAL-RUNTIME-CANDIDATE.md",
+      "sha256": "8ac777f39f12426a3479b71c8226366afbed5340fe813fdd9dcce76d7757197b"
+    },
+    {
+      "path": "tools/readiness/build-minimal-root.py",
+      "sha256": "1b4713f5cfe8db507df3f0a749c1f1380eb3c228c70e48ace93ca2c366c50d8e"
+    },
+    {
+      "path": "tools/readiness/check-minimal-runtime.py",
+      "sha256": "38e70e58ab0a7dcfffdc7b41d4db8a56cdfa3de2448d6442fbed61bd23dea304"
+    },
+    {
+      "path": "tools/readiness/evaluate-minimal-runtime.py",
+      "sha256": "36071952f788503e129f028dd3e56cd7337fcb85b911ec6421ed312435f5e917"
+    },
+    {
+      "path": "tools/readiness/minimal-runtime-provenance.py",
+      "sha256": "1814a51356e23580098d54b96cfa849ba5b9b4dc9db31fdc8be393112996b76d"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/assessment.json",
+      "sha256": "ffeb0fddbfabd61c789e7bfdc21457e5a230a75399deae782116f8f1ac49dc30"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/build.log",
+      "sha256": "d3cf48a5b5a9f3f2dc4df8b9c5e554d017971c51123f8705180430195a078483"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/Dockerfile",
+      "sha256": "979fb223f521e2c0329dbec0cc159c33ea2b67334c062e133a93d4804ea4c114"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/local-service-validation.json",
+      "sha256": "7c6c0a6d025f2504517e3581708561ccf8e9c0e18081992504bd8b71b3c89e0d"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/minimal-runtime-validation.json",
+      "sha256": "07bb865deb9bc007100af2d99ffd9385b5556197e436bed2052a81bf9b590e6a"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/native-build-checks.json",
+      "sha256": "8787db9a7dc5bf6c8c0024c61d061b9ac4fc6ac8c3522223de655950e95baa95"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/os-unrecognized-assessment.json",
+      "sha256": "504a1f288fe4df3e13f7ccb05cffc0e85b11f97023f7731100fd91ff9f78bd57"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/os-unrecognized-scan.json",
+      "sha256": "f0e2efa50a463f4a3f3540ce9c48b5dd632c8bcbeb7ea7591129e62d23ec8584"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/package-provenance-coverage.json",
+      "sha256": "e9226c0b28794c315aea4218a030f5837464c55abfc9e6227264d6ec31000735"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/retained-files.json",
+      "sha256": "cf0df80d1801fef1b736694f938dc3a2120890f12752362c379904073a0e6a74"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/scan.json",
+      "sha256": "c6898aeb62470f6131020a4145c8adb84019aae1e214ef13a85222bb3f89c4ce"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/scope.json",
+      "sha256": "6bcb6e2925c791ea163354c9ebc21f2be19bf659d773029afe2025ab8b936c60"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/service-dns-validation.json",
+      "sha256": "1a055fffa24632e2f7dd47e40df26a71ff15bbb7136d93611626ea45927971a5"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/worker-boundary-validation.json",
+      "sha256": "8f8310e9b286130a5f4a5f8e8095888aa2348f87b85cae4221be223031fead71"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-runtime/worker-runtime-validation.json",
+      "sha256": "e0a74e2e475c83bf9f8de98e4127c6fa4b263eec14018717ce74e6203314b47e"
+    },
+    {
+      "path": "docs/foundation/MINIMAL-RUNTIME-RESTART-REVIEW.md",
+      "sha256": "d00978d8b39cf813c69819a1682e171c259e1831d99ac22016104105810d9686"
+    },
+    {
+      "path": "tools/readiness/test-minimal-restart.py",
+      "sha256": "15c21f06cf8cf570f20f96dd4dda725775526f6d583732ad4bdbbf6ba875bd7b"
+    },
+    {
+      "path": "tools/readiness/review-minimal-high-advisories.py",
+      "sha256": "94b80b63602fb181d42e7b86832c35653567a80befc5749e1d70fba6ace78381"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-restart/assessment.json",
+      "sha256": "9e006f9292bc4bebdfa56a2eed840564b1449ad6e6cd51e7611e9b97072437f5"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-restart/component-exclusion-checks.json",
+      "sha256": "3006c57651fcc664633b9d595cc7f472dc3da5e02bb31cb4e33d17b79d2b4ae8"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-restart/high-advisory-dispositions.json",
+      "sha256": "685ea9c418f127cfad85d160e3b599d6fdc1f8abc9d9ece50cbf46ed74d43e15"
+    },
+    {
+      "path": "docs/quality/runtime-candidates/minimal-restart/local-service-validation.json",
+      "sha256": "fd2ef56ff6e6753b96702ec1c3b9a3ee5f77f7e4a692ebbb14ff52f47acbf574"
+    }
+  ],
+  "holds": [
+    {
+      "id": "H01",
+      "requirement": "DB01-DB10 full physical semantics",
+      "status": "PARTIALLY IMPLEMENTED; OPEN",
+      "evidence": "Current 001-009 suite: 118 checks. Field coverage closed (23 entities, 0 unmapped); policy identity SCHEMA-D01 closed with legacy preflight safety. Integrated DB01-DB10 publisher/plugin/worker/object/API semantics remain open.",
+      "exit": "Complete physical design and executable transaction/concurrency/consent tests before application admission or inference."
+    },
+    {
+      "id": "H02",
+      "requirement": "Browser bootstrap/session security",
+      "status": "OPEN; no browser API exposed",
+      "evidence": "Separate three-operation contract only; no running host API",
+      "exit": "Implement and test exact-origin, one-use/expiry/replay bootstrap, CSRF, logout and session expiry before browser exposure."
+    },
+    {
+      "id": "H03",
+      "requirement": "Application path/output/cleanup and recovery enforcement",
+      "status": "OPEN",
+      "evidence": "Docker boundary checks pass; no application canonical-root/path validation, admission cancellation or crash-recovery implementation",
+      "exit": "Adversarial absolute/traversal/UNC/symlink/collision and cancellation/recovery tests before source acquisition/generation."
+    },
+    {
+      "id": "H04",
+      "requirement": "Full runtime dependency/image review",
+      "status": "OPEN: complete initial collection; unresolved image advisories and adoption coverage",
+      "evidence": "30 October review: two npm locks and 31 explicit Python versions clear; Node/Go primary advisory checks clear; 16 integrity entries pass. All 8 images scanned; high/critical OS/embedded/vendor findings retained and corroborated. Two isolated pip-free candidates pass 59 check entries; each scan retains 164 OS findings (44 High), no language-package findings. No adoption or restart test. OS candidate comparison: 50 checks passed; Trixie upgrade changes only tzdata with no finding reduction; Bookworm not adopted. Package-specific applicability/minimal-runtime work remains. Path inventory maps all 164 worker findings; 8 unique High advisories reviewed without waivers. Native dependency inventory exposes existing Tkinter gap. Minimal-runtime design proposed, not adopted. Minimal candidate: 50 checks pass, 82 native libraries load; scanner coverage restored and verified; 164 conservative OS findings remain. No adoption; final-file applicability and restart regressions pending. Isolated graceful restart/persistence passed; original stack unchanged. Eight High advisories have exact-candidate component-exclusion evidence; other 120 rows and separate service images remain under review.",
+      "exit": "Complete H04-R01\u2013R05 remediation/applicability review; rescan exact candidate digests and rerun impacted readiness fixtures before adoption. No waiver granted."
+    }
+  ],
+  "preserved_decisions": [
+    "local-first",
+    "application-agnostic core",
+    "five approved screens",
+    "no source scripts executed",
+    "no product features or deployment"
+  ],
+  "current_client_typecheck_repeated": true,
+  "field_coverage_complete": true,
+  "resolved_design_issues": [
+    "SCHEMA-D01"
+  ],
+  "runtime_dependency_review": "docs/quality/runtime-audit/assessment.json",
+  "python_runtime_candidates": "docs/quality/runtime-candidates/python-tooling-free/assessment.json",
+  "python_os_candidates": "docs/quality/runtime-candidates/python-os/assessment.json",
+  "worker_path_review": "docs/quality/runtime-candidates/python-path-review/assessment.json",
+  "minimal_runtime_candidate": "docs/quality/runtime-candidates/minimal-runtime/assessment.json",
+  "minimal_runtime_restart_review": "docs/quality/runtime-candidates/minimal-restart/assessment.json"
+}

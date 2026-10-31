@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "image_id": "sha256:ea6891d3e54f5d50597f2f27ede69385033f33afe20dcb5651e82675d4d6f762",
+  "finding_rows": 164,
+  "packages": 40,
+  "high_occurrences": 44,
+  "unique_high_advisories": 8,
+  "high_groups": {
+    "CVE-2026-76642": [
+      "bsdutils",
+      "libblkid1",
+      "liblastlog2-2",
+      "libmount1",
+      "libsmartcols1",
+      "libuuid1",
+      "login",
+      "mount",
+      "util-linux"
+    ],
+    "CVE-2026-78408": [
+      "bsdutils",
+      "libblkid1",
+      "liblastlog2-2",
+      "libmount1",
+      "libsmartcols1",
+      "libuuid1",
+      "login",
+      "mount",
+      "util-linux"
+    ],
+    "CVE-2026-78409": [
+      "bsdutils",
+      "libblkid1",
+      "liblastlog2-2",
+      "libmount1",
+      "libsmartcols1",
+      "libuuid1",
+      "login",
+      "mount",
+      "util-linux"
+    ],
+    "CVE-2026-78410": [
+      "bsdutils",
+      "libblkid1",
+      "liblastlog2-2",
+      "libmount1",
+      "libsmartcols1",
+      "libuuid1",
+      "login",
+      "mount",
+      "util-linux"
+    ],
+    "CVE-2026-54369": [
+      "libacl1"
+    ],
+    "CVE-2025-69720": [
+      "libncursesw6",
+      "libtinfo6",
+      "ncurses-base",
+      "ncurses-bin"
+    ],
+    "CVE-2026-16742": [
+      "libsystemd0",
+      "libudev1"
+    ],
+    "CVE-2026-9538": [
+      "perl-base"
+    ]
+  },
+  "fixture_checks": 11,
+  "native_dependency_checks": 85,
+  "all_native_dependencies_resolved": false,
+  "unresolved_native_modules": [
+    "/usr/local/lib/python3.14/lib-dynload/_tkinter.cpython-314-x86_64-linux-gnu.so"
+  ],
+  "h04_complete": false,
+  "adopted": false,
+  "waivers": []
+}

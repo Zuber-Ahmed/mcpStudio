@@ -1,0 +1,245 @@
+{
+  "scope": "Migrations 001-007 and full CanonicalPlan/Candidate/Plan/PolicyReference contract binding; trusted fixture metadata, not installed plugin/schema execution or API readiness",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "published_ports": false,
+  "passed": true,
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "001_admission_kernel.sql applies",
+      "passed": true
+    },
+    {
+      "name": "002_bound_validation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "003_runtime_roles.sql applies",
+      "passed": true
+    },
+    {
+      "name": "004_source_graph_recommendation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "005_artifacts_findings_revocations.sql applies",
+      "passed": true
+    },
+    {
+      "name": "006_identity_approval_metadata.sql applies",
+      "passed": true
+    },
+    {
+      "name": "007_executable_payloads.sql applies",
+      "passed": true
+    },
+    {
+      "name": "model evidence cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "side effects cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "unknown sensitivity cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "write operation cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "duplicate scopes cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "empty evidence cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "changed source evidence cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "eligibility disagreement cannot create allowed candidate",
+      "passed": true
+    },
+    {
+      "name": "blocked write candidate stays nonexecutable data",
+      "passed": true
+    },
+    {
+      "name": "stored complete candidate conforms to unchanged OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "policy canonical content cannot contradict label",
+      "passed": true
+    },
+    {
+      "name": "policy exact labels cannot alias another revision",
+      "passed": true
+    },
+    {
+      "name": "policy content is immutable",
+      "passed": true
+    },
+    {
+      "name": "opaque version labels retain leading zero distinction",
+      "passed": true
+    },
+    {
+      "name": "policy content hash derives from exact bytes",
+      "passed": true
+    },
+    {
+      "name": "string policy reference conforms to unchanged OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "full canonical payload conforms to unchanged OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "set normalization stabilizes analyzer ordering",
+      "passed": true
+    },
+    {
+      "name": "ordered configuration arrays retain order",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects duplicate scopes",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects duplicate candidate identity",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects confidence in executable payload",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects unsafe integer",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects nonfinite float",
+      "passed": true
+    },
+    {
+      "name": "canonical boundary rejects malformed Unicode",
+      "passed": true
+    },
+    {
+      "name": "strict JSON boundary rejects duplicate keys",
+      "passed": true
+    },
+    {
+      "name": "strict JSON boundary rejects NaN",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed candidate scopes",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed candidate I/O schema",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed domain service",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed policy checks",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed policy version coercion",
+      "passed": true
+    },
+    {
+      "name": "database rejects changed analyzer pins",
+      "passed": true
+    },
+    {
+      "name": "scoped draft Plan conforms to unchanged OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "required canonical override null survives serialization",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant cannot fetch plan document",
+      "passed": true
+    },
+    {
+      "name": "worker cannot fetch backend plan document",
+      "passed": true
+    },
+    {
+      "name": "plan projection remains private",
+      "passed": true
+    },
+    {
+      "name": "generation pins exact generator reference",
+      "passed": true
+    },
+    {
+      "name": "validation reference preserves exact opaque policy label",
+      "passed": true
+    },
+    {
+      "name": "full payload plan reaches gated export through scoped roles",
+      "passed": true
+    },
+    {
+      "name": "approved Plan still conforms to unchanged OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "old approval cannot authorize changed configuration values",
+      "passed": true
+    },
+    {
+      "name": "configuration values changes canonical digest",
+      "passed": true
+    },
+    {
+      "name": "old approval cannot authorize changed plugin pin",
+      "passed": true
+    },
+    {
+      "name": "plugin pin changes canonical digest",
+      "passed": true
+    },
+    {
+      "name": "old approval cannot authorize changed configuration schema pin",
+      "passed": true
+    },
+    {
+      "name": "configuration schema pin changes canonical digest",
+      "passed": true
+    },
+    {
+      "name": "old approval cannot authorize changed generator pin",
+      "passed": true
+    },
+    {
+      "name": "generator pin changes canonical digest",
+      "passed": true
+    },
+    {
+      "name": "opaque policy label projects without integer coercion",
+      "passed": true
+    },
+    {
+      "name": "old approval cannot authorize new policy version",
+      "passed": true
+    }
+  ]
+}

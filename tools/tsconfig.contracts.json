@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": false,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "baseUrl": "..",
+    "paths": {"openapi-fetch": ["work/node-tools/node_modules/openapi-fetch"]}
+  },
+  "include": ["../packages/contracts/client.ts", "../packages/contracts/generated/*.d.ts"]
+}

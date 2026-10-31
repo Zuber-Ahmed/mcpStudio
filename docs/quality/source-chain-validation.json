@@ -1,0 +1,201 @@
+{
+  "scope": "Source snapshot/graph/recommendation physical ownership plus migration 001-004 role integration; trusted source evidence fixtures only",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "published_ports": false,
+  "passed": true,
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "001_admission_kernel.sql applies",
+      "passed": true
+    },
+    {
+      "name": "002_bound_validation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "003_runtime_roles.sql applies",
+      "passed": true
+    },
+    {
+      "name": "004_source_graph_recommendation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "analysis pins exact source snapshot identity",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant snapshot denied",
+      "passed": true
+    },
+    {
+      "name": "foreign project snapshot denied",
+      "passed": true
+    },
+    {
+      "name": "changed source digest denied",
+      "passed": true
+    },
+    {
+      "name": "changed resolved revision denied",
+      "passed": true
+    },
+    {
+      "name": "snapshot mutation denied",
+      "passed": true
+    },
+    {
+      "name": "snapshot deletion denied",
+      "passed": true
+    },
+    {
+      "name": "terminal analysis reopening denied",
+      "passed": true
+    },
+    {
+      "name": "analysis source replacement denied",
+      "passed": true
+    },
+    {
+      "name": "foreign project predecessor denied",
+      "passed": true
+    },
+    {
+      "name": "empty graph evidence denied",
+      "passed": true
+    },
+    {
+      "name": "cross-analysis edge denied",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant graph node denied",
+      "passed": true
+    },
+    {
+      "name": "graph evidence mutation denied",
+      "passed": true
+    },
+    {
+      "name": "candidate foreign-analysis node denied",
+      "passed": true
+    },
+    {
+      "name": "candidate foreign-tenant node denied",
+      "passed": true
+    },
+    {
+      "name": "foreign candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "ineligible candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "empty executable candidates recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "unsupported executable type recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "unfinished analysis recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "recommendation changed source denied",
+      "passed": true
+    },
+    {
+      "name": "eligible source-bound recommendation accepted",
+      "passed": true
+    },
+    {
+      "name": "recommendation immutable",
+      "passed": true
+    },
+    {
+      "name": "recommendation version gap denied",
+      "passed": true
+    },
+    {
+      "name": "explicit none recommendation remains inspectable",
+      "passed": true
+    },
+    {
+      "name": "non-generating recommendation cannot produce plan",
+      "passed": true
+    },
+    {
+      "name": "legacy plan signature fails closed",
+      "passed": true
+    },
+    {
+      "name": "wrong snapshot payload denied",
+      "passed": true
+    },
+    {
+      "name": "wrong recommendation payload denied",
+      "passed": true
+    },
+    {
+      "name": "wrong recommendation version payload denied",
+      "passed": true
+    },
+    {
+      "name": "candidate outside recommendation payload denied",
+      "passed": true
+    },
+    {
+      "name": "changed policy binding payload denied",
+      "passed": true
+    },
+    {
+      "name": "plan binds snapshot recommendation and exact selected candidates",
+      "passed": true
+    },
+    {
+      "name": "scoped backend admits fully linked plan",
+      "passed": true
+    },
+    {
+      "name": "complete scoped chain permits guarded export",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot insert source snapshots",
+      "passed": true
+    },
+    {
+      "name": "worker cannot forge graph data",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot publish recommendation",
+      "passed": true
+    },
+    {
+      "name": "concurrent same-version recommendations commit once",
+      "passed": true
+    },
+    {
+      "name": "recommendation revisions remain contiguous",
+      "passed": true
+    },
+    {
+      "name": "snapshot and recommendation audit entries exist",
+      "passed": true
+    },
+    {
+      "name": "new source tables owned by private owner",
+      "passed": true
+    }
+  ]
+}

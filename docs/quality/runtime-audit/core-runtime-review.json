@@ -1,0 +1,29 @@
+{
+  "recorded_date": "2026-10-30",
+  "scope": "Selected Node core advisory ranges and Go stdlib/toolchain OSV; not symbol reachability or full host OS audit",
+  "node": {
+    "version": "26.13.0",
+    "complete": true,
+    "entries": 204,
+    "findings": [],
+    "unparsed": [],
+    "source": "https://api.github.com/repos/nodejs/security-wg/git/trees/main?recursive=1",
+    "repository_commit": "f643f84d4977d0ba379dc7c5805c9b65206369b5",
+    "archive_sha256": "7e2f91188a13d31d4562e3268482b357ac1d1cc9addff7b88aa55cea63364f61"
+  },
+  "go": {
+    "version": "1.27.3",
+    "complete": true,
+    "queries": [
+      {
+        "package": "stdlib",
+        "advisory_ids": []
+      },
+      {
+        "package": "toolchain",
+        "advisory_ids": []
+      }
+    ],
+    "source": "https://api.osv.dev/v1/querybatch"
+  }
+}

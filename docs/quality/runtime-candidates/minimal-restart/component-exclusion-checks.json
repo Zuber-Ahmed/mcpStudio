@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "mount": true,
+    "umount": true,
+    "nsenter": true,
+    "infocmp": true,
+    "systemd-homed": true,
+    "homectl": true,
+    "perl": true,
+    "libacl": true,
+    "libmount": true,
+    "Archive_Tar": true,
+    "systemd_homed_payload": true
+  },
+  "manifest_hashes_verified": true,
+  "manifest_entries": 6740,
+  "scope": "Exact immutable image payload and PATH; historical dpkg/license records remain"
+}

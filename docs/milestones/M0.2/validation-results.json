@@ -1,0 +1,19 @@
+{
+  "scope": "M0.2 documentation consistency only",
+  "passed": true,
+  "check_count": 265,
+  "failed": [],
+  "source_integrity_output": "{\"scope\": \"M0.1 structural draft inspection only\", \"passed\": true, \"check_count\": 128, \"operation_count\": 15, \"schema_count\": 23, \"entity_count\": 14, \"relationship_count\": 18, \"supplied_manifest_entries\": 16, \"runtime_tests_executed\": 0, \"full_openapi_semantic_validation\": false, \"approved\": false}",
+  "document_sha256": {
+    "README.md": "83207c4bcad80f3695d50de89f6ea350dc9beaaf12bdab1da1ebe516bf44c7c4",
+    "baseline.md": "77cd42dd1e053f29d5b67f9c6db7f93546ce17d142e1b1380ce8260ae6c2a83f",
+    "decisions.md": "843436989bec2bb06365a1297ed3fe5e33ea7e0e189e18fd054176cb49360bc4",
+    "contract-amendment.md": "80f68877ee4b2ea094624223e5d5fbcdca00b745fcf3b1e9c210f482fd43b81f",
+    "reconciliation.md": "12cfd13ae88d48420913f9e80391e5af26b303dc569508f9a8abbfa598d4318f",
+    "acceptance-and-tracker.md": "408376d9f712b0f991da525658006e8aaf0c032e7dbc1e1efffe4c5a9a8edb8d"
+  },
+  "runtime_tests_executed": 0,
+  "application_code_created": false,
+  "replacement_openapi_or_migrations_created": false,
+  "user_baseline_approval": "pending"
+}

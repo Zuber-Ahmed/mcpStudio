@@ -1,0 +1,17 @@
+=== RUN   TestQACommentCannotBecomeExecutableCandidate
+    qa_test.go:20: comment created 1 candidates; eligibility=allowed mapping=builtin:health-status
+--- FAIL: TestQACommentCannotBecomeExecutableCandidate (0.06s)
+=== RUN   TestQASrcAppRouteIdentity
+    qa_test.go:25: wrong route identity "GET /src/app/api/health"
+--- FAIL: TestQASrcAppRouteIdentity (0.04s)
+=== RUN   TestQARouteGroupNotURLSegment
+    qa_test.go:31: route group leaked into URL "GET /(internal)/api/health"
+--- FAIL: TestQARouteGroupNotURLSegment (0.02s)
+=== RUN   TestQAIgnoredLocalCredentialFilesExcluded
+    qa_test.go:40: ignored local credential file acquired: .local/credentials.json
+--- FAIL: TestQAIgnoredLocalCredentialFilesExcluded (0.03s)
+=== RUN   TestQAGenerationRemainsLocked
+--- PASS: TestQAGenerationRemainsLocked (0.02s)
+FAIL
+FAIL	command-line-arguments	1.533s
+FAIL

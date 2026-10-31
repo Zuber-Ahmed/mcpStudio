@@ -1,0 +1,32 @@
+{
+  "recorded_date": "2026-10-30",
+  "review_complete": true,
+  "h04_complete": false,
+  "m03_complete": false,
+  "package_queries_succeeded": true,
+  "explicit_python_package_versions": 31,
+  "npm_audit_advisories": {
+    "contract-tools": 0,
+    "mcp-fixture": 0
+  },
+  "explicit_python_advisories": 0,
+  "core_node_review": {
+    "complete": true,
+    "advisories": 0
+  },
+  "core_go_review": {
+    "complete": true,
+    "advisories": 0
+  },
+  "lock_wheel_checks": 16,
+  "image_scans": 8,
+  "all_image_scans_complete": true,
+  "gate_status": "HOLD: unresolved OS/library/vendored-image findings and final-application coverage; scan success does not clear H04",
+  "remediation_ids": [
+    "H04-R01",
+    "H04-R02",
+    "H04-R03",
+    "H04-R04",
+    "H04-R05"
+  ]
+}

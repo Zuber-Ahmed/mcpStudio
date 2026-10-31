@@ -1,0 +1,26 @@
+{
+  "scope": "Limited structural and contract-design fixtures only",
+  "passed": true,
+  "check_count": 705,
+  "fixture_count": 36,
+  "failed": [],
+  "operations": 24,
+  "bootstrap_operations": 3,
+  "schemas": 43,
+  "entities": 23,
+  "sha256": {
+    "specs/openapi.yaml": "3c8c38f49f3f429629e2be7e1f243030a33d1684a78d3f5e7e0800a931de284c",
+    "specs/bootstrap.openapi.yaml": "5659e3d0502c7c92c56b656023a98b8cc4d964680d9f2169b89316484aff1cb9",
+    "specs/database-erd.mmd": "b980c577b23641be00082ecf59261dd1f0a2b9c4936447b1a1734f768c0ae1a7",
+    "specs/data-dictionary.json": "e2f355ff4e9e429f69a6c19f23fd7ccbd0c6a775129c15d660962636be838cf4",
+    "semantic-rules.md": "83ab48cce2899ae5856a7b9f9824ffc4fcdf17de0df7213a003d566739f68734",
+    "version-pins.json": "c3afb22779b40b9d6503cf92bb8a552a4eb66afc53aa24f23d9b00c0f1c1fb4a"
+  },
+  "full_openapi_validator": "not run; dependency download DNS failure",
+  "client_generation": "not run; dependency retrieval unavailable",
+  "full_rfc8785_test": "not run; subset vectors only",
+  "database_constraint_tests": "not run; no database/engine",
+  "mcp_interoperability": "not run",
+  "runtime_tests_executed": 0,
+  "ready_for_initialization": false
+}

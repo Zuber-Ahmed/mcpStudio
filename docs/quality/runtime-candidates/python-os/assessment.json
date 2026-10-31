@@ -1,0 +1,123 @@
+{
+  "recorded_at": "2026-10-30T14:44:23.382207+00:00",
+  "adopted": false,
+  "complete": true,
+  "scope": "Python worker Debian OS candidate evaluation; no service restart or server/database changes",
+  "database_metadata": {
+    "Version": 2,
+    "NextUpdate": "2026-10-31T13:06:28.139592603Z",
+    "UpdatedAt": "2026-10-30T13:06:28.139593044Z",
+    "DownloadedAt": "2026-10-30T14:22:37.9639328Z"
+  },
+  "baseline_id": "sha256:ea6891d3e54f5d50597f2f27ede69385033f33afe20dcb5651e82675d4d6f762",
+  "baseline_counts": {
+    "LOW": 61,
+    "HIGH": 44,
+    "MEDIUM": 58,
+    "UNKNOWN": 1
+  },
+  "sources": [
+    "https://raw.githubusercontent.com/docker-library/official-images/master/library/python",
+    "https://security-tracker.debian.org/tracker/"
+  ],
+  "scanner_sha256": "94618922c9eb324d7099bf217b01504bfc1f87a0d46d6008cb24ec89b1d1a4bb",
+  "candidates": [
+    {
+      "label": "trixie_apt_upgrade",
+      "image_id": "sha256:2ec65c2e76125c3a87eec5be9c0e1b069d5677f27148a7487ed4553e65e4f96e",
+      "tag": "mcpstudio-worker-os-candidate:trixie-apt-upgrade",
+      "adopted": false,
+      "inventory": {
+        "distributions": {
+          "tree-sitter-typescript": "0.23.2",
+          "tree-sitter": "0.26.0",
+          "temporalio": "1.35.0",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": false,
+        "ensurepip_present": false,
+        "wheel_dirs_present": false,
+        "uid": 65534
+      },
+      "changed_packages": {
+        "tzdata": {
+          "before": "2026e-0+deb13u1",
+          "after": "2026f-0+deb13u1"
+        }
+      },
+      "runtime_checks": 11,
+      "boundary_checks": 14,
+      "scan": {
+        "counts": {
+          "LOW": 61,
+          "HIGH": 44,
+          "MEDIUM": 58,
+          "UNKNOWN": 1
+        },
+        "findings": 164,
+        "fixable": 0,
+        "library_findings": 0,
+        "os": {
+          "Family": "debian",
+          "Name": "13.7"
+        },
+        "sha256": "27421f9cb8ef13d4a6dd83eecd6f9966e78f1117efb87836b7201f6f7aeaa8cb"
+      }
+    },
+    {
+      "label": "bookworm",
+      "image_id": "sha256:cc2dd1ecb4b9080170711291f2ba5f4adde2b2ffac0284a82cea51e7ee56c6db",
+      "tag": "mcpstudio-worker-os-candidate:bookworm",
+      "adopted": false,
+      "inventory": {
+        "distributions": {
+          "tree-sitter-typescript": "0.23.2",
+          "tree-sitter": "0.26.0",
+          "temporalio": "1.35.0",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": false,
+        "ensurepip_present": false,
+        "wheel_dirs_present": false,
+        "uid": 65534
+      },
+      "runtime_checks": 11,
+      "boundary_checks": 14,
+      "scan": {
+        "counts": {
+          "LOW": 89,
+          "HIGH": 59,
+          "MEDIUM": 91,
+          "CRITICAL": 2,
+          "UNKNOWN": 2
+        },
+        "findings": 243,
+        "fixable": 1,
+        "library_findings": 0,
+        "os": {
+          "Family": "debian",
+          "Name": "12.15"
+        },
+        "sha256": "5c1ae380554ba047576fa4874087c6dfb03afc23ad6b24c9cbcab11f1daa7e77"
+      }
+    }
+  ],
+  "trixie_base": {
+    "reference": "python@sha256:3cabfd7d7aaf394e6040e79fa1eec6ca1c52b74ed9188650472695d9a9326999",
+    "image_id": "sha256:3cabfd7d7aaf394e6040e79fa1eec6ca1c52b74ed9188650472695d9a9326999",
+    "architecture": "amd64"
+  },
+  "bookworm_base": {
+    "reference": "python@sha256:516b51cb9db2ef061e465c803e50f64361b82cefd91e525b889b967b83e83527",
+    "image_id": "sha256:516b51cb9db2ef061e465c803e50f64361b82cefd91e525b889b967b83e83527",
+    "architecture": "amd64"
+  },
+  "trixie_refresh_unchanged": true,
+  "h04_complete": false
+}

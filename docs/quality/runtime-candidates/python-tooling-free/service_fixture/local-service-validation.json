@@ -1,0 +1,50 @@
+{
+  "scope": "Candidate client workflow/activity/S3 regression against existing local services; no service restart performed",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Temporal gRPC health",
+      "passed": true
+    },
+    {
+      "name": "dedicated local namespace available",
+      "passed": true
+    },
+    {
+      "name": "authenticated local S3 bucket access",
+      "passed": true
+    },
+    {
+      "name": "incorrect storage credentials denied",
+      "passed": true
+    },
+    {
+      "name": "Temporal workflow executes storage activity",
+      "passed": true
+    },
+    {
+      "name": "S3 upload download bytes match",
+      "passed": true
+    },
+    {
+      "name": "artifact digest and metadata match",
+      "passed": true
+    },
+    {
+      "name": "completed workflow and stored bytes readable by fresh candidate process (no restart)",
+      "passed": true
+    },
+    {
+      "name": "unique fixture object removed",
+      "passed": true
+    }
+  ],
+  "fixture": {
+    "workflow_id": "m03-storage-95237c5fbd254206920ec9070f708527",
+    "key": "readiness/95237c5fbd254206920ec9070f708527.txt",
+    "sha256": "7017422f2f387f14986213fad1ab9c3a4c967f50fe4c256887f15179a50f82ac",
+    "namespace": "mcpstudio-local"
+  },
+  "restart_phase_complete": false,
+  "fixture_object_removed": true
+}

@@ -1,0 +1,12 @@
+{
+  "completed_thread_turn": "01a188cd-21d3-75f3-99a8-95cbb0f420ea",
+  "runner_sha256": "7a9ec73eb1bc640673f02e8756bf87852835ec69b78cae6f0f96f90f7a101ccb",
+  "migration_sha256": {
+    "001_admission_kernel.sql": "423a3274313a24290bc0cebfec09a6ce840de5a7485fc834f27d52f386b4dd49",
+    "002_bound_validation.sql": "531983169ec3e4aca380156101cbdbb79e743adcf378aecbb31569180243701d",
+    "003_runtime_roles.sql": "b5dd2f3810e005e603a4b7afe41989bf2616845e89ce8f14527c8ec651015196",
+    "004_source_graph_recommendation.sql": "a1cc5640cbdb65c8771f341126795af3602764954619d5aae98de789300fb665",
+    "005_artifacts_findings_revocations.sql": "49273747c226960f25c8787be14b7ea55eea9ed3f45a8a6f0400eeb31713f179",
+    "006_identity_approval_metadata.sql": "5dbdbb27ac550d617398e5579c07b9e8df0c9a330ca7515dea177dde14c3b362"
+  }
+}

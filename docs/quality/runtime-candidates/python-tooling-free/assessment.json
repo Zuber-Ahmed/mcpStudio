@@ -1,0 +1,196 @@
+{
+  "recorded_at": "2026-10-30T14:36:55.545814+00:00",
+  "scope": "Isolated tooling-free Python candidates; no approved pin changes or service restarts",
+  "adopted": false,
+  "h04_complete": false,
+  "complete": true,
+  "images": [
+    {
+      "label": "worker_fixture",
+      "baseline_id": "sha256:5cd2e089643a7c47f7c0fe4feaf81b0191834d51e9b9190a128a87a796846af4",
+      "candidate_id": "sha256:ea6891d3e54f5d50597f2f27ede69385033f33afe20dcb5651e82675d4d6f762",
+      "candidate_tag": "mcpstudio-worker-fixture-candidate:pip-free",
+      "architecture": "amd64",
+      "final_layers": 2,
+      "inventory_before": {
+        "distributions": {
+          "pip": "26.2.2",
+          "tree-sitter-typescript": "0.23.2",
+          "tree-sitter": "0.26.0",
+          "temporalio": "1.35.0",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": true,
+        "ensurepip_present": true,
+        "wheel_dirs_present": true,
+        "uid": 65534
+      },
+      "inventory_after": {
+        "distributions": {
+          "tree-sitter-typescript": "0.23.2",
+          "tree-sitter": "0.26.0",
+          "temporalio": "1.35.0",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": false,
+        "ensurepip_present": false,
+        "wheel_dirs_present": false,
+        "uid": 65534
+      },
+      "runtime_checks": 11,
+      "baseline_counts": {
+        "LOW": 62,
+        "HIGH": 49,
+        "MEDIUM": 60,
+        "UNKNOWN": 1
+      },
+      "candidate_counts": {
+        "LOW": 61,
+        "HIGH": 44,
+        "MEDIUM": 58,
+        "UNKNOWN": 1
+      },
+      "scan_sha256": "8fa711bd22dbf08072d7e315eae8accc6eb7779f07996010f7bafe63435b9628",
+      "remaining_findings": 164,
+      "remaining_library_findings": 0,
+      "boundary_checks": 14,
+      "baseline_layers_not_in_final_image": true
+    },
+    {
+      "label": "service_fixture",
+      "baseline_id": "sha256:e970c09287e35e2cf86f0b1c518df50fb14c92427b9111f12f2877f248be739d",
+      "candidate_id": "sha256:bd320540b91dabf4f7fabe7bef85aefea4745d256895bbd6b2261c562db22049",
+      "candidate_tag": "mcpstudio-service-fixture-candidate:pip-free",
+      "architecture": "amd64",
+      "final_layers": 2,
+      "inventory_before": {
+        "distributions": {
+          "pip": "26.2.2",
+          "jmespath": "1.1.0",
+          "s3transfer": "0.19.3",
+          "python-dateutil": "2.9.0.post0",
+          "boto3": "1.43.121",
+          "urllib3": "2.8.0",
+          "six": "1.17.0",
+          "botocore": "1.43.121",
+          "tree-sitter-typescript": "0.23.2",
+          "tree-sitter": "0.26.0",
+          "temporalio": "1.35.0",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": true,
+        "ensurepip_present": true,
+        "wheel_dirs_present": true,
+        "uid": 65534
+      },
+      "inventory_after": {
+        "distributions": {
+          "jmespath": "1.1.0",
+          "tree-sitter-typescript": "0.23.2",
+          "s3transfer": "0.19.3",
+          "python-dateutil": "2.9.0.post0",
+          "boto3": "1.43.121",
+          "tree-sitter": "0.26.0",
+          "urllib3": "2.8.0",
+          "six": "1.17.0",
+          "temporalio": "1.35.0",
+          "botocore": "1.43.121",
+          "nexus-rpc": "1.4.0",
+          "typing_extensions": "4.16.0",
+          "protobuf": "7.36.2",
+          "types-protobuf": "7.35.1.20260906"
+        },
+        "pip_present": false,
+        "ensurepip_present": false,
+        "wheel_dirs_present": false,
+        "uid": 65534
+      },
+      "runtime_checks": 11,
+      "service_regression": {
+        "scope": "Candidate client workflow/activity/S3 regression against existing local services; no service restart performed",
+        "passed": true,
+        "checks": [
+          {
+            "name": "Temporal gRPC health",
+            "passed": true
+          },
+          {
+            "name": "dedicated local namespace available",
+            "passed": true
+          },
+          {
+            "name": "authenticated local S3 bucket access",
+            "passed": true
+          },
+          {
+            "name": "incorrect storage credentials denied",
+            "passed": true
+          },
+          {
+            "name": "Temporal workflow executes storage activity",
+            "passed": true
+          },
+          {
+            "name": "S3 upload download bytes match",
+            "passed": true
+          },
+          {
+            "name": "artifact digest and metadata match",
+            "passed": true
+          },
+          {
+            "name": "completed workflow and stored bytes readable by fresh candidate process (no restart)",
+            "passed": true
+          },
+          {
+            "name": "unique fixture object removed",
+            "passed": true
+          }
+        ],
+        "fixture": {
+          "workflow_id": "m03-storage-95237c5fbd254206920ec9070f708527",
+          "key": "readiness/95237c5fbd254206920ec9070f708527.txt",
+          "sha256": "7017422f2f387f14986213fad1ab9c3a4c967f50fe4c256887f15179a50f82ac",
+          "namespace": "mcpstudio-local"
+        },
+        "restart_phase_complete": false,
+        "fixture_object_removed": true
+      },
+      "baseline_counts": {
+        "LOW": 62,
+        "HIGH": 49,
+        "MEDIUM": 60,
+        "UNKNOWN": 1
+      },
+      "candidate_counts": {
+        "LOW": 61,
+        "HIGH": 44,
+        "MEDIUM": 58,
+        "UNKNOWN": 1
+      },
+      "scan_sha256": "9f9dbb2cfbf4b944161595e66199d5b80e7c9eea92b6d6d39e44e50fe5ffee3b",
+      "remaining_findings": 164,
+      "remaining_library_findings": 0,
+      "boundary_checks": 14,
+      "baseline_layers_not_in_final_image": true
+    }
+  ],
+  "database_metadata": {
+    "Version": 2,
+    "NextUpdate": "2026-10-31T13:06:28.139592603Z",
+    "UpdatedAt": "2026-10-30T13:06:28.139593044Z",
+    "DownloadedAt": "2026-10-30T14:22:37.9639328Z"
+  },
+  "same_advisory_database_as_baseline": true,
+  "scanner_sha256": "94618922c9eb324d7099bf217b01504bfc1f87a0d46d6008cb24ec89b1d1a4bb",
+  "validation_check_entries": 59
+}

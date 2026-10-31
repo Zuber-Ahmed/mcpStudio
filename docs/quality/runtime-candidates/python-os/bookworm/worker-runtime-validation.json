@@ -1,0 +1,62 @@
+{
+  "scope": "Container runtime/parser and Temporal sandbox import readiness; no Temporal server or application analyzer",
+  "python": "3.14.10 (main, Oct 28 2026, 02:02:23) [GCC 12.2.0]",
+  "dependencies": {
+    "temporalio": "1.35.0",
+    "tree-sitter": "0.26.0",
+    "tree-sitter-typescript": "0.23.2"
+  },
+  "passed": true,
+  "checks": [
+    {
+      "name": "selected Python runtime",
+      "passed": true
+    },
+    {
+      "name": "exact direct dependency pins",
+      "passed": true
+    },
+    {
+      "name": "TypeScript grammar parses typed function",
+      "passed": true
+    },
+    {
+      "name": "source byte range preserves evidence",
+      "passed": true
+    },
+    {
+      "name": "repeated parse is deterministic",
+      "passed": true
+    },
+    {
+      "name": "malformed syntax stays diagnostic",
+      "passed": true
+    },
+    {
+      "name": "TSX grammar parses JSX",
+      "passed": true
+    },
+    {
+      "name": "source script is parsed without execution",
+      "passed": true
+    },
+    {
+      "name": "Temporal workflow metadata loads",
+      "passed": true
+    },
+    {
+      "name": "Temporal workflow sandbox prepares fixture",
+      "passed": true
+    },
+    {
+      "name": "container has no default network route",
+      "passed": true
+    }
+  ],
+  "fixture": {
+    "source_digest": "ba4337a6fcf47fc0e59cae45848261d979b0d9f297f3be6207848db550f1c34b",
+    "source_bytes": 62
+  },
+  "network": "disabled by Docker",
+  "remaining": "Actual workflow execution/retry/recovery and application discovery are not tested by this fixture."
+}

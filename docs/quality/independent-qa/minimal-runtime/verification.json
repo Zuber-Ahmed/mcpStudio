@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "image_id": "sha256:dc612ae7bb151a095b3848d9cbf45c17311514267c39950d3121e223ff52f797",
+  "fresh_runtime_boundary_entries": 25,
+  "component_probe": {
+    "checks": {
+      "mount": true,
+      "umount": true,
+      "nsenter": true,
+      "infocmp": true,
+      "systemd-homed": true,
+      "homectl": true,
+      "perl": true,
+      "libacl": true,
+      "libmount": true,
+      "Archive_Tar": true,
+      "systemd_homed_payload": true
+    },
+    "manifest_hashes_verified": true,
+    "manifest_entries": 6740,
+    "scope": "Exact immutable image payload and PATH; historical dpkg/license records remain"
+  },
+  "recorded_scan_counts": {
+    "LOW": 61,
+    "HIGH": 44,
+    "MEDIUM": 58,
+    "UNKNOWN": 1
+  },
+  "restart_evidence_reviewed_not_rerun": true,
+  "adopted": false,
+  "limits": "Fresh runtime/isolation/retained-file checks; recorded restart evidence only. No new advisory or reachability assessment."
+}

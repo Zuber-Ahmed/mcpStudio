@@ -1,0 +1,655 @@
+{
+  "scope": "M0.1 structural draft inspection only",
+  "checks": [
+    {
+      "name": "OpenAPI version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "15 unique operation IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "23 component schemas",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "global authentication declared",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Analysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/AnalysisInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Approval",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/ApprovalInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Artifact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/ArtifactList",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Configuration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Edge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Error",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Generation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/GenerationInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Graph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Node",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Plan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/PlanInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Project",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/ProjectInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/ProjectList",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Source",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/Validation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ref:#/components/schemas/ValidationInput",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:listProjects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:listProjects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:createProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:createProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:startAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:startAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getGraph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getGraph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:createPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:createPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:approvePlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:approvePlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:startGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:startGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:startValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:startValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:getValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:getValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:listArtifacts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:listArtifacts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "path parameters:downloadBundle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "success response:downloadBundle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "14 logical entities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "18 relationships",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "relationship targets defined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:docs/01-Architecture-HLD.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:docs/02-LLD.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:docs/03-Database-ERD.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:docs/04-OpenAPI-Guide.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:docs/05-Provenance-and-Review.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:MCPStudio-Technical-Documentation.pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:quality/Validation-Report.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:quality/validation-results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:sources/decisions.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:sources/inventory.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:sources/prd-intake.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:sources/PRD-v1.0-original-draft.pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:sources/source-conversation.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:specs/database-erd.mmd",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "supplied manifest:specs/openapi.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:listProjects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:createProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getProject",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:startAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getAnalysis",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getGraph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:createPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getPlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:approvePlan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:startGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getGeneration",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:startValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:getValidation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:listArtifacts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operation mapped:downloadBundle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:ANALYSIS_RUN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:APPROVAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:ARTIFACT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:AUDIT_EVENT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:GENERATION_RUN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:GRAPH_EDGE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:GRAPH_NODE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:MEMBERSHIP",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:PLAN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:PROJECT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:TENANT",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:USER",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:VALIDATION_CHECK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "entity mapped:VALIDATION_RUN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R07",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R08",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirement mapped:R18",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screen mapped:S1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screen mapped:S2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screen mapped:S3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screen mapped:S4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screen mapped:S5",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "passed": true,
+  "check_count": 128,
+  "operation_count": 15,
+  "schema_count": 23,
+  "entity_count": 14,
+  "relationship_count": 18,
+  "supplied_manifest_entries": 16,
+  "runtime_tests_executed": 0,
+  "full_openapi_semantic_validation": false,
+  "approved": false
+}

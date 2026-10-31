@@ -1,0 +1,36 @@
+{
+  "validated_at": "2026-10-31T10:45:51.4643865Z",
+  "scope": "Engineer remediation evidence; does not replace independent QA sign-off",
+  "source_hashes": {
+    "apps/api/analyzer.go": "8bd69c31687240c35650b3fb7daf32c21cfb6bd1796cd154792d393a25762864",
+    "apps/api/candidates.go": "e05e8fe5db077d77a7f2a2c358fb6c538e401c611bd573b4b041266b4d73e0d3",
+    "apps/api/plans.go": "bea8cd1187f58ed212d6c48bfefd54209a12105553a57c5943bef6a1eb316391"
+  },
+  "checks": {
+    "product_go_suite": "passed",
+    "frontend_typecheck": "passed",
+    "supplied_independent_regressions": {
+      "passed": 5,
+      "failed": 0,
+      "commented_handler_excluded": true,
+      "src_app_url_normalized": true,
+      "route_group_removed_from_url": true,
+      "local_credentials_excluded": true,
+      "generation_locked": true
+    },
+    "live_api": {
+      "project_id": "80f4967e-f56b-4916-a8d4-3d0d15e7de33",
+      "analysis_id": "66ce25d5-1042-4a28-90c6-84cd341fd4f6",
+      "analyzer_version": "typescript-next-deterministic-v2",
+      "acquired_file_count": 2,
+      "http_routes": ["GET /api/health"],
+      "candidate_count": 1,
+      "candidate_eligibility": "unknown",
+      "candidate_mapping": "unresolved:GET /api/health",
+      "recommendation_type": "none",
+      "supported_generation": false,
+      "unsafe_plan_rejected": true,
+      "unsafe_plan_status": 422
+    }
+  }
+}

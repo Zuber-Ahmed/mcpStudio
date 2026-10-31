@@ -1,0 +1,43 @@
+{
+  "timeUtc": "2026-10-28T17:42:18.5050719Z",
+  "tools": [
+    {
+      "tool": "node",
+      "found": true,
+      "path": "C:\\Program Files\\nodejs\\node.exe"
+    },
+    {
+      "tool": "npm",
+      "found": true,
+      "path": "C:\\Program Files\\nodejs\\npm.ps1"
+    },
+    {
+      "tool": "go",
+      "found": false,
+      "path": null
+    },
+    {
+      "tool": "docker",
+      "found": false,
+      "path": null
+    },
+    {
+      "tool": "wsl",
+      "found": true,
+      "path": "C:\\WINDOWS\\system32\\wsl.exe"
+    },
+    {
+      "tool": "psql",
+      "found": false,
+      "path": null
+    }
+  ],
+  "observedNode": "v25.2.1",
+  "docker": "docker command unavailable; engine/Compose/Linux sandbox not tested",
+  "repository": "C:/Users/ADMIN/mcpStudio",
+  "repositoryWriteAccess": "not established; outside current writable roots",
+  "sandboxProof": "not run",
+  "databaseProof": "not run",
+  "serviceImageDigests": "not resolved",
+  "readyForInitialization": false
+}

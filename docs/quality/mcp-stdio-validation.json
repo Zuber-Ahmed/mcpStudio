@@ -1,0 +1,43 @@
+{
+  "scope": "Official SDK stdio fixture; not generated adapter/product authorization proof",
+  "protocol_pin": "2026-07-28",
+  "server_sdk": "2.4.0",
+  "client_sdk": "2.4.0",
+  "node": "v26.13.0",
+  "passed": true,
+  "checks": [
+    {
+      "name": "connect requires exactly 2026-07-28, no legacy fallback",
+      "passed": true
+    },
+    {
+      "name": "discover one read-only fixture tool",
+      "passed": true
+    },
+    {
+      "name": "typed read invokes controlled domain service",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant fixture result denied",
+      "passed": true
+    },
+    {
+      "name": "malformed input denied",
+      "passed": true
+    },
+    {
+      "name": "unexpected input field denied",
+      "passed": true
+    },
+    {
+      "name": "unregistered write tool denied",
+      "passed": true
+    },
+    {
+      "name": "server remains usable after negative cases",
+      "passed": true
+    }
+  ],
+  "stderr": ""
+}

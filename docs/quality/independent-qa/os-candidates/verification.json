@@ -1,0 +1,38 @@
+{
+  "scope": "Fresh runtime/boundary tests and reconciliation of recorded unsuppressed scan evidence; no new advisory scan",
+  "candidates": [
+    {
+      "label": "trixie_apt_upgrade",
+      "image_id": "sha256:2ec65c2e76125c3a87eec5be9c0e1b069d5677f27148a7487ed4553e65e4f96e",
+      "runtime_checks": 11,
+      "boundary_checks": 14,
+      "recorded_scan_counts": {
+        "LOW": 61,
+        "HIGH": 44,
+        "MEDIUM": 58,
+        "UNKNOWN": 1
+      },
+      "recorded_scan_entries": 164,
+      "scan_hash_matches": true
+    },
+    {
+      "label": "bookworm",
+      "image_id": "sha256:cc2dd1ecb4b9080170711291f2ba5f4adde2b2ffac0284a82cea51e7ee56c6db",
+      "runtime_checks": 11,
+      "boundary_checks": 14,
+      "recorded_scan_counts": {
+        "LOW": 89,
+        "HIGH": 59,
+        "MEDIUM": 91,
+        "CRITICAL": 2,
+        "UNKNOWN": 2
+      },
+      "recorded_scan_entries": 243,
+      "scan_hash_matches": true
+    }
+  ],
+  "adopted": false,
+  "approved_worker_tag_unchanged": true,
+  "fresh_check_entries": 50,
+  "passed": true
+}

@@ -1,0 +1,565 @@
+{
+  "scope": "Migrations 001-006: identity/approval/durable metadata and OpenAPI response checks; includes prior chain integration, no live service database or API implementation",
+  "image": "postgres@sha256:31ba9c94a03ada9988f2bb493a22a75eef3a185884533e5cdbcd498ea835b08f",
+  "published_ports": false,
+  "passed": true,
+  "fixture_removed": true,
+  "checks": [
+    {
+      "name": "001_admission_kernel.sql applies",
+      "passed": true
+    },
+    {
+      "name": "002_bound_validation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "003_runtime_roles.sql applies",
+      "passed": true
+    },
+    {
+      "name": "004_source_graph_recommendation.sql applies",
+      "passed": true
+    },
+    {
+      "name": "005_artifacts_findings_revocations.sql applies",
+      "passed": true
+    },
+    {
+      "name": "006_identity_approval_metadata.sql applies",
+      "passed": true
+    },
+    {
+      "name": "analysis pins exact source snapshot identity",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant snapshot denied",
+      "passed": true
+    },
+    {
+      "name": "foreign project snapshot denied",
+      "passed": true
+    },
+    {
+      "name": "changed source digest denied",
+      "passed": true
+    },
+    {
+      "name": "changed resolved revision denied",
+      "passed": true
+    },
+    {
+      "name": "snapshot mutation denied",
+      "passed": true
+    },
+    {
+      "name": "snapshot deletion denied",
+      "passed": true
+    },
+    {
+      "name": "terminal analysis reopening denied",
+      "passed": true
+    },
+    {
+      "name": "analysis source replacement denied",
+      "passed": true
+    },
+    {
+      "name": "foreign project predecessor denied",
+      "passed": true
+    },
+    {
+      "name": "empty graph evidence denied",
+      "passed": true
+    },
+    {
+      "name": "cross-analysis edge denied",
+      "passed": true
+    },
+    {
+      "name": "cross-tenant graph node denied",
+      "passed": true
+    },
+    {
+      "name": "graph evidence mutation denied",
+      "passed": true
+    },
+    {
+      "name": "candidate foreign-analysis node denied",
+      "passed": true
+    },
+    {
+      "name": "candidate foreign-tenant node denied",
+      "passed": true
+    },
+    {
+      "name": "foreign candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "duplicate candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "ineligible candidate recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "empty executable candidates recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "unsupported executable type recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "unfinished analysis recommendation denied",
+      "passed": true
+    },
+    {
+      "name": "recommendation changed source denied",
+      "passed": true
+    },
+    {
+      "name": "eligible source-bound recommendation accepted",
+      "passed": true
+    },
+    {
+      "name": "recommendation immutable",
+      "passed": true
+    },
+    {
+      "name": "recommendation version gap denied",
+      "passed": true
+    },
+    {
+      "name": "explicit none recommendation remains inspectable",
+      "passed": true
+    },
+    {
+      "name": "non-generating recommendation cannot produce plan",
+      "passed": true
+    },
+    {
+      "name": "legacy plan signature fails closed",
+      "passed": true
+    },
+    {
+      "name": "wrong snapshot payload denied",
+      "passed": true
+    },
+    {
+      "name": "wrong recommendation payload denied",
+      "passed": true
+    },
+    {
+      "name": "wrong recommendation version payload denied",
+      "passed": true
+    },
+    {
+      "name": "candidate outside recommendation payload denied",
+      "passed": true
+    },
+    {
+      "name": "changed policy binding payload denied",
+      "passed": true
+    },
+    {
+      "name": "plan binds snapshot recommendation and exact selected candidates",
+      "passed": true
+    },
+    {
+      "name": "approval rejects wrong explicit plan version",
+      "passed": true
+    },
+    {
+      "name": "approval rejects wrong explicit plan hash",
+      "passed": true
+    },
+    {
+      "name": "approval requires affirmative security confirmation",
+      "passed": true
+    },
+    {
+      "name": "approval rejects null security confirmation",
+      "passed": true
+    },
+    {
+      "name": "stored scoped approval conforms to current OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "approval records have explicit security version and timestamp",
+      "passed": true
+    },
+    {
+      "name": "approval confirmation cannot be edited",
+      "passed": true
+    },
+    {
+      "name": "worker cannot approve a plan",
+      "passed": true
+    },
+    {
+      "name": "scoped backend admits fully linked plan",
+      "passed": true
+    },
+    {
+      "name": "assigned worker records portable artifact metadata",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path '/escape' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'C:/escape' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path '../escape' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a//b' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/./b' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/../b' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a\\\\b' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/NUL.txt' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'COM1' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'LPT9.log' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'CON .txt' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/name.' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/name ' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/%2e%2e/b' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'https://x' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path '\\\\\\\\server\\\\share' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/na:me' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'a/\\u202e.txt' denied",
+      "passed": true
+    },
+    {
+      "name": "unsafe artifact path 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' denied",
+      "passed": true
+    },
+    {
+      "name": "case-folded artifact collision denied",
+      "passed": true
+    },
+    {
+      "name": "negative artifact size denied",
+      "passed": true
+    },
+    {
+      "name": "artifact metadata mutation denied",
+      "passed": true
+    },
+    {
+      "name": "legacy digest-only publication fails closed",
+      "passed": true
+    },
+    {
+      "name": "manifest digest mismatch denied",
+      "passed": true
+    },
+    {
+      "name": "empty manifest denied",
+      "passed": true
+    },
+    {
+      "name": "manifest missing artifact denied",
+      "passed": true
+    },
+    {
+      "name": "manifest order mismatch denied",
+      "passed": true
+    },
+    {
+      "name": "manifest changed artifact descriptor denied",
+      "passed": true
+    },
+    {
+      "name": "failed publication leaves generation queued",
+      "passed": true
+    },
+    {
+      "name": "failed publication leaves no artifact set",
+      "passed": true
+    },
+    {
+      "name": "exact manifest bytes bind published artifact set",
+      "passed": true
+    },
+    {
+      "name": "artifact cannot be appended after publication",
+      "passed": true
+    },
+    {
+      "name": "duplicate finding stable identity denied",
+      "passed": true
+    },
+    {
+      "name": "foreign-tenant finding run denied",
+      "passed": true
+    },
+    {
+      "name": "finding evidence mutation denied",
+      "passed": true
+    },
+    {
+      "name": "cross-run finding check link denied",
+      "passed": true
+    },
+    {
+      "name": "same-run validation finding link accepted",
+      "passed": true
+    },
+    {
+      "name": "worker cannot forge finding raw rows",
+      "passed": true
+    },
+    {
+      "name": "complete scoped chain permits guarded export",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot insert source snapshots",
+      "passed": true
+    },
+    {
+      "name": "worker cannot forge graph data",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot publish recommendation",
+      "passed": true
+    },
+    {
+      "name": "concurrent same-version recommendations commit once",
+      "passed": true
+    },
+    {
+      "name": "recommendation revisions remain contiguous",
+      "passed": true
+    },
+    {
+      "name": "snapshot and recommendation audit entries exist",
+      "passed": true
+    },
+    {
+      "name": "new source tables owned by private owner",
+      "passed": true
+    },
+    {
+      "name": "finalized validation finding links cannot be appended",
+      "passed": true
+    },
+    {
+      "name": "worker cannot revoke plans",
+      "passed": true
+    },
+    {
+      "name": "blank revocation reason denied",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant cannot revoke plan",
+      "passed": true
+    },
+    {
+      "name": "explicit plan revocation transaction observed",
+      "passed": true
+    },
+    {
+      "name": "export waits behind explicit plan revocation",
+      "passed": true
+    },
+    {
+      "name": "committed plan revocation blocks export",
+      "passed": true
+    },
+    {
+      "name": "revoked plan blocks new admission",
+      "passed": true
+    },
+    {
+      "name": "revoked plan blocks old idempotent replay",
+      "passed": true
+    },
+    {
+      "name": "revoked plan prevents assigned worker publication",
+      "passed": true
+    },
+    {
+      "name": "revocation cannot be edited",
+      "passed": true
+    },
+    {
+      "name": "revocation cannot be removed",
+      "passed": true
+    },
+    {
+      "name": "explicit revocation creates transactional audit event",
+      "passed": true
+    },
+    {
+      "name": "audit event IDs use UUID storage",
+      "passed": true
+    },
+    {
+      "name": "audit ordinal remains separate from external UUID",
+      "passed": true
+    },
+    {
+      "name": "runtime audit is attributed to authenticated actor",
+      "passed": true
+    },
+    {
+      "name": "administrative audit retains explicit unknown actor",
+      "passed": true
+    },
+    {
+      "name": "scoped check projection conforms to current OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "mandatory status derives from pinned policy",
+      "passed": true
+    },
+    {
+      "name": "finding links project stable public keys",
+      "passed": true
+    },
+    {
+      "name": "foreign tenant cannot read check projection",
+      "passed": true
+    },
+    {
+      "name": "worker cannot read backend check projection",
+      "passed": true
+    },
+    {
+      "name": "raw contract view remains private",
+      "passed": true
+    },
+    {
+      "name": "persisted generation hash matches immutable plan",
+      "passed": true
+    },
+    {
+      "name": "explicit forged generation hash rejected",
+      "passed": true
+    },
+    {
+      "name": "generation cannot reference itself as predecessor",
+      "passed": true
+    },
+    {
+      "name": "cross-actor generation predecessor rejected",
+      "passed": true
+    },
+    {
+      "name": "validation cannot reference itself as predecessor",
+      "passed": true
+    },
+    {
+      "name": "queued check projection omits absent execution metadata",
+      "passed": true
+    },
+    {
+      "name": "queued check UUID cannot change",
+      "passed": true
+    },
+    {
+      "name": "UUID check identity unique per tenant",
+      "passed": true
+    },
+    {
+      "name": "admission response is durably preserved after run completes",
+      "passed": true
+    },
+    {
+      "name": "idempotency identity metadata is populated",
+      "passed": true
+    },
+    {
+      "name": "durable admission outcome cannot be rewritten",
+      "passed": true
+    },
+    {
+      "name": "outbox payload binds run plan actor and request digest",
+      "passed": true
+    },
+    {
+      "name": "outbox immutable payload cannot be rewritten",
+      "passed": true
+    },
+    {
+      "name": "negative dispatch attempt rejected",
+      "passed": true
+    },
+    {
+      "name": "dispatch timestamp requires an attempt",
+      "passed": true
+    },
+    {
+      "name": "dispatch attempt cannot regress",
+      "passed": true
+    },
+    {
+      "name": "dispatched event cannot lose its timestamp",
+      "passed": true
+    },
+    {
+      "name": "runtime cannot mark outbox delivery",
+      "passed": true
+    },
+    {
+      "name": "QA-02 generation approval hash mutation denied",
+      "passed": true
+    }
+  ]
+}

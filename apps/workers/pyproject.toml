@@ -1,0 +1,15 @@
+[project]
+name = "mcpstudio-workers"
+version = "0.0.0"
+description = "Reserved read-only analysis worker workspace"
+requires-python = "==3.14.10"
+dependencies = [
+  "temporalio==1.35.0",
+  "tree-sitter==0.26.0",
+  "tree-sitter-typescript==0.23.2",
+]
+
+[tool.mcpstudio]
+status = "runtime-readiness-verified; application-analyzers-not-implemented"
+source-execution = "forbidden-during-scan"
+semantic-inference = "disabled"

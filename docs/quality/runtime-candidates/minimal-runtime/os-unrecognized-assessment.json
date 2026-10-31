@@ -1,0 +1,60 @@
+{
+  "complete": false,
+  "adopted": false,
+  "h04_complete": false,
+  "input_id": "sha256:bd320540b91dabf4f7fabe7bef85aefea4745d256895bbd6b2261c562db22049",
+  "recorded_at": "2026-10-30T14:56:54.942875+00:00",
+  "database_metadata": {
+    "Version": 2,
+    "NextUpdate": "2026-10-31T13:06:28.139592603Z",
+    "UpdatedAt": "2026-10-30T13:06:28.139593044Z",
+    "DownloadedAt": "2026-10-30T14:22:37.9639328Z"
+  },
+  "image_id": "sha256:8de48dbd5b39324795e00e39600ba0488bb6a54cc154b7787b56864a411abac0",
+  "inventory": {
+    "distributions": {
+      "jmespath": "1.1.0",
+      "tree-sitter-typescript": "0.23.2",
+      "s3transfer": "0.19.3",
+      "python-dateutil": "2.9.0.post0",
+      "boto3": "1.43.121",
+      "tree-sitter": "0.26.0",
+      "urllib3": "2.8.0",
+      "six": "1.17.0",
+      "temporalio": "1.35.0",
+      "botocore": "1.43.121",
+      "nexus-rpc": "1.4.0",
+      "typing_extensions": "4.16.0",
+      "protobuf": "7.36.2",
+      "types-protobuf": "7.35.1.20260906"
+    },
+    "pip_present": false,
+    "ensurepip_present": false,
+    "wheel_dirs_present": false,
+    "uid": 65534
+  },
+  "worker-runtime-validation.json": 11,
+  "worker-boundary-validation.json": 14,
+  "local-service-validation.json": 9,
+  "scan": {
+    "counts": {},
+    "findings": 0,
+    "fixable": 0,
+    "library_findings": 0,
+    "os": {
+      "Family": "none",
+      "Name": ""
+    },
+    "sha256": "f0e2efa50a463f4a3f3540ce9c48b5dd632c8bcbeb7ea7591129e62d23ec8584"
+  },
+  "baseline_scan_counts": {
+    "LOW": 61,
+    "HIGH": 44,
+    "MEDIUM": 58,
+    "UNKNOWN": 1
+  },
+  "minimal_checks": 14,
+  "dns_checks": 2,
+  "scan_coverage_accepted": false,
+  "diagnostic": "Superseded: missing /etc/debian_version caused unknown OS and invalid zero-finding interpretation. Not a clean result."
+}
